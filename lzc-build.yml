@@ -12,7 +12,9 @@ devshell:
   dependencies:
     - nodejs
     - npm
-  setupscript: |
-    export npm_config_registry=https://registry.npmmirror.com
-    # cd ./content/app
+  setupscript: startup.sh
+  # setupscript: |
+    # export npm_config_registry=https://registry.npmmirror.com
+    # cd app
     # npm install
+    # bash ./startup.sh
