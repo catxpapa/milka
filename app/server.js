@@ -12,13 +12,8 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// 静态文件托管 - 前端文件
-app.use(express.static(path.join(__dirname, 'public'), {
-  // 添加一些选项确保正确服务静态文件
-  maxAge: '1d',
-  etag: false
-}));
-
+// 静态文件托管 - 确保在API路由之前
+app.use(express.static(path.join(__dirname, 'public')));
 
 // 数据库连接配置
 const dbConfig = {
@@ -32,35 +27,24 @@ const dbConfig = {
   reconnect: true
 };
 
-// 数据库连接池
 let pool;
 
-// 等待数据库完全启动的函数
+// 等待数据库启动
 async function waitForDatabase(maxRetries = 30, retryInterval = 2000) {
   console.log('等待MySQL数据库服务启动...');
   
   for (let i = 0; i < maxRetries; i++) {
     try {
-      // 尝试创建连接池
       const testPool = mysql.createPool(dbConfig);
-      
-      // 执行简单查询测试数据库是否完全可用
       await testPool.execute('SELECT 1 as test');
-      await testPool.execute('SHOW TABLES'); // 确保可以执行DDL操作
-      
       console.log(`数据库连接成功！(尝试 ${i + 1}/${maxRetries})`);
       await testPool.end();
       return true;
-      
     } catch (error) {
       console.log(`数据库连接失败，${retryInterval/1000}秒后重试... (${i + 1}/${maxRetries})`);
-      console.log(`错误信息: ${error.message}`);
-      
       if (i === maxRetries - 1) {
         throw new Error(`数据库连接超时，已重试 ${maxRetries} 次`);
       }
-      
-      // 等待指定时间后重试
       await new Promise(resolve => setTimeout(resolve, retryInterval));
     }
   }
@@ -69,47 +53,76 @@ async function waitForDatabase(maxRetries = 30, retryInterval = 2000) {
 // 初始化数据库
 async function initDatabase() {
   try {
-    // 等待数据库完全启动
     await waitForDatabase();
-    
-    // 创建连接池
     pool = mysql.createPool(dbConfig);
     console.log('数据库连接池创建成功');
     
-    // 创建数据表
     await createTables();
     console.log('数据表初始化完成');
     
-    // 插入预置数据
     await insertSampleData();
-    console.log('预置数据插入完成');
+    console.log('预置数据检查完成');
     
   } catch (error) {
     console.error('数据库初始化失败:', error);
-    process.exit(1); // 如果数据库初始化失败，退出应用
+    // 不要退出进程，让静态文件服务继续工作
   }
 }
 
-// 创建数据表（增加错误重试）
+// 创建数据表
 async function createTables() {
   const tables = [
     {
       name: 'CardFace',
-      sql: ` CREATE TABLE IF NOT EXISTS CardFace ( id INT AUTO_INCREMENT PRIMARY KEY, main_text TEXT NOT NULL, notes TEXT, image_url VARCHAR(255), keywords JSON, created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci `
+      sql: `
+        CREATE TABLE IF NOT EXISTS CardFace (
+          id INT AUTO_INCREMENT PRIMARY KEY,
+          main_text TEXT NOT NULL,
+          notes TEXT,
+          image_url VARCHAR(255),
+          keywords JSON,
+          created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+          updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+      `
     },
     {
       name: 'Theme',
-      sql: ` CREATE TABLE IF NOT EXISTS Theme ( id INT AUTO_INCREMENT PRIMARY KEY, title VARCHAR(255) NOT NULL, description TEXT, cover_image_url VARCHAR(255), style_config JSON, is_official BOOLEAN DEFAULT FALSE, sort_order INT DEFAULT 0, is_pinned BOOLEAN DEFAULT FALSE, created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci `
+      sql: `
+        CREATE TABLE IF NOT EXISTS Theme (
+          id INT AUTO_INCREMENT PRIMARY KEY,
+          title VARCHAR(255) NOT NULL,
+          description TEXT,
+          cover_image_url VARCHAR(255),
+          style_config JSON,
+          is_official BOOLEAN DEFAULT FALSE,
+          sort_order INT DEFAULT 0,
+          is_pinned BOOLEAN DEFAULT FALSE,
+          created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+          updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+      `
     },
     {
       name: 'ThemeCardAssociation',
-      sql: ` CREATE TABLE IF NOT EXISTS ThemeCardAssociation ( id INT AUTO_INCREMENT PRIMARY KEY, theme_id INT NOT NULL, front_face_id INT NOT NULL, back_face_id INT NOT NULL, sort_order INT DEFAULT 0, created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, FOREIGN KEY (theme_id) REFERENCES Theme(id) ON DELETE CASCADE, FOREIGN KEY (front_face_id) REFERENCES CardFace(id) ON DELETE CASCADE, FOREIGN KEY (back_face_id) REFERENCES CardFace(id) ON DELETE CASCADE ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci `
+      sql: `
+        CREATE TABLE IF NOT EXISTS ThemeCardAssociation (
+          id INT AUTO_INCREMENT PRIMARY KEY,
+          theme_id INT NOT NULL,
+          front_face_id INT NOT NULL,
+          back_face_id INT NOT NULL,
+          sort_order INT DEFAULT 0,
+          created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+          FOREIGN KEY (theme_id) REFERENCES Theme(id) ON DELETE CASCADE,
+          FOREIGN KEY (front_face_id) REFERENCES CardFace(id) ON DELETE CASCADE,
+          FOREIGN KEY (back_face_id) REFERENCES CardFace(id) ON DELETE CASCADE
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+      `
     }
   ];
 
   for (const table of tables) {
     try {
-      console.log(`创建数据表: ${table.name}`);
       await pool.execute(table.sql);
       console.log(`✓ ${table.name} 表创建成功`);
     } catch (error) {
@@ -122,7 +135,6 @@ async function createTables() {
 // 插入预置数据
 async function insertSampleData() {
   try {
-    // 检查是否已有数据
     const [existingThemes] = await pool.execute('SELECT COUNT(*) as count FROM Theme');
     if (existingThemes[0].count > 0) {
       console.log('数据库已有数据，跳过预置数据插入');
@@ -131,7 +143,6 @@ async function insertSampleData() {
 
     console.log('插入预置数据...');
     
-    // 插入示例卡面
     const cardFaces = [
       { main_text: 'Apple', notes: '苹果 - 一种常见的水果', keywords: '["en", "fruit", "apple"]' },
       { main_text: '苹果', notes: 'Apple的中文翻译', keywords: '["zh", "水果", "苹果"]' },
@@ -148,14 +159,12 @@ async function insertSampleData() {
       cardFaceIds.push(result.insertId);
     }
 
-    // 插入示例主题
     const [themeResult] = await pool.execute(
       'INSERT INTO Theme (title, description, is_official) VALUES (?, ?, ?)',
       ['基础英语单词', '包含一些基础的英语单词学习卡片', true]
     );
     const themeId = themeResult.insertId;
 
-    // 插入主题-卡片关联
     await pool.execute(
       'INSERT INTO ThemeCardAssociation (theme_id, front_face_id, back_face_id, sort_order) VALUES (?, ?, ?, ?)',
       [themeId, cardFaceIds[0], cardFaceIds[1], 1]
@@ -168,17 +177,20 @@ async function insertSampleData() {
     console.log('✓ 预置数据插入完成');
   } catch (error) {
     console.error('预置数据插入失败:', error);
-    // 预置数据失败不应该导致应用退出
   }
 }
 
 // API路由
-
-// 获取所有主题
 app.get('/api/themes', async (req, res) => {
   try {
+    if (!pool) {
+      return res.status(503).json({ error: '数据库未初始化' });
+    }
+    
     const [rows] = await pool.execute(`
-      SELECT * FROM Theme 
+      SELECT *, 
+        (SELECT COUNT(*) FROM ThemeCardAssociation WHERE theme_id = Theme.id) as card_count
+      FROM Theme 
       ORDER BY is_pinned DESC, sort_order ASC, created_at DESC
     `);
     res.json(rows);
@@ -188,12 +200,14 @@ app.get('/api/themes', async (req, res) => {
   }
 });
 
-// 获取主题详情及其卡片
 app.get('/api/themes/:id', async (req, res) => {
   try {
+    if (!pool) {
+      return res.status(503).json({ error: '数据库未初始化' });
+    }
+    
     const themeId = req.params.id;
     
-    // 获取主题信息
     const [themeRows] = await pool.execute(
       'SELECT * FROM Theme WHERE id = ?', 
       [themeId]
@@ -203,7 +217,6 @@ app.get('/api/themes/:id', async (req, res) => {
       return res.status(404).json({ error: '主题不存在' });
     }
     
-    // 获取主题的卡片
     const [cardRows] = await pool.execute(`
       SELECT 
         tca.id as association_id,
@@ -227,9 +240,12 @@ app.get('/api/themes/:id', async (req, res) => {
   }
 });
 
-// 创建新主题
 app.post('/api/themes', async (req, res) => {
   try {
+    if (!pool) {
+      return res.status(503).json({ error: '数据库未初始化' });
+    }
+    
     const { title, description, style_config } = req.body;
     
     const [result] = await pool.execute(
@@ -244,21 +260,28 @@ app.post('/api/themes', async (req, res) => {
   }
 });
 
-// SPA路由支持 - 只对非API、非静态文件的请求返回index.html
+// 健康检查
+app.get('/api/health', (req, res) => {
+  res.json({ 
+    status: 'healthy', 
+    timestamp: new Date().toISOString(),
+    database: pool ? 'connected' : 'disconnected'
+  });
+});
+
+// SPA路由支持 - 所有非API请求返回index.html
 app.get('*', (req, res) => {
-  // 检查请求是否为API或静态资源
-  if (req.path.startsWith('/api/') || 
-      req.path.match(/\.(css|js|png|jpg|jpeg|gif|ico|svg)$/)) {
-    // 如果是API或静态资源但到了这里，说明资源不存在
-    res.status(404).json({ error: 'Resource not found' });
-  } else {
-    // 其他路径返回SPA主页
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
-  }
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // 启动服务器
 app.listen(PORT, async () => {
-  console.log(`喵卡 Milka 服务器运行在端口 ${PORT}`);
-  await initDatabase();
+  console.log(`=================================`);
+  console.log(`🐱 喵卡 Milka 服务器启动成功`);
+  console.log(`端口: ${PORT}`);
+  console.log(`时间: ${new Date().toLocaleString()}`);
+  console.log(`=================================`);
+  
+  // 异步初始化数据库，不阻塞服务器启动
+  initDatabase().catch(console.error);
 });

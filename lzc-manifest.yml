@@ -10,8 +10,8 @@ application:
   subdomain: milka
   workdir: /lzcapp/pkg/content
   routes:
-    - /=file:///lzcapp/pkg/content/public
-    - /api/=exec://3000,/lzcapp/pkg/content/run.sh
+    # - /=file:///lzcapp/pkg/content/public
+    - /=exec://3000,./lzcapp/pkg/content/run.sh
 services:
   mysql:
     image: registry.lazycat.cloud/mysql

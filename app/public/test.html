@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>喵卡 API 测试界面</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header { background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .test-section { background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .btn { padding: 10px 20px; margin: 5px; border: none; border-radius: 4px; cursor: pointer; font-size: 14px; }
+        .btn-primary { background: #007bff; color: white; }
+        .btn-success { background: #28a745; color: white; }
+        .btn-warning { background: #ffc107; color: black; }
+        .btn-danger { background: #dc3545; color: white; }
+        .result { background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 4px; padding: 15px; margin-top: 10px; font-family: monospace; white-space: pre-wrap; max-height: 400px; overflow-y: auto; }
+        .success { border-color: #28a745; background: #d4edda; }
+        .error { border-color: #dc3545; background: #f8d7da; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+        .form-group input, .form-group textarea { width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .status-indicator { display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; }
+        .status-success { background: #28a745; }
+        .status-error { background: #dc3545; }
+        .status-warning { background: #ffc107; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🐱 喵卡 Milka - API 测试界面</h1>
+            <p>用于测试和诊断所有API路由的状态和功能</p>
+            <div id="server-status" style="margin-top: 10px;">
+                <span class="status-indicator status-warning"></span>
+                <span>正在检查服务器状态...</span>
+            </div>
+        </div>
+
+        <div class="grid">
+            <!-- 系统诊断 -->
+            <div class="test-section">
+                <h3>🔍 系统诊断</h3>
+                <button class="btn btn-primary" onclick="checkStatus()">检查服务器状态</button>
+                <button class="btn btn-primary" onclick="runTests()">运行综合测试</button>
+                <div id="status-result" class="result" style="display: none;"></div>
+            </div>
+
+            <!-- 主题查询测试 -->
+            <div class="test-section">
+                <h3>📚 主题查询测试</h3>
+                <button class="btn btn-success" onclick="getThemes()">GET /api/themes</button>
+                <button class="btn btn-success" onclick="getTheme(1)">GET /api/themes/1</button>
+                <div id="get-result" class="result" style="display: none;"></div>
+            </div>
+
+            <!-- 主题创建测试 -->
+            <div class="test-section">
+                <h3>➕ 主题创建测试</h3>
+                <div class="form-group">
+                    <label>主题标题:</label>
+                    <input type="text" id="theme-title" value="测试主题" placeholder="输入主题标题">
+                </div>
+                <div class="form-group">
+                    <label>主题描述:</label>
+                    <textarea id="theme-description" placeholder="输入主题描述">这是一个测试主题</textarea>
+                </div>
+                <button class="btn btn-warning" onclick="createTheme()">POST /api/themes</button>
+                <div id="post-result" class="result" style="display: none;"></div>
+            </div>
+
+            <!-- 其他操作测试 -->
+            <div class="test-section">
+                <h3>🔧 其他操作测试</h3>
+                <div class="form-group">
+                    <label>主题ID:</label>
+                    <input type="number" id="theme-id" value="1" placeholder="输入要操作的主题ID">
+                </div>
+                <button class="btn btn-warning" onclick="updateTheme()">PUT /api/themes/:id</button>
+                <button class="btn btn-danger" onclick="deleteTheme()">DELETE /api/themes/:id</button>
+                <div id="other-result" class="result" style="display: none;"></div>
+            </div>
+        </div>
+
+        <!-- 实时日志 -->
+        <div class="test-section">
+            <h3>📝 测试日志</h3>
+            <button class="btn btn-primary" onclick="clearLog()">清空日志</button>
+            <div id="test-log" class="result" style="min-height: 200px;"></div>
+        </div>
+    </div>
+
+    <script>
+        let logContainer = document.getElementById('test-log');
+        
+        function log(message, type = 'info') {
+            const timestamp = new Date().toLocaleTimeString();
+            const logEntry = `[${timestamp}] ${message}\n`;
+            logContainer.textContent += logEntry;
+            logContainer.scrollTop = logContainer.scrollHeight;
+            
+            if (type === 'error') {
+                logContainer.className = 'result error';
+            } else if (type === 'success') {
+                logContainer.className = 'result success';
+            } else {
+                logContainer.className = 'result';
+            }
+        }
+
+        function clearLog() {
+            logContainer.textContent = '';
+            logContainer.className = 'result';
+        }
+
+        function showResult(elementId, data, isSuccess = true) {
+            const element = document.getElementById(elementId);
+            element.style.display = 'block';
+            element.textContent = JSON.stringify(data, null, 2);
+            element.className = isSuccess ? 'result success' : 'result error';
+        }
+
+        async function makeRequest(url, options = {}) {
+            try {
+                log(`发送请求: ${options.method || 'GET'} ${url}`);
+                const response = await fetch(url, {
+                    ...options,
+                    headers: {
+                        'Content-Type': 'application/json',
+                        ...options.headers
+                    }
+                });
+                
+                const data = await response.json();
+                log(`响应状态: ${response.status} ${response.statusText}`, response.ok ? 'success' : 'error');
+                
+                return { response, data };
+            } catch (error) {
+                log(`请求失败: ${error.message}`, 'error');
+                throw error;
+            }
+        }
+
+        async function checkStatus() {
+            try {
+                const { response, data } = await makeRequest('/api/status');
+                showResult('status-result', data, response.ok);
+                
+                // 更新服务器状态指示器
+                const statusElement = document.getElementById('server-status');
+                if (response.ok) {
+                    statusElement.innerHTML = '<span class="status-indicator status-success"></span><span>服务器运行正常</span>';
+                } else {
+                    statusElement.innerHTML = '<span class="status-indicator status-error"></span><span>服务器状态异常</span>';
+                }
+            } catch (error) {
+                showResult('status-result', { error: error.message }, false);
+                document.getElementById('server-status').innerHTML = '<span class="status-indicator status-error"></span><span>无法连接到服务器</span>';
+            }
+        }
+
+        async function runTests() {
+            try {
+                const { response, data } = await makeRequest('/api/test');
+                showResult('status-result', data, response.ok);
+            } catch (error) {
+                showResult('status-result', { error: error.message }, false);
+            }
+        }
+
+        async function getThemes() {
+            try {
+                const { response, data } = await makeRequest('/api/themes');
+                showResult('get-result', data, response.ok);
+            } catch (error) {
+                showResult('get-result', { error: error.message }, false);
+            }
+        }
+
+        async function getTheme(id) {
+            try {
+                const { response, data } = await makeRequest(`/api/themes/${id}`);
+                showResult('get-result', data, response.ok);
+            } catch (error) {
+                showResult('get-result', { error: error.message }, false);
+            }
+        }
+
+        async function createTheme() {
+            const title = document.getElementById('theme-title').value;
+            const description = document.getElementById('theme-description').value;
+            
+            try {
+                const { response, data } = await makeRequest('/api/themes', {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        title: title,
+                        description: description,
+                        style_config: { theme: 'minimalist-white' }
+                    })
+                });
+                showResult('post-result', data, response.ok);
+            } catch (error) {
+                showResult('post-result', { error: error.message }, false);
+            }
+        }
+
+        async function updateTheme() {
+            const id = document.getElementById('theme-id').value;
+            
+            try {
+                const { response, data } = await makeRequest(`/api/themes/${id}`, {
+                    method: 'PUT',
+                    body: JSON.stringify({
+                        title: '更新的主题标题',
+                        description: '更新的主题描述'
+                    })
+                });
+                showResult('other-result', data, response.ok);
+            } catch (error) {
+                showResult('other-result', { error: error.message }, false);
+            }
+        }
+
+        async function deleteTheme() {
+            const id = document.getElementById('theme-id').value;
+            
+            if (!confirm(`确定要删除主题 ${id} 吗？`)) {
+                return;
+            }
+            
+            try {
+                const { response, data } = await makeRequest(`/api/themes/${id}`, {
+                    method: 'DELETE'
+                });
+                showResult('other-result', data, response.ok);
+            } catch (error) {
+                showResult('other-result', { error: error.message }, false);
+            }
+        }
+
+        // 页面加载时自动检查状态
+        window.addEventListener('load', () => {
+            log('测试界面加载完成');
+            checkStatus();
+        });
+    </script>
+</body>
+</html>
