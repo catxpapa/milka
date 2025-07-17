@@ -1,1 +1,18 @@
 # 构建配置文件
+# 懒猫应用打包构建描述
+# buildscript: ./build.sh
+manifest: ./lzc-manifest.yml
+contentdir: ./app
+pkgout: ./
+icon: ./lzc-icon.png
+
+devshell:
+  routes:
+    - /=http://127.0.0.1:3000
+  dependencies:
+    - nodejs
+    - npm
+  setupscript: |
+    export npm_config_registry=https://registry.npmmirror.com
+    # cd ./content/app
+    # npm install

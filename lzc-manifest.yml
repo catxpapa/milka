@@ -1,1 +1,22 @@
 # 应用元信息配置
+name: 喵卡 Milka
+package: cloud.lazycat.app.milka
+version: 0.0.1
+description: 漂亮的记忆闪卡应用，支持自定义界面及内容，帮助用户学习语言、背诵知识点
+license: https://choosealicense.com/licenses/mit/
+homepage: https://catxpapa.com
+author: CATxPAPA@gmail.com
+application:
+  subdomain: milka
+  routes:
+    - /=exec://3000,./lzcapp/pkg/content/run.sh
+services:
+  mysql:
+    image: registry.lazycat.cloud/mysql
+    binds:
+      - /lzcapp/var/mysql:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=LAZYCAT
+      - MYSQL_DATABASE=LAZYCAT
+      - MYSQL_USER=LAZYCAT
+      - MYSQL_PASSWORD=LAZYCAT

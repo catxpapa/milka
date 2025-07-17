@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>喵卡 Milka - 记忆闪卡</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+        }
+        
+        .themes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .theme-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
+        }
+        
+        .theme-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        
+        .theme-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+        
+        .theme-card p {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #7f8c8d;
+        }
+        
+        .btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.2s ease;
+        }
+        
+        .btn:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🐱 喵卡 Milka</h1>
+            <p>漂亮的记忆闪卡应用</p>
+        </div>
+        
+        <div id="app">
+            <div class="loading">正在加载主题...</div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px;">
+            <button class="btn" onclick="createNewTheme()">创建新主题</button>
+        </div>
+    </div>
+
+    <script>
+        // 简单的前端逻辑
+        async function loadThemes() {
+            try {
+                const response = await fetch('/api/themes');
+                const themes = await response.json();
+                
+                const app = document.getElementById('app');
+                
+                if (themes.length === 0) {
+                    app.innerHTML = '<div class="loading">暂无主题，点击下方按钮创建第一个主题</div>';
+                    return;
+                }
+                
+                const themesHtml = themes.map(theme => `
+                    <div class="theme-card" onclick="viewTheme(${theme.id})">
+                        <h3>${theme.title}</h3>
+                        <p>${theme.description || '暂无描述'}</p>
+                    </div>
+                `).join('');
+                
+                app.innerHTML = `<div class="themes-grid">${themesHtml}</div>`;
+            } catch (error) {
+                console.error('加载主题失败:', error);
+                document.getElementById('app').innerHTML = '<div class="loading">加载失败，请刷新页面重试</div>';
+            }
+        }
+        
+        function viewTheme(themeId) {
+            alert(`查看主题 ${themeId} (功能开发中)`);
+        }
+        
+        function createNewTheme() {
+            const title = prompt('请输入主题标题:');
+            if (title) {
+                const description = prompt('请输入主题描述 (可选):');
+                createTheme(title, description);
+            }
+        }
+        
+        async function createTheme(title, description) {
+            try {
+                const response = await fetch('/api/themes', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ title, description })
+                });
+                
+                if (response.ok) {
+                    alert('主题创建成功！');
+                    loadThemes(); // 重新加载主题列表
+                } else {
+                    alert('创建失败，请重试');
+                }
+            } catch (error) {
+                console.error('创建主题失败:', error);
+                alert('创建失败，请重试');
+            }
+        }
+        
+        // 页面加载时获取主题列表
+        document.addEventListener('DOMContentLoaded', loadThemes);
+    </script>
+</body>
+</html>
