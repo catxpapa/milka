@@ -8,9 +8,8 @@ homepage: https://catxpapa.com
 author: CATxPAPA@gmail.com
 application:
   subdomain: milka
-  workdir: /lzcapp/pkg/content
+  workdir: /lzcapp/pkg/content/app
   routes:
-    # - /=file:///lzcapp/pkg/content/public
     - /=exec://3000,./lzcapp/pkg/content/run.sh
 services:
   mysql:
