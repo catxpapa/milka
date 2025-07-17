@@ -1,9 +1,14 @@
 # 构建配置文件
 # 懒猫应用打包构建描述
-# buildscript: ./build.sh
+
+buildscript: ./build.sh
+
 manifest: ./lzc-manifest.yml
+
 contentdir: ./app
+
 pkgout: ./
+
 icon: ./lzc-icon.png
 
 devshell:

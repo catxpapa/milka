@@ -240,8 +240,8 @@ app.post('/api/themes', async (req, res) => {
 });
 
 // 所有其他路由返回前端应用
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public'));
 });
 
 // 启动服务器

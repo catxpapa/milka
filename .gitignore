@@ -1,2 +1,5 @@
+node_modules
 *.lpk
-r.sh
+
+.lzc-cli-*
+package-lock.json
