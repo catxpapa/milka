@@ -9,7 +9,7 @@ author: CATxPAPA@gmail.com
 application:
   subdomain: milka
   routes:
-    - /=exec://3000,./lzcapp/pkg/content/run.sh
+    - /=exec://3000,./lzcapp/pkg/content/app/run.sh
 services:
   mysql:
     image: registry.lazycat.cloud/mysql
