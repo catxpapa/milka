@@ -13,7 +13,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // 静态文件托管 - 前端文件
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public'), {
+  // 添加一些选项确保正确服务静态文件
+  maxAge: '1d',
+  etag: false
+}));
+
 
 // 数据库连接配置
 const dbConfig = {
@@ -239,9 +244,17 @@ app.post('/api/themes', async (req, res) => {
   }
 });
 
-// 所有其他路由返回前端应用
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public'));
+// SPA路由支持 - 只对非API、非静态文件的请求返回index.html
+app.get('*', (req, res) => {
+  // 检查请求是否为API或静态资源
+  if (req.path.startsWith('/api/') || 
+      req.path.match(/\.(css|js|png|jpg|jpeg|gif|ico|svg)$/)) {
+    // 如果是API或静态资源但到了这里，说明资源不存在
+    res.status(404).json({ error: 'Resource not found' });
+  } else {
+    // 其他路径返回SPA主页
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  }
 });
 
 // 启动服务器
