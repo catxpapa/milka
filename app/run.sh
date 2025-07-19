@@ -4,7 +4,7 @@ echo "启动喵卡 Milka 应用..."
 echo "等待MySQL服务启动..."
 wait_time=0
 max_wait=180  # 最大等待2分钟
-
+cd /lzcapp/pkg/content
 while [ $wait_time -lt $max_wait ]; do
     # 使用nc (netcat) 检查MySQL端口是否可用
     if nc -z mysql.cloud.lazycat.app.milka.lzcapp 3306 2>/dev/null; then
@@ -25,7 +25,7 @@ fi
 
 echo "MySQL服务已就绪，启动Node.js应用..."
 
-cd /lzcapp/pkg/content
+
 apk update
 apk add nodejs npm
 npm install

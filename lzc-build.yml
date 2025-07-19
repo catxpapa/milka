@@ -1,7 +1,7 @@
 # 构建配置文件
 # 懒猫应用打包构建描述
 
-buildscript: ./build.sh
+buildscript: cd app && npm install
 
 manifest: ./lzc-manifest.yml
 

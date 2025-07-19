@@ -8,9 +8,21 @@ homepage: https://catxpapa.com
 author: CATxPAPA@gmail.com
 application:
   subdomain: milka
-  workdir: /lzcapp/pkg/content/app
+  workdir: /lzcapp/pkg/content
   routes:
-    - /=exec://3000,./lzcapp/pkg/content/run.sh
+    # - /=exec://3000,/lzcapp/pkg/content/run.sh
+    # - /=exec://3000,install -m 755 /lzcapp/pkg/content/run.sh /tmp;exec /tmp/run.sh
+  upstreams:
+    - location: /
+      backend: http://127.0.0.1:3000/
+      # backend_launch_command: install -m 755 /lzcapp/pkg/content/run.sh /tmp;exec /tmp/run.sh
+      backend_launch_command: |
+        cd /lzcapp/pkg/content
+        apk update
+        apk add nodejs npm
+        npm run start
+  depends-on:
+    - mysql
 services:
   mysql:
     image: registry.lazycat.cloud/mysql
