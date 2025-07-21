@@ -1,11 +1,11 @@
 # 构建配置文件
 # 懒猫应用打包构建描述
 
-buildscript: cd app && npm install
+buildscript: cd APP && npm install
 
 manifest: ./lzc-manifest.yml
 
-contentdir: ./app
+contentdir: ./APP
 
 pkgout: ./
 
@@ -17,9 +17,4 @@ devshell:
   dependencies:
     - nodejs
     - npm
-  setupscript: startup.sh
-  # setupscript: |
-    # export npm_config_registry=https://registry.npmmirror.com
-    # cd app
-    # npm install
-    # bash ./startup.sh
+  setupscript: cd APP && npm install
