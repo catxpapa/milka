@@ -21,3 +21,14 @@ application:
         apk update
         apk add nodejs npm
         npm run start
+      environment:
+      - name: NODE_ENV
+        value: "production"
+      - name: PORT
+        value: "3000"
+      - name: TEMP_PATH
+        value: "/lzcapp/tmp/milka"
+      - name: UPLOAD_PATH
+        value: "/lzcapp/var/milka/uploads"
+      - name: MAX_FILE_SIZE
+        value: "52428800"  # 50MB
