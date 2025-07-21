@@ -1,67 +1,124 @@
-<!-- 喵卡应用前端入口 - 单页应用主页面 -->
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="喵卡 - 漂亮的记忆闪卡应用，支持自定义界面及内容">
-    <meta name="keywords" content="记忆卡片,学习工具,闪卡,懒猫微服">
+    <title>🐱 喵卡 Milka - 漂亮的记忆闪卡应用</title>
+    <meta name="description" content="基于懒猫微服的轻量级记忆闪卡应用，支持自定义界面及内容，帮助用户学习语言、背诵知识点">
+    <meta name="keywords" content="记忆卡片,闪卡,学习工具,懒猫微服,MiniDB">
     <meta name="author" content="CATxPAPA@gmail.com">
     
-    <title>喵卡 Milka - 记忆闪卡应用</title>
-    
     <!-- 预加载关键资源 -->
-    <link rel="preload" href="./styles.css" as="style">
-    <link rel="preload" href="./app.js" as="script">
+    <link rel="preload" href="./assets/css/styles.css" as="style">
+    <link rel="preload" href="./assets/css/card-animations.css" as="style">
     
-    <!-- 样式文件 -->
-    <link rel="stylesheet" href="./styles.css">
+    <!-- 样式表 -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/card-animations.css">
     
-    <!-- 基础 PWA 支持（不使用 Service Worker） -->
+    <!-- PWA 支持 -->
+    <link rel="manifest" href="./manifest.json">
     <meta name="theme-color" content="#667eea">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-title" content="喵卡">
     
     <!-- 图标 -->
-    <link rel="icon" type="image/png" href="./assets/icons/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
     <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png">
+    
+    <!-- 社交媒体元标签 -->
+    <meta property="og:title" content="喵卡 Milka - 记忆闪卡应用">
+    <meta property="og:description" content="漂亮的记忆闪卡应用，支持自定义界面及内容">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./assets/icons/og-image.png">
+    
+    <!-- 字体预加载 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- 应用加载指示器 -->
-    <div id="loading" class="loading-screen">
-        <div class="loading-spinner">
-            <div class="spinner"></div>
-            <p>正在加载喵卡应用...</p>
+    <div id="loading" class="loading-overlay">
+        <div class="loading-content">
+            <div class="loading-spinner">
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+            </div>
+            <h2>🐱 喵卡正在启动...</h2>
+            <p>正在初始化应用和数据库连接</p>
         </div>
     </div>
 
     <!-- 主应用容器 -->
-    <div id="app" class="milka-app">
-        <!-- 应用内容将由 JavaScript 动态生成 -->
-    </div>
-
-    <!-- 模态框容器 -->
-    <div id="modal-container"></div>
-
-    <!-- 通知容器 -->
-    <div id="notification-container" class="notification-container"></div>
-
-    <!-- 文件上传隐藏表单 -->
-    <form id="import-form" style="display: none;">
-        <input type="file" id="file-input" accept=".json" />
-    </form>
-
-    <!-- 错误边界 -->
-    <div id="error-boundary" class="error-boundary" style="display: none;">
-        <div class="error-content">
-            <h2>😿 应用遇到了问题</h2>
-            <p>请刷新页面重试，或联系技术支持。</p>
-            <button onclick="location.reload()" class="btn btn-primary">刷新页面</button>
+    <div id="app" class="app-container">
+        <!-- 应用内容将通过 JavaScript 动态渲染 -->
+        <div class="app-placeholder">
+            <div class="placeholder-content">
+                <h1>🐱 喵卡 Milka</h1>
+                <p>正在加载应用...</p>
+                <div class="placeholder-spinner">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- MiniDB 和应用脚本 -->
+    <!-- 通知容器 -->
+    <div id="notifications" class="notifications-container"></div>
+
+    <!-- 模态框容器 -->
+    <div id="modal-container" class="modal-container"></div>
+
+    <!-- 键盘快捷键帮助 -->
+    <div id="keyboard-help" class="keyboard-help hidden">
+        <div class="keyboard-help-content">
+            <h3>⌨️ 键盘快捷键</h3>
+            <div class="shortcut-list">
+                <div class="shortcut-item">
+                    <kbd>空格</kbd>
+                    <span>翻转当前卡片</span>
+                </div>
+                <div class="shortcut-item">
+                    <kbd>←</kbd> <kbd>→</kbd>
+                    <span>切换卡片</span>
+                </div>
+                <div class="shortcut-item">
+                    <kbd>ESC</kbd>
+                    <span>返回上级</span>
+                </div>
+                <div class="shortcut-item">
+                    <kbd>Ctrl</kbd> + <kbd>N</kbd>
+                    <span>新建主题/卡片</span>
+                </div>
+                <div class="shortcut-item">
+                    <kbd>?</kbd>
+                    <span>显示/隐藏帮助</span>
+                </div>
+            </div>
+            <button class="btn btn-secondary" onclick="app.hideKeyboardHelp()">关闭</button>
+        </div>
+    </div>
+
+    <!-- 错误边界 -->
+    <div id="error-boundary" class="error-boundary hidden">
+        <div class="error-content">
+            <h2>😿 应用遇到了问题</h2>
+            <p>很抱歉，应用运行时出现了错误。</p>
+            <div class="error-actions">
+                <button class="btn btn-primary" onclick="location.reload()">
+                    🔄 重新加载
+                </button>
+                <button class="btn btn-secondary" onclick="app.reportError()">
+                    📝 报告问题
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 脚本加载 -->
     <script type="importmap">
     {
         "imports": {
@@ -69,55 +126,115 @@
         }
     }
     </script>
-    
+
     <!-- 主应用脚本 -->
     <script type="module" src="./app.js"></script>
-    
-    <!-- 应用初始化脚本 -->
+
+    <!-- 服务工作者注册（PWA支持） -->
     <script>
+        // 注册 Service Worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(registration => {
+                        console.log('🔧 Service Worker 注册成功:', registration.scope);
+                    })
+                    .catch(error => {
+                        console.log('❌ Service Worker 注册失败:', error);
+                    });
+            });
+        }
+
         // 全局错误处理
         window.addEventListener('error', (event) => {
-            console.error('全局错误:', event.error);
-            document.getElementById('error-boundary').style.display = 'flex';
-            document.getElementById('loading').style.display = 'none';
+            console.error('🚨 全局错误:', event.error);
+            
+            // 显示错误边界
+            const errorBoundary = document.getElementById('error-boundary');
+            if (errorBoundary) {
+                errorBoundary.classList.remove('hidden');
+            }
+            
+            // 隐藏加载指示器
+            const loading = document.getElementById('loading');
+            if (loading) {
+                loading.style.display = 'none';
+            }
         });
 
         // 未处理的 Promise 拒绝
         window.addEventListener('unhandledrejection', (event) => {
-            console.error('未处理的 Promise 拒绝:', event.reason);
+            console.error('🚨 未处理的 Promise 拒绝:', event.reason);
             event.preventDefault();
         });
 
-        // 页面加载完成后隐藏加载指示器
-        window.addEventListener('DOMContentLoaded', () => {
-            setTimeout(() => {
-                const loading = document.getElementById('loading');
-                if (loading) {
-                    loading.style.opacity = '0';
-                    setTimeout(() => {
-                        loading.style.display = 'none';
-                    }, 300);
-                }
-            }, 1000);
+        // 页面可见性变化处理
+        document.addEventListener('visibilitychange', () => {
+            if (document.visibilityState === 'visible' && window.app) {
+                // 页面重新可见时刷新数据
+                console.log('📱 页面重新可见，检查数据更新');
+                window.app.checkForUpdates?.();
+            }
         });
 
-        // 应用缓存管理（替代 Service Worker 的简单缓存策略）
-        if ('caches' in window) {
-            // 可选：使用 Cache API 进行简单的资源缓存
-            // 但不注册 Service Worker
-            console.log('浏览器支持 Cache API，可用于资源缓存');
-        }
-
-        // 离线状态检测
+        // 网络状态监听
         window.addEventListener('online', () => {
-            console.log('网络连接已恢复');
-            // 可以在这里添加重新同步数据的逻辑
+            console.log('🌐 网络连接已恢复');
+            if (window.app) {
+                window.app.showNotification?.('网络连接已恢复', 'success');
+                window.app.syncData?.();
+            }
         });
 
         window.addEventListener('offline', () => {
-            console.log('网络连接已断开');
-            // 可以在这里显示离线提示
+            console.log('📵 网络连接已断开');
+            if (window.app) {
+                window.app.showNotification?.('网络连接已断开，应用将在离线模式下运行', 'warning');
+            }
         });
+    </script>
+
+    <!-- 性能监控 -->
+    <script>
+        // 页面加载性能监控
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const perfData = performance.getEntriesByType('navigation')[0];
+                const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
+                
+                console.log('📊 页面加载性能:', {
+                    loadTime: `${loadTime}ms`,
+                    domContentLoaded: `${perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart}ms`,
+                    firstPaint: performance.getEntriesByType('paint')[0]?.startTime || 'N/A'
+                });
+                
+                // 如果加载时间过长，显示提示
+                if (loadTime > 3000) {
+                    console.warn('⚠️ 页面加载时间较长，建议优化');
+                }
+            }, 0);
+        });
+    </script>
+
+    <!-- 开发环境调试工具 -->
+    <script>
+        // 仅在开发环境显示调试信息
+        if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
+            console.log('🔧 开发模式已启用');
+            
+            // 添加调试快捷键
+            document.addEventListener('keydown', (event) => {
+                // Ctrl + Shift + D 显示调试信息
+                if (event.ctrlKey && event.shiftKey && event.key === 'D') {
+                    console.log('🐛 调试信息:', {
+                        userAgent: navigator.userAgent,
+                        viewport: `${window.innerWidth}x${window.innerHeight}`,
+                        timestamp: new Date().toISOString(),
+                        app: window.app?.state || 'Not initialized'
+                    });
+                }
+            });
+        }
     </script>
 </body>
 </html>

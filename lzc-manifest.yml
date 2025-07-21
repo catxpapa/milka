@@ -10,7 +10,7 @@ application:
   subdomain: milka
   workdir: /lzcapp/pkg/content/
   routes:
-    - /=file:///lzcapp/pkg/content/public/
+    - /=file:///lzcapp/pkg/content/public
   upstreams:
     - location: /api/
       workdir: /lzcapp/pkg/content/
