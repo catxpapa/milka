@@ -1,0 +1,123 @@
+<!-- 喵卡应用前端入口 - 单页应用主页面 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="喵卡 - 漂亮的记忆闪卡应用，支持自定义界面及内容">
+    <meta name="keywords" content="记忆卡片,学习工具,闪卡,懒猫微服">
+    <meta name="author" content="CATxPAPA@gmail.com">
+    
+    <title>喵卡 Milka - 记忆闪卡应用</title>
+    
+    <!-- 预加载关键资源 -->
+    <link rel="preload" href="./styles.css" as="style">
+    <link rel="preload" href="./app.js" as="script">
+    
+    <!-- 样式文件 -->
+    <link rel="stylesheet" href="./styles.css">
+    
+    <!-- 基础 PWA 支持（不使用 Service Worker） -->
+    <meta name="theme-color" content="#667eea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="喵卡">
+    
+    <!-- 图标 -->
+    <link rel="icon" type="image/png" href="./assets/icons/favicon.png">
+    <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png">
+</head>
+<body>
+    <!-- 应用加载指示器 -->
+    <div id="loading" class="loading-screen">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>正在加载喵卡应用...</p>
+        </div>
+    </div>
+
+    <!-- 主应用容器 -->
+    <div id="app" class="milka-app">
+        <!-- 应用内容将由 JavaScript 动态生成 -->
+    </div>
+
+    <!-- 模态框容器 -->
+    <div id="modal-container"></div>
+
+    <!-- 通知容器 -->
+    <div id="notification-container" class="notification-container"></div>
+
+    <!-- 文件上传隐藏表单 -->
+    <form id="import-form" style="display: none;">
+        <input type="file" id="file-input" accept=".json" />
+    </form>
+
+    <!-- 错误边界 -->
+    <div id="error-boundary" class="error-boundary" style="display: none;">
+        <div class="error-content">
+            <h2>😿 应用遇到了问题</h2>
+            <p>请刷新页面重试，或联系技术支持。</p>
+            <button onclick="location.reload()" class="btn btn-primary">刷新页面</button>
+        </div>
+    </div>
+
+    <!-- MiniDB 和应用脚本 -->
+    <script type="importmap">
+    {
+        "imports": {
+            "@lazycatcloud/minidb": "https://cdn.skypack.dev/@lazycatcloud/minidb"
+        }
+    }
+    </script>
+    
+    <!-- 主应用脚本 -->
+    <script type="module" src="./app.js"></script>
+    
+    <!-- 应用初始化脚本 -->
+    <script>
+        // 全局错误处理
+        window.addEventListener('error', (event) => {
+            console.error('全局错误:', event.error);
+            document.getElementById('error-boundary').style.display = 'flex';
+            document.getElementById('loading').style.display = 'none';
+        });
+
+        // 未处理的 Promise 拒绝
+        window.addEventListener('unhandledrejection', (event) => {
+            console.error('未处理的 Promise 拒绝:', event.reason);
+            event.preventDefault();
+        });
+
+        // 页面加载完成后隐藏加载指示器
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const loading = document.getElementById('loading');
+                if (loading) {
+                    loading.style.opacity = '0';
+                    setTimeout(() => {
+                        loading.style.display = 'none';
+                    }, 300);
+                }
+            }, 1000);
+        });
+
+        // 应用缓存管理（替代 Service Worker 的简单缓存策略）
+        if ('caches' in window) {
+            // 可选：使用 Cache API 进行简单的资源缓存
+            // 但不注册 Service Worker
+            console.log('浏览器支持 Cache API，可用于资源缓存');
+        }
+
+        // 离线状态检测
+        window.addEventListener('online', () => {
+            console.log('网络连接已恢复');
+            // 可以在这里添加重新同步数据的逻辑
+        });
+
+        window.addEventListener('offline', () => {
+            console.log('网络连接已断开');
+            // 可以在这里显示离线提示
+        });
+    </script>
+</body>
+</html>

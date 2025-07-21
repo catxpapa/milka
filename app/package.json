@@ -1,0 +1,30 @@
+{
+  "name": "milka",
+  "version": "0.1.1",
+  "description": "喵卡记忆闪卡应用 - 基于懒猫微服和MiniDB的轻量级学习工具",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "flashcard",
+    "memory",
+    "learning",
+    "lazycat",
+    "minidb"
+  ],
+  "author": "CATxPAPA@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "@lazycatcloud/minidb": "latest",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "multer": "^1.4.5-lts.1",
+    "uuid": "^9.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
