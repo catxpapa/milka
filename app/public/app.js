@@ -1,186 +1,10 @@
 // 喵卡应用前端主逻辑 - 基于MiniDB和React组件化设计
 import { MiniDB } from "@lazycatcloud/minidb";
-import { initializeSampleData } from "./utils/sampleData.js";
+import { ThemeEditor, CardEditor } from "./components/editors.js";
 import { SettingsPage } from "./pages/settings.js";
-// 主题编辑器组件
-class ThemeEditor {
-  constructor(app) {
-    this.app = app;
-    this.isEditing = false;
-    this.currentTheme = null;
-  }
+import { SampleDataPrompt } from "./pages/sampleDataPrompt.js";
 
-  render(theme = null) {
-    this.isEditing = !!theme;
-    this.currentTheme = theme;
 
-    return `
-      <div class="theme-editor-container">
-        <div class="theme-editor-header">
-          <h2>${this.isEditing ? '编辑主题' : '创建新主题'}</h2>
-          <button class="btn btn-close" onclick="app.goBack()">✕</button>
-        </div>
-        
-        <form class="theme-editor-form" onsubmit="app.handleThemeSubmit(event)">
-          <div class="form-group">
-            <label for="theme-title">主题标题 *</label>
-            <input 
-              type="text" 
-              id="theme-title" 
-              name="title" 
-              value="${theme?.title || ''}"
-              placeholder="例如：英语单词、历史知识"
-              required
-              maxlength="50"
-            >
-            <div class="form-hint">简洁明了的主题名称</div>
-          </div>
-
-          <div class="form-group">
-            <label for="theme-description">主题描述</label>
-            <textarea 
-              id="theme-description" 
-              name="description" 
-              placeholder="描述这个主题的内容和用途..."
-              maxlength="200"
-              rows="3"
-            >${theme?.description || ''}</textarea>
-            <div class="form-hint">可选，帮助您记住这个主题的用途</div>
-          </div>
-
-          <div class="form-actions">
-            <button type="button" class="btn btn-secondary" onclick="app.goBack()">
-              取消
-            </button>
-            <button type="submit" class="btn btn-primary">
-              ${this.isEditing ? '保存修改' : '创建主题'}
-            </button>
-          </div>
-        </form>
-      </div>
-    `;
-  }
-}
-
-// 卡片编辑器组件
-class CardEditor {
-  constructor(app) {
-    this.app = app;
-    this.isEditing = false;
-    this.currentCard = null;
-  }
-
-  render(card = null, themeId) {
-    this.isEditing = !!card;
-    this.currentCard = card;
-
-    return `
-      <div class="card-editor-container">
-        <div class="card-editor-header">
-          <h2>${this.isEditing ? '编辑卡片' : '添加新卡片'}</h2>
-          <button class="btn btn-close" onclick="app.goBack()">✕</button>
-        </div>
-
-        <div class="card-editor-content">
-          <form class="card-editor-form" onsubmit="app.handleCardSubmit(event, '${themeId}')">
-            
-            <!-- 实时预览区域 -->
-            <div class="card-preview-section">
-              <h3>卡片预览</h3>
-              <div class="preview-card-container">
-                <div class="preview-card ${this.app.state.styleTheme} " id="preview-card">
-                  <div class="card-face card-front">
-                    <div class="card-content" id="preview-front">
-                      ${card?.front?.main_text || '正面内容预览'}
-                    </div>
-                    <div class="card-notes" id="preview-front-notes">
-                        ${card?.front?.notes || '正面备注'}
-                    </div>
-                  </div>
-                  <div class="card-face card-back">
-                    <div class="card-content" id="preview-back">
-                      ${card?.back?.main_text || '背面内容预览'}
-                    </div>
-                    <div class="card-notes" id="preview-back-notes">
-                      ${card?.back?.notes || '背面备注'}       
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="preview-hint">预览卡片内容</div>
-            </div>
-
-            <!-- 编辑表单区域 -->
-            <div class="card-form-section">
-              <div class="form-group">
-                <label for="card-front">正面内容 *</label>
-                <textarea 
-                  id="card-front" 
-                  name="frontText" 
-                  placeholder="输入卡片正面的内容，比如问题、单词等..."
-                  required
-                  maxlength="500"
-                  rows="4"
-                  oninput="app.updateCardPreview('front', this.value)"
-                >${card?.front?.main_text || ''}</textarea>
-                <div class="form-hint">这是用户首先看到的内容</div>
-              </div>
-
-              <div class="form-group">
-                <label for="card-front-notes">正面备注</label>
-                <textarea 
-                  id="card-front-notes" 
-                  name="frontNotes" 
-                  placeholder="添加正面的助记信息、提示等..."
-                  maxlength="200"
-                  rows="2"
-                    oninput="app.updateCardPreview('front-notes', this.value)"
-                >${card?.front?.notes || ''}</textarea>
-                <div class="form-hint">可选，正面的助记信息或提示</div>
-              </div>
-
-              <div class="form-group">
-                <label for="card-back">背面内容 *</label>
-                <textarea 
-                  id="card-back" 
-                  name="backText" 
-                  placeholder="输入卡片背面的内容，比如答案、释义等..."
-                  required
-                  maxlength="500"
-                  rows="4"
-                  oninput="app.updateCardPreview('back', this.value)"
-                >${card?.back?.main_text || ''}</textarea>
-                <div class="form-hint">这是翻转后显示的内容</div>
-              </div>
-
-              <div class="form-group">
-                <label for="card-back-notes">背面备注</label>
-                <textarea 
-                  id="card-back-notes" 
-                  name="backNotes" 
-                  placeholder="添加例句、发音、用法说明等..."
-                  maxlength="200"
-                  rows="2"
-                    oninput="app.updateCardPreview('back-notes', this.value)"
-                >${card?.back?.notes || ''}</textarea>
-                <div class="form-hint">可选，例句、发音或用法说明</div>
-              </div>
-
-              <div class="form-actions">
-                <button type="button" class="btn btn-secondary" onclick="app.goBack()">
-                  取消
-                </button>
-                <button type="submit" class="btn btn-primary">
-                  ${this.isEditing ? '保存修改' : '添加卡片'}
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    `;
-  }
-}
 
 // 全局应用状态和配置
 class MilkaApp {
@@ -190,7 +14,11 @@ class MilkaApp {
     this.themesCollection = this.db.getCollection("themes");
     this.cardFacesCollection = this.db.getCollection("cardFaces");
     this.associationsCollection = this.db.getCollection("associations");
-    
+    // 组件实例
+this.themeEditor = new ThemeEditor(this);
+this.cardEditor = new CardEditor(this);
+this.settingsPage = new SettingsPage(this);
+this.sampleDataPrompt = new SampleDataPrompt(this);
     // 应用状态
     this.state = {
       currentTheme: null,
@@ -245,152 +73,225 @@ class MilkaApp {
   }
 
   // 应用初始化
-  async init() {
-    try {
-      console.log('🐱 喵卡应用初始化中...');
-      
-      // 显示加载状态
-      this.setLoading(true);
-      
-      // 清除之前的错误状态
-      this.state.initError = null;
-      
-      // 加载主题数据
-      await this.loadThemes();
-      
-      // 检查是否有预置数据，没有则创建示例数据
+ // 应用初始化
+async init() {
+  try {
+    console.log('🐱 喵卡应用初始化中...');
+    
+    // 显示加载状态
+    this.setLoading(true);
+    
+    // 清除之前的错误状态
+    this.state.initError = null;
+    
+    // 加载主题数据
+    await this.loadThemes();
+    
+    // 检查是否有数据，没有则询问用户是否创建示例数据
     if (this.state.themes.length === 0) {
-      console.log('🌱 创建示例数据...');
-      await initializeSampleData(this.db);
-      await this.loadThemes();
-    }
+      console.log('📊 数据库为空，询问用户是否创建示例数据');
       
-      // 标记初始化完成
-      this.state.isInitialized = true;
-      
-      // 隐藏加载状态
+      // 隐藏加载状态，显示询问界面
       this.setLoading(false);
-      
-      // 渲染应用界面
-      this.render();
-      
-      // 绑定事件监听器
-      this.bindEvents();
-      
-      // 应用主题
-      this.applyTheme();
-      
-      console.log('✅ 喵卡应用初始化完成');
-      
-    } catch (error) {
-      console.error('❌ 应用初始化失败:', error);
-      
-      // 设置错误状态，但不阻止应用运行
-      this.state.initError = error.message;
-      this.state.isInitialized = true; // 仍然标记为已初始化
-      
-      this.setLoading(false);
-      this.render(); // 渲染界面，显示错误但允许继续使用
-      
-      // 显示友好的错误提示，但不阻止功能
-      this.showNotification('初始化时遇到问题，但应用仍可正常使用', 'warning');
+      const appContainer = document.getElementById('app');
+        appContainer.innerHTML = this.sampleDataPrompt.render();
+      return; // 等待用户选择
     }
+    
+    // 标记初始化完成
+    this.state.isInitialized = true;
+    
+    // 隐藏加载状态
+    this.setLoading(false);
+    
+    // 渲染应用界面
+    this.render();
+    
+    // 绑定事件监听器
+    this.bindEvents();
+    
+    // 应用主题
+    this.applyTheme();
+    
+    console.log('✅ 喵卡应用初始化完成');
+    
+  } catch (error) {
+    console.error('❌ 应用初始化失败:', error);
+    
+    // 设置错误状态，但不阻止应用运行
+    this.state.initError = error.message;
+    this.state.isInitialized = true; // 仍然标记为已初始化
+    
+    this.setLoading(false);
+    this.render(); // 渲染界面，显示错误但允许继续使用
+    
+    // 显示友好的错误提示，但不阻止功能
+    this.showNotification('初始化时遇到问题，但应用仍可正常使用', 'warning');
   }
+  window.settingsPage = this.settingsPage;
+}
 
-  // 创建示例数据
-  async createSampleData() {
-    try {
-      console.log('🌱 开始创建示例数据...');
-      
-      // 创建示例主题
-      const sampleTheme = {
-        id: `theme_${Date.now()}_sample`,
-        title: '英语单词学习',
-        description: '常用英语单词记忆卡片，帮助提高词汇量',
-        cover_image_url: '',
-        style_config: {
-          theme: 'minimalist-white',
-          custom_styles: {}
-        },
-        is_official: true,
-        sort_order: 0,
-        is_pinned: false,
-        created_at: new Date().toISOString(),
-        updated_at: new Date().toISOString()
-      };
-      
-      await this.themesCollection.upsert(sampleTheme);
-      
-      // 创建示例卡片
-      const sampleCards = [
-        { 
-          front: 'Hello', 
-          back: '你好', 
-          frontNotes: '最常用的问候语',
-          backNotes: '发音：/həˈloʊ/'
-        },
-        { 
-          front: 'Thank you', 
-          back: '谢谢', 
-          frontNotes: '表达感谢',
-          backNotes: '例句：Thank you for your help.'
-        },
-        { 
-          front: 'Beautiful', 
-          back: '美丽的', 
-          frontNotes: '形容词，描述美好的事物',
-          backNotes: '例句：What a beautiful day!'
-        }
-      ];
-      
-      for (let i = 0; i < sampleCards.length; i++) {
-        const card = sampleCards[i];
-        const timestamp = Date.now() + i;
-        const randomId = Math.random().toString(36).substr(2, 9);
-        
-        // 创建卡面
-        const frontFace = {
-          id: `face_${timestamp}_front_${randomId}`,
-          main_text: card.front,
-          notes: card.frontNotes,
-          image_url: '',
-          keywords: [],
-          created_at: new Date().toISOString(),
-          updated_at: new Date().toISOString()
-        };
-        
-        const backFace = {
-          id: `face_${timestamp}_back_${randomId}`,
-          main_text: card.back,
-          notes: card.backNotes,
-          image_url: '',
-          keywords: [],
-          created_at: new Date().toISOString(),
-          updated_at: new Date().toISOString()
-        };
-        
-        await this.cardFacesCollection.upsert([frontFace, backFace]);
-        
-        // 创建关联
-        const association = {
-          id: `assoc_${timestamp}_${randomId}`,
-          theme_id: sampleTheme.id,
-          front_face_id: frontFace.id,
-          back_face_id: backFace.id,
-          sort_order: i,
-          created_at: new Date().toISOString()
-        };
-        
-        await this.associationsCollection.upsert(association);
+
+
+// 创建示例数据并启动应用
+async createSampleDataAndStart() {
+  try {
+    // 显示加载状态
+    this.setLoading(true, '正在创建示例数据...');
+    
+    // 创建示例数据
+    const { initializeSampleData } = await import('./utils/sampleData.js');
+    await initializeSampleData(this.db);
+    
+    // 重新加载主题数据
+    await this.loadThemes();
+    
+    // 完成初始化
+    await this.completeInitialization();
+    
+    this.showNotification('示例数据创建成功，欢迎使用喵卡！', 'success');
+    
+  } catch (error) {
+    console.error('❌ 创建示例数据失败:', error);
+    this.setLoading(false);
+    this.showNotification('创建示例数据失败: ' + error.message, 'error');
+  }
+}
+
+// 从空白数据开始
+async startWithEmptyData() {
+  try {
+    // 完成初始化
+    await this.completeInitialization();
+    
+    this.showNotification('应用已启动，您可以开始创建自己的主题和卡片', 'info');
+    
+  } catch (error) {
+    console.error('❌ 启动应用失败:', error);
+    this.showNotification('启动应用失败: ' + error.message, 'error');
+  }
+}
+
+// 完成应用初始化
+async completeInitialization() {
+  // 标记初始化完成
+  this.state.isInitialized = true;
+  
+  // 隐藏加载状态
+  this.setLoading(false);
+  
+  // 渲染应用界面
+  this.render();
+  
+  // 绑定事件监听器
+  this.bindEvents();
+  
+  // 应用主题
+  this.applyTheme();
+  
+  console.log('✅ 喵卡应用初始化完成');
+}
+
+// 修改设置页面的数据管理方法
+async clearAllData() {
+  try {
+    this.setLoading(true, '正在清空数据...');
+    
+    const { SampleDataGenerator } = await import('./utils/sampleData.js');
+    const generator = new SampleDataGenerator(this.db);
+    
+    await generator.clearAllData();
+    
+    // 重新加载主题数据
+    await this.loadThemes();
+    
+    this.setLoading(false);
+    this.showNotification('所有数据已清空', 'success');
+    
+    // 如果当前在设置页面，刷新统计数据
+    if (this.state.currentView === 'settings') {
+      await this.refreshStats();
+    }
+    
+  } catch (error) {
+    console.error('❌ 清空数据失败:', error);
+    this.setLoading(false);
+    this.showNotification('清空数据失败: ' + error.message, 'error');
+  }
+}
+
+async reinitializeData() {
+  try {
+    this.setLoading(true, '正在重新初始化数据...');
+    
+    const { SampleDataGenerator } = await import('./utils/sampleData.js');
+    const generator = new SampleDataGenerator(this.db);
+    
+    await generator.recreateSampleData();
+    
+    // 重新加载主题数据
+    await this.loadThemes();
+    
+    this.setLoading(false);
+    this.showNotification('数据重新初始化成功', 'success');
+    
+    // 如果当前在设置页面，刷新统计数据
+    if (this.state.currentView === 'settings') {
+      await this.refreshStats();
+    }
+    
+  } catch (error) {
+    console.error('❌ 重新初始化失败:', error);
+    this.setLoading(false);
+    this.showNotification('重新初始化失败: ' + error.message, 'error');
+  }
+}
+
+async createSampleData() {
+  try {
+    this.setLoading(true, '正在创建示例数据...');
+    
+    const { SampleDataGenerator } = await import('./utils/sampleData.js');
+    const generator = new SampleDataGenerator(this.db);
+    
+    await generator.createAllSampleData();
+    
+    // 重新加载主题数据
+    await this.loadThemes();
+    
+    this.setLoading(false);
+    this.showNotification('示例数据创建成功', 'success');
+    
+    // 如果当前在设置页面，刷新统计数据
+    if (this.state.currentView === 'settings') {
+      await this.refreshStats();
+    }
+    
+  } catch (error) {
+    console.error('❌ 创建示例数据失败:', error);
+    this.setLoading(false);
+    this.showNotification('创建示例数据失败: ' + error.message, 'error');
+  }
+}
+
+// 修改 setLoading 方法支持自定义消息
+setLoading(isLoading, message = '正在加载...') {
+  this.state.isLoading = isLoading;
+  
+  const loadingElement = document.getElementById('loading');
+  if (loadingElement) {
+    if (isLoading) {
+      // 更新加载消息
+      const messageElement = loadingElement.querySelector('p');
+      if (messageElement) {
+        messageElement.textContent = message;
       }
-      
-      console.log('✅ 示例数据创建完成');
-      
-    } catch (error) {
-      console.error('❌ 创建示例数据失败:', error);
-      throw error;
+      loadingElement.style.display = 'flex';
+    } else {
+      loadingElement.style.display = 'none';
     }
   }
+}
 
   // 设置加载状态的统一方法
   setLoading(isLoading) {
@@ -979,6 +880,7 @@ updateCardPreview(side, content) {
                 <span class="theme-name">${this.state.styleTheme === 'minimalist-white' ? '极简白' : '暗夜黑'}</span>
               </div>
             </button>
+            <button class="btn btn-secondary" onclick="app.navigateToSettings()">设置</button>
           </div>
         </header>
         <main class="app-main">
@@ -1012,7 +914,7 @@ updateCardPreview(side, content) {
       // 首页：只显示产品标题
       return `
         <h1>
-          <img src="./assets/logo.png" alt="喵卡" class="app-logo">
+          <img src="./assets/logo.png" alt="喵卡" class="app-logo" onclick="location.reload()">
           喵卡 Milka
         </h1>
       `;
@@ -1023,14 +925,14 @@ updateCardPreview(side, content) {
     switch (this.state.currentView) {
       case 'themes':
         return `<button class="btn btn-primary" onclick="app.showCreateThemeDialog()">+ 新建主题</button>
-        <button class="btn btn-secondary" onclick="app.navigateToSettings()">设置</button> `;
+         `;
       case 'theme-detail':
         return `
           <button class="btn btn-primary" onclick="app.showAddCardDialog()">+ 添加卡片</button>
           <button class="btn btn-secondary" onclick="app.toggleMode()">
             ${this.state.currentMode === 'list' ? '幻灯片模式' : '列表模式'}
           </button>
-          <button class="btn btn-secondary" onclick="app.navigateToSettings()">设置</button> 
+         
         `;
       default:
         return '';
@@ -1053,6 +955,8 @@ updateCardPreview(side, content) {
         return '<div class="error">未知视图</div>';
     }
   }
+
+  
 navigateToSettings() {
   this.state.currentView = 'settings';
   this.render();

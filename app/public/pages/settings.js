@@ -1,6 +1,5 @@
 // 设置页面 - 数据管理和系统配置
 import { SampleDataGenerator } from "../utils/sampleData.js";
-import { showNotification } from "../utils/helpers.js";
 
 export class SettingsPage {
   constructor(app) {
@@ -13,25 +12,20 @@ export class SettingsPage {
     return `
       <div class="settings-page">
         <div class="settings-container">
-          <div class="settings-header">
-            <h2>⚙️ 应用设置</h2>
-            <p class="settings-subtitle">数据管理和系统配置</p>
-          </div>
-
           <div class="settings-content">
             <!-- 数据管理区域 -->
             <div class="settings-section">
               <div class="section-header">
                 <h3>📊 数据管理</h3>
                 <p class="section-description">管理应用数据，包括重置、清空和备份操作</p>
+                <button class="btn btn-close-settings" onclick="location.reload()">✕</button>
               </div>
 
               <div class="settings-grid">
                 <!-- 重新初始化数据 -->
                 <div class="setting-card">
-                  <div class="card-icon">🔄</div>
                   <div class="card-content">
-                    <h4>重新初始化数据</h4>
+                    <h4>🔄 重新初始化数据</h4>
                     <p>清空所有数据并重新创建示例主题和卡片</p>
                     <button 
                       class="btn btn-warning" 
@@ -45,9 +39,8 @@ export class SettingsPage {
 
                 <!-- 清空所有数据 -->
                 <div class="setting-card">
-                  <div class="card-icon">🗑️</div>
                   <div class="card-content">
-                    <h4>清空所有数据</h4>
+                    <h4>🗑️ 清空所有数据</h4>
                     <p>删除所有主题、卡片和关联数据，不可恢复</p>
                     <button 
                       class="btn btn-danger" 
@@ -61,9 +54,8 @@ export class SettingsPage {
 
                 <!-- 创建示例数据 -->
                 <div class="setting-card">
-                  <div class="card-icon">🌱</div>
                   <div class="card-content">
-                    <h4>创建示例数据</h4>
+                    <h4>🌱 创建示例数据</h4>
                     <p>在现有数据基础上添加示例主题和卡片</p>
                     <button 
                       class="btn btn-secondary" 
@@ -77,9 +69,8 @@ export class SettingsPage {
 
                 <!-- 数据统计 -->
                 <div class="setting-card">
-                  <div class="card-icon">📈</div>
                   <div class="card-content">
-                    <h4>数据统计</h4>
+                    <h4>📈 数据统计</h4>
                     <div class="data-stats" id="data-stats">
                       <div class="stat-item">
                         <span class="stat-label">主题数量：</span>
@@ -115,9 +106,8 @@ export class SettingsPage {
               <div class="settings-grid">
                 <!-- 导出数据 -->
                 <div class="setting-card disabled">
-                  <div class="card-icon">📤</div>
                   <div class="card-content">
-                    <h4>导出数据</h4>
+                    <h4>📤 导出数据</h4>
                     <p>将所有数据导出为JSON文件</p>
                     <button class="btn btn-secondary" disabled>
                       即将推出
@@ -127,9 +117,8 @@ export class SettingsPage {
 
                 <!-- 导入数据 -->
                 <div class="setting-card disabled">
-                  <div class="card-icon">📥</div>
                   <div class="card-content">
-                    <h4>导入数据</h4>
+                    <h4>📥 导入数据</h4>
                     <p>从JSON文件导入数据</p>
                     <button class="btn btn-secondary" disabled>
                       即将推出
@@ -203,12 +192,12 @@ export class SettingsPage {
       </div>
 
       <style>
-        /* 设置页面样式 */
+        /* 设置页面样式 - 按要求修改 */
         .settings-page {
           max-width: 1000px;
           margin: 0 auto;
           padding: 2rem;
-          background: #f5f5f5;
+          /* 移除背景色，透出底色 */
           min-height: 100vh;
         }
 
@@ -219,25 +208,7 @@ export class SettingsPage {
           overflow: hidden;
         }
 
-        .settings-header {
-          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-          color: white;
-          padding: 2rem;
-          text-align: center;
-        }
-
-        .settings-header h2 {
-          font-size: 2rem;
-          font-weight: 300;
-          margin: 0 0 0.5rem 0;
-        }
-
-        .settings-subtitle {
-          font-size: 1rem;
-          opacity: 0.9;
-          margin: 0;
-          font-weight: 300;
-        }
+        /* 移除 settings-header 相关样式 */
 
         .settings-content {
           padding: 2rem;
@@ -255,6 +226,7 @@ export class SettingsPage {
           margin-bottom: 1.5rem;
           padding-bottom: 1rem;
           border-bottom: 1px solid #e9ecef;
+          position: relative; /* 为关闭按钮定位 */
         }
 
         .section-header h3 {
@@ -269,6 +241,30 @@ export class SettingsPage {
           font-size: 0.875rem;
           margin: 0;
           font-weight: 300;
+        }
+
+        /* 关闭按钮样式 */
+        .btn-close-settings {
+          position: absolute;
+          top: 0;
+          right: 0;
+          background: transparent;
+          color: #999;
+          border: none;
+          padding: 0.5rem;
+          border-radius: 50%;
+          width: 32px;
+          height: 32px;
+          font-size: 1.2rem;
+          font-weight: 300;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+
+        .btn-close-settings:hover {
+          background: #f8f9fa;
+          color: #666;
+          transform: scale(1.1);
         }
 
         .settings-grid {
@@ -295,17 +291,20 @@ export class SettingsPage {
           cursor: not-allowed;
         }
 
-        .card-icon {
-          font-size: 2rem;
-          margin-bottom: 1rem;
-          display: block;
-        }
-
+        /* 修改后的标题样式 - 图标直接在标题中，缩小尺寸 */
         .card-content h4 {
           font-size: 1.125rem;
           font-weight: 400;
           color: #333;
           margin: 0 0 0.5rem 0;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem; /* 图标和文字间距 */
+        }
+
+        /* 确保emoji图标大小适中 */
+        .card-content h4::first-letter {
+          font-size: 1rem; /* 缩小图标尺寸 */
         }
 
         .card-content p {
@@ -551,6 +550,10 @@ export class SettingsPage {
             grid-template-columns: 1fr;
           }
 
+          .section-header {
+            padding-right: 3rem; /* 为关闭按钮留出空间 */
+          }
+
           .dialog-content {
             margin: 1rem;
           }
@@ -624,15 +627,15 @@ export class SettingsPage {
       switch (action) {
         case 'reinitialize':
           await this.sampleDataGenerator.recreateSampleData();
-          showNotification('数据重新初始化成功', 'success');
+          this.showNotification('数据重新初始化成功', 'success');
           break;
         case 'clear':
           await this.sampleDataGenerator.clearAllData();
-          showNotification('所有数据已清空', 'success');
+          this.showNotification('所有数据已清空', 'success');
           break;
         case 'sample':
           await this.sampleDataGenerator.createAllSampleData();
-          showNotification('示例数据创建成功', 'success');
+          this.showNotification('示例数据创建成功', 'success');
           break;
       }
 
@@ -646,7 +649,7 @@ export class SettingsPage {
 
     } catch (error) {
       console.error('操作失败:', error);
-      showNotification('操作失败: ' + error.message, 'error');
+      this.showNotification('操作失败: ' + error.message, 'error');
     } finally {
       this.hideProcessing();
     }
@@ -708,7 +711,25 @@ export class SettingsPage {
     const timeString = now.toLocaleString('zh-CN');
     document.getElementById('last-update').textContent = timeString;
   }
+
+  // 显示通知
+  showNotification(message, type = 'info') {
+    // 简单的通知实现
+    console.log(`${type.toUpperCase()}: ${message}`);
+    
+    // 如果主应用有通知方法，使用主应用的
+    if (this.app.showNotification) {
+      this.app.showNotification(message, type);
+    }
+  }
 }
 
 // 创建全局实例
 window.settingsPage = null;
+
+// 当页面加载时初始化设置页面实例
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.app) {
+    window.settingsPage = new SettingsPage(window.app);
+  }
+});

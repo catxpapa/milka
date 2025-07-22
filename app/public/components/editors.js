@@ -1,3 +1,5 @@
+// 编辑器组件集合 - 主题编辑器、卡片编辑器等
+
 // 主题编辑器组件
 export class ThemeEditor {
   constructor(app) {
@@ -42,26 +44,6 @@ export class ThemeEditor {
               rows="3"
             >${theme?.description || ''}</textarea>
             <div class="form-hint">可选，帮助您记住这个主题的用途</div>
-          </div>
-
-          <div class="form-group">
-            <label>界面风格</label>
-            <div class="style-selector">
-              <div class="style-option ${(!theme || theme.style_config?.theme === 'minimalist-white') ? 'selected' : ''}" 
-                   onclick="app.selectThemeStyle('minimalist-white')">
-                <div class="style-preview minimalist-white">
-                  <div class="preview-card">Aa</div>
-                </div>
-                <span>极简白</span>
-              </div>
-              <div class="style-option ${(theme?.style_config?.theme === 'night-black') ? 'selected' : ''}" 
-                   onclick="app.selectThemeStyle('night-black')">
-                <div class="style-preview night-black">
-                  <div class="preview-card">Aa</div>
-                </div>
-                <span>暗夜黑</span>
-              </div>
-            </div>
           </div>
 
           <div class="form-actions">
