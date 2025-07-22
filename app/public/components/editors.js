@@ -104,15 +104,21 @@ export class CardEditor {
             <div class="card-preview-section">
               <h3>卡片预览</h3>
               <div class="preview-card-container">
-                <div class="preview-card ${this.app.state.styleTheme}" id="preview-card" onclick="app.flipPreviewCard()">
+                <div class="preview-card card ${this.app.state.styleTheme}" id="preview-card" onclick="app.flipPreviewCard()">
                   <div class="card-face card-front">
                     <div class="card-content" id="preview-front">
                       ${card?.front?.main_text || '正面内容预览'}
+                    </div>
+                    <div class="card-notes" id="preview-front-notes">
+                      ${card?.front?.notes || '正面备注'}
                     </div>
                   </div>
                   <div class="card-face card-back">
                     <div class="card-content" id="preview-back">
                       ${card?.back?.main_text || '背面内容预览'}
+                    </div>
+                    <div class="card-notes" id="preview-back-notes">
+                      ${card?.back?.notes || '背面备注'}
                     </div>
                   </div>
                 </div>
@@ -130,10 +136,23 @@ export class CardEditor {
                   placeholder="输入卡片正面的内容，比如问题、单词等..."
                   required
                   maxlength="500"
-                  rows="4"
+                  rows="3"
                   oninput="app.updateCardPreview('front', this.value)"
                 >${card?.front?.main_text || ''}</textarea>
                 <div class="form-hint">这是用户首先看到的内容</div>
+              </div>
+
+              <div class="form-group">
+                <label for="card-front-notes">正面备注</label>
+                <textarea 
+                  id="card-front-notes" 
+                  name="frontNotes" 
+                  placeholder="添加助记信息、提示等..."
+                  maxlength="200"
+                  rows="2"
+                  oninput="app.updateCardPreview('front-notes', this.value)"
+                >${card?.front?.notes || ''}</textarea>
+                <div class="form-hint">可选，帮助记忆的额外信息</div>
               </div>
 
               <div class="form-group">
@@ -144,22 +163,23 @@ export class CardEditor {
                   placeholder="输入卡片背面的内容，比如答案、释义等..."
                   required
                   maxlength="500"
-                  rows="4"
+                  rows="3"
                   oninput="app.updateCardPreview('back', this.value)"
                 >${card?.back?.main_text || ''}</textarea>
                 <div class="form-hint">这是翻转后显示的内容</div>
               </div>
 
               <div class="form-group">
-                <label for="card-notes">备注说明</label>
+                <label for="card-back-notes">背面备注</label>
                 <textarea 
-                  id="card-notes" 
-                  name="notes" 
-                  placeholder="添加一些备注或记忆技巧..."
+                  id="card-back-notes" 
+                  name="backNotes" 
+                  placeholder="添加例句、发音、用法等..."
                   maxlength="200"
                   rows="2"
-                >${card?.front?.notes || ''}</textarea>
-                <div class="form-hint">可选，帮助记忆的额外信息</div>
+                  oninput="app.updateCardPreview('back-notes', this.value)"
+                >${card?.back?.notes || ''}</textarea>
+                <div class="form-hint">可选，补充说明信息</div>
               </div>
 
               <div class="form-actions">

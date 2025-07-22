@@ -24,30 +24,35 @@ html, body {
 
 /* ===== 主题变量定义 ===== */
 .milka-app {
-  --primary-color: #667eea;
-  --secondary-color: #764ba2;
+  --primary-color: #333639;
+  --secondary-color: #3a3e39;
   --success-color: #28a745;
   --warning-color: #ffc107;
   --error-color: #dc3545;
   --text-primary: #333;
   --text-secondary: #666;
   --text-muted: #999;
+  --back-text-primary: #000000;
+  --back-text-secondary: #444444;
+  --back-text-muted: #727272;
   --bg-primary: #ffffff;
-  --bg-secondary: #f8f9fa;
-  --border-color: #dee2e6;
+  --bg-secondary: #f0f3f6;
+  --bg-back-primary: #ffffff;
+  --bg-back-secondary: #e0ded3;
+  --border-color: #e4e2d6;
   --shadow-light: 0 2px 10px rgba(0, 0, 0, 0.1);
   --shadow-medium: 0 4px 20px rgba(0, 0, 0, 0.15);
   --shadow-heavy: 0 8px 30px rgba(0, 0, 0, 0.2);
   --border-radius: 12px;
-  --transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
-  background: #f5f5f5; /* 统一浅灰色背景 */
+  --transition: all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+  background: #f3f3f3; /* 统一浅灰色背景 */
   min-height: 100vh;
   font-weight: 300; /* 细体字体 */
 }
 
 /* 极简白主题 */
 .milka-app.theme-minimalist-white {
-  background: #f5f5f5; /* 统一浅灰色背景 */
+  background: #f3f3f3; /* 统一浅灰色背景 */
   color: var(--text-primary);
 }
 
@@ -56,10 +61,16 @@ html, body {
   --text-primary: #ffffff;
   --text-secondary: #cccccc;
   --text-muted: #999999;
-  --bg-primary: rgba(255, 255, 255, 0.1);
-  --bg-secondary: rgba(255, 255, 255, 0.05);
-  --border-color: rgba(255, 255, 255, 0.2);
-  background: #2c2c2c; /* 暗色统一背景 */
+  --bg-primary: #232629;
+  --bg-secondary: #202326;
+  --back-text-primary:#ffffff;
+  --back-text-secondary: #666666;
+  --back-text-muted: #999;
+  --bg-back-primary: #2a2a2c;
+  --bg-back-secondary: #232629;
+
+  --border-color: #292a2f;
+  background: #191a1f; /* 暗色统一背景 */
   color: var(--text-primary);
 }
 
@@ -142,7 +153,7 @@ html, body {
 
 .btn-primary {
   background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-  color: white;
+  color: #fff;
   font-weight: 300; /* 细体 */
 }
 
@@ -150,6 +161,7 @@ html, body {
   background: var(--bg-primary);
   color: var(--text-primary);
   border: 1px solid var(--border-color);
+  box-sizing: border-box;
   font-weight: 300; /* 细体 */
 }
 
@@ -222,6 +234,7 @@ html, body {
 
 .error-content {
   display: flex;
+  flex-direction: column;
   align-items: center;
   padding: 1rem 1.5rem;
   gap: 1rem;
@@ -345,13 +358,16 @@ html, body {
 
 .theme-icon {
   font-size: 1rem;
-  border: 2px dashed currentColor;
+  border: 5px dashed currentColor;
   border-radius: 50%;
   width: 20px;
   height: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.theme-night-black .theme-icon {
+  border: 6px dotted currentColor;
 }
 
 .theme-name {
@@ -460,7 +476,7 @@ html, body {
   gap: 0.5rem;
 }
 
-.theme-icon {
+/* .theme-icon {
   font-size: 14px;
   font-weight: 300;
   border: 1px dashed currentColor;
@@ -470,7 +486,7 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
 .theme-name {
   font-size: 0.75rem;

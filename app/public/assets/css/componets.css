@@ -6,16 +6,17 @@
   width: 100%;
   height: 200px;
   transform-style: preserve-3d;
+  transform: rotateY(0deg);
   transition: transform 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
   cursor: pointer;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-light);
-  perspective: 1000px; /* 添加透视效果 */
+  perspective: 100px; /* 添加透视效果 */
 }
 
 /* 卡片翻转状态 - 修复翻转方向 */
 .card.flipped {
-  transform: rotateY(180deg);
+  transform: rotateY(180deg)!important; /* 确保翻转效果 */
 }
 
 /* 卡片面基础样式 - 修复背面显示问题 */
@@ -30,7 +31,7 @@
   justify-content: center;
   padding: 20px;
   box-sizing: border-box;
-  background: var(--bg-primary);
+  /* background: var(--bg-primary); */
   border: 1px solid var(--border-color);
   overflow: hidden;
   -webkit-backface-visibility: hidden; /* Safari兼容 */
@@ -40,15 +41,16 @@
 .card-front {
   z-index: 2;
   transform: rotateY(0deg); /* 确保正面朝前 */
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: linear-gradient(135deg,var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  color: var(--text-primary)
 }
 
 /* 背面样式 - 修复：确保背面正确翻转 */
 .card-back {
   transform: rotateY(180deg); /* 背面预先翻转180度 */
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  color: white;
+  transform-style: preserve-3d;
+  background: linear-gradient(135deg, var(--bg-back-secondary) 0%, var(--bg-back-primary) 100%);
+  color: var(--back-text-primary);
 }
 
 /* 卡片内容样式 */
@@ -80,28 +82,28 @@
 
 /* 极简白主题卡片样式 */
 .theme-minimalist-white .card-front {
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  color: #333;
-  border: 2px solid #dee2e6;
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  color: var(--text-primary);
+  border: 2px solid --border-color;
 }
 
 .theme-minimalist-white .card-back {
-  background: linear-gradient(135deg, #ffffff 0%, #f1f3f4 100%);
-  color: #333;
-  border: 2px solid #dee2e6;
+  background: linear-gradient(135deg,var(--bg-back-primary) 0%, var(--bg-back-secondary) 100%);
+  color: var(--back-text-primary);
+  border: 2px solid --border-color;
 }
 
 /* 暗夜黑主题卡片样式 */
 .theme-night-black .card-front {
-  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-  color: #ecf0f1;
-  border: 2px solid #34495e;
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  color: var(--text-primary);
+  border: 2px solid #--border-color;
 }
 
 .theme-night-black .card-back {
-  background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
-  color: #ecf0f1;
-  border: 2px solid #34495e;
+  background: linear-gradient(135deg,var(--bg-back-primary) 0%, var(--bg-back-secondary) 100%);
+  color: var(--back-text-primary);
+  border: 2px solid --border-color;
 }
 
 /* ===== 主题列表样式 ===== */
@@ -120,6 +122,7 @@
 .theme-card {
   background: var(--bg-primary);
   border: 1px solid var(--border-color);
+  min-height: 200px;
   border-radius: var(--border-radius);
   padding: 1.5rem;
   cursor: pointer;
@@ -195,6 +198,7 @@
 .card-item {
   position: relative;
   width: 100%;
+  perspective: 800px;
 }
 
 /* 移除卡片编号显示 */
@@ -234,7 +238,16 @@
   display: flex;
   gap: 0.5rem;
 }
-
+.slideshow-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  height: 300px; /* 确保幻灯片卡片有固定高度 */
+  overflow: visible;
+  perspective: 800px;
+}
 .slideshow-card {
   width: 100%;
   max-width: 500px;
@@ -700,7 +713,7 @@
   transform: rotate(-2deg) translateY(-3px) translateX(-1px);
   z-index: 1;
   box-shadow: var(--shadow-light);
-  opacity: 0.8;
+  /* opacity: 0.8; */
 }
 
 /* 第二个伪元素 - 向下旋转的卡片 */
@@ -717,7 +730,7 @@
   transform: rotate(1.5deg) translateY(-6px) translateX(1px);
   z-index: 2;
   box-shadow: var(--shadow-light);
-  opacity: 0.9;
+  /* opacity: 0.9; */
 }
 
 /* 悬停效果优化 */
@@ -729,12 +742,12 @@
 
 .theme-card:hover::before {
   transform: rotate(-2.5deg) translateY(-5px) translateX(-2px);
-  opacity: 0.7;
+  /* opacity: 0.7; */
 }
 
 .theme-card:hover::after {
   transform: rotate(2deg) translateY(-8px) translateX(2px);
-  opacity: 0.8;
+  /* opacity: 0.8; */
 }
 
 /* 暗夜黑主题适配 */
@@ -749,4 +762,205 @@
 .theme-card-body {
   position: relative;
   z-index: 4;
+}
+
+/* ===== 卡片备注样式 ===== */
+.card-content {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.5;
+  word-wrap: break-word;
+  word-break: break-word;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  gap: 8px;
+}
+
+.card-main-text {
+  font-size: 24px;
+  font-weight: 400;
+  flex-shrink: 0;
+}
+
+.card-notes {
+  font-size: 12px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.3;
+  margin-top: 8px;
+  padding: 6px 8px;
+  /* background: rgba(0, 0, 0, 0.1); */
+  border-radius: 6px;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+/* 极简白主题卡片备注样式 */
+.theme-minimalist-white .card-notes {
+  color: rgba(51, 51, 51, 0.7);
+  /* background: rgba(0, 0, 0, 0.05); */
+}
+
+/* 幻灯片模式卡片样式调整 */
+.slideshow-card .card-content {
+  padding: 25px;
+  gap: 12px;
+}
+
+.slideshow-card .card-main-text {
+  font-size: 24px;
+}
+
+.slideshow-card .card-notes {
+  font-size: 14px;
+  padding: 8px 12px;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .card-content {
+    padding: 12px;
+    gap: 6px;
+  }
+  
+  .card-main-text {
+    font-size: 16px;
+  }
+  
+  .card-notes {
+    font-size: 11px;
+    padding: 4px 6px;
+  }
+  
+  .slideshow-card .card-main-text {
+    font-size: 20px;
+  }
+  
+  .slideshow-card .card-notes {
+    font-size: 12px;
+  }
+}
+
+/* ===== 卡片备注显示样式 ===== */
+.card-notes {
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  /* background: var(--bg-secondary); */
+  border-radius: 8px;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.note-item {
+  margin-bottom: 0.5rem;
+}
+
+.note-item:last-child {
+  margin-bottom: 0;
+}
+
+.note-item strong {
+  color: var(--text-primary);
+  font-weight: 400;
+}
+
+/* 幻灯片模式备注样式 */
+.slideshow-notes {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slideshow-notes .note-item {
+  margin-bottom: 0.75rem;
+}
+
+.slideshow-notes .note-item:last-child {
+  margin-bottom: 0;
+}
+
+/* 暗夜黑主题适配 */
+.theme-night-black .card-notes,
+.theme-night-black .slideshow-notes {
+  /* background: var(--bg-secondary); */
+  color: var(--text-secondary);
+}
+
+.theme-night-black .note-item strong {
+  color: var(--text-primary);
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .card-notes {
+    padding: 0.5rem;
+    font-size: 0.7rem;
+  }
+  
+  .slideshow-notes {
+    padding: 0.75rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* ===== 卡片备注样式 ===== */
+.card-notes {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
+  /* background: rgba(0, 0, 0, 0.2); */
+  padding: 4px 8px;
+  border-radius: 4px;
+  line-height: 1.2;
+  max-height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* 极简白主题卡片备注 */
+.theme-minimalist-white .card-notes {
+  color: rgba(51, 51, 51, 0.8);
+  /* background: rgba(255, 255, 255, 0.8); */
+}
+
+/* 暗夜黑主题卡片备注 */
+.theme-night-black .card-notes {
+  color: rgba(255, 255, 255, 0.9);
+  /* background: rgba(0, 0, 0, 0.3); */
+}
+
+/* 预览卡片中的备注样式 */
+.preview-card .card-notes {
+  font-size: 0.7rem;
+  max-height: 30px;
+  -webkit-line-clamp: 1;
+}
+
+/* 幻灯片模式中的备注样式 */
+.slideshow-card .card-notes {
+  font-size: 0.8rem;
+  max-height: 50px;
+  -webkit-line-clamp: 2;
 }

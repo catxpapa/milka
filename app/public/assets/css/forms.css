@@ -37,7 +37,7 @@
 /* 确保卡片编辑器内容区域布局稳定 */
 .card-editor-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 2rem;
   padding: 2rem;
   align-items: start; /* 确保两列顶部对齐 */
@@ -62,15 +62,23 @@
 .preview-card-container {
   display: flex;
   justify-content: center;
+  flex-direction: row;
+    flex-wrap: wrap; /* 允许换行 */
   align-items: center;
   min-height: 250px;
-  max-height: 300px; /* 添加最大高度限制 */
+  /* max-height: 300px; 添加最大高度限制 */
   overflow: hidden; /* 防止溢出 */
   position: relative; /* 确保定位上下文 */
 }
 
 .preview-card {
-  width: 250px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+  width: 100%;
+  gap: 1rem;
   height: 180px;
   position: relative; /* 改为相对定位，避免绝对定位导致的溢出 */
   flex-shrink: 0; /* 防止被压缩 */
@@ -78,10 +86,30 @@
 
 /* 确保预览卡片的卡面不会溢出 */
 .preview-card .card-face {
-  position: absolute;
-  width: 100%;
+  position: relative;
+  width: auto;
   height: 100%;
-  max-width: 250px; /* 明确限制最大宽度 */
+min-width: 250px; /* 确保卡片有最小宽度 */
+  max-height: 180px; /* 明确限制最大高度 */
+  backface-visibility: hidden;
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px; /* 稍微减少内边距 */
+  box-sizing: border-box;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.preview-card .card-back {
+    transform: rotateY(0);
+min-width: 250px; /* 确保卡片有最小宽度 */
+  position: relative;
+  width:auto;
+  height: 100%;
+
   max-height: 180px; /* 明确限制最大高度 */
   backface-visibility: hidden;
   border-radius: var(--border-radius);
@@ -103,10 +131,7 @@
   min-height: 250px;
 }
 
-.preview-card {
-  width: 250px;
-  height: 180px;
-}
+
 
 .preview-hint {
   text-align: center;

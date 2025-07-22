@@ -1,6 +1,7 @@
 // 喵卡应用前端主逻辑 - 基于MiniDB和React组件化设计
 import { MiniDB } from "@lazycatcloud/minidb";
-
+import { initializeSampleData } from "./utils/sampleData.js";
+import { SettingsPage } from "./pages/settings.js";
 // 主题编辑器组件
 class ThemeEditor {
   constructor(app) {
@@ -47,26 +48,6 @@ class ThemeEditor {
             <div class="form-hint">可选，帮助您记住这个主题的用途</div>
           </div>
 
-          <div class="form-group">
-            <label>界面风格</label>
-            <div class="style-selector">
-              <div class="style-option ${(!theme || theme.style_config?.theme === 'minimalist-white') ? 'selected' : ''}" 
-                   onclick="app.selectThemeStyle('minimalist-white')">
-                <div class="style-preview minimalist-white">
-                  <div class="preview-card">Aa</div>
-                </div>
-                <span>极简白</span>
-              </div>
-              <div class="style-option ${(theme?.style_config?.theme === 'night-black') ? 'selected' : ''}" 
-                   onclick="app.selectThemeStyle('night-black')">
-                <div class="style-preview night-black">
-                  <div class="preview-card">Aa</div>
-                </div>
-                <span>暗夜黑</span>
-              </div>
-            </div>
-          </div>
-
           <div class="form-actions">
             <button type="button" class="btn btn-secondary" onclick="app.goBack()">
               取消
@@ -107,20 +88,26 @@ class CardEditor {
             <div class="card-preview-section">
               <h3>卡片预览</h3>
               <div class="preview-card-container">
-                <div class="preview-card ${this.app.state.styleTheme}" id="preview-card" onclick="app.flipPreviewCard()">
+                <div class="preview-card ${this.app.state.styleTheme} " id="preview-card">
                   <div class="card-face card-front">
                     <div class="card-content" id="preview-front">
                       ${card?.front?.main_text || '正面内容预览'}
+                    </div>
+                    <div class="card-notes" id="preview-front-notes">
+                        ${card?.front?.notes || '正面备注'}
                     </div>
                   </div>
                   <div class="card-face card-back">
                     <div class="card-content" id="preview-back">
                       ${card?.back?.main_text || '背面内容预览'}
                     </div>
+                    <div class="card-notes" id="preview-back-notes">
+                      ${card?.back?.notes || '背面备注'}       
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="preview-hint">点击卡片可以预览翻转效果</div>
+              <div class="preview-hint">预览卡片内容</div>
             </div>
 
             <!-- 编辑表单区域 -->
@@ -140,6 +127,19 @@ class CardEditor {
               </div>
 
               <div class="form-group">
+                <label for="card-front-notes">正面备注</label>
+                <textarea 
+                  id="card-front-notes" 
+                  name="frontNotes" 
+                  placeholder="添加正面的助记信息、提示等..."
+                  maxlength="200"
+                  rows="2"
+                    oninput="app.updateCardPreview('front-notes', this.value)"
+                >${card?.front?.notes || ''}</textarea>
+                <div class="form-hint">可选，正面的助记信息或提示</div>
+              </div>
+
+              <div class="form-group">
                 <label for="card-back">背面内容 *</label>
                 <textarea 
                   id="card-back" 
@@ -154,15 +154,16 @@ class CardEditor {
               </div>
 
               <div class="form-group">
-                <label for="card-notes">备注说明</label>
+                <label for="card-back-notes">背面备注</label>
                 <textarea 
-                  id="card-notes" 
-                  name="notes" 
-                  placeholder="添加一些备注或记忆技巧..."
+                  id="card-back-notes" 
+                  name="backNotes" 
+                  placeholder="添加例句、发音、用法说明等..."
                   maxlength="200"
                   rows="2"
-                >${card?.front?.notes || ''}</textarea>
-                <div class="form-hint">可选，帮助记忆的额外信息</div>
+                    oninput="app.updateCardPreview('back-notes', this.value)"
+                >${card?.back?.notes || ''}</textarea>
+                <div class="form-hint">可选，例句、发音或用法说明</div>
               </div>
 
               <div class="form-actions">
@@ -210,6 +211,7 @@ class MilkaApp {
     // 组件实例
     this.themeEditor = new ThemeEditor(this);
     this.cardEditor = new CardEditor(this);
+    this.settingsPage = new SettingsPage(this);
     
     // 绑定方法上下文
     this.bindMethods();
@@ -257,11 +259,11 @@ class MilkaApp {
       await this.loadThemes();
       
       // 检查是否有预置数据，没有则创建示例数据
-      if (this.state.themes.length === 0) {
-        console.log('🌱 创建示例数据...');
-        await this.createSampleData();
-        await this.loadThemes();
-      }
+    if (this.state.themes.length === 0) {
+      console.log('🌱 创建示例数据...');
+      await initializeSampleData(this.db);
+      await this.loadThemes();
+    }
       
       // 标记初始化完成
       this.state.isInitialized = true;
@@ -321,9 +323,24 @@ class MilkaApp {
       
       // 创建示例卡片
       const sampleCards = [
-        { front: 'Hello', back: '你好', notes: '最常用的问候语' },
-        { front: 'Thank you', back: '谢谢', notes: '表达感谢' },
-        { front: 'Beautiful', back: '美丽的', notes: '形容词，描述美好的事物' }
+        { 
+          front: 'Hello', 
+          back: '你好', 
+          frontNotes: '最常用的问候语',
+          backNotes: '发音：/həˈloʊ/'
+        },
+        { 
+          front: 'Thank you', 
+          back: '谢谢', 
+          frontNotes: '表达感谢',
+          backNotes: '例句：Thank you for your help.'
+        },
+        { 
+          front: 'Beautiful', 
+          back: '美丽的', 
+          frontNotes: '形容词，描述美好的事物',
+          backNotes: '例句：What a beautiful day!'
+        }
       ];
       
       for (let i = 0; i < sampleCards.length; i++) {
@@ -335,7 +352,7 @@ class MilkaApp {
         const frontFace = {
           id: `face_${timestamp}_front_${randomId}`,
           main_text: card.front,
-          notes: card.notes,
+          notes: card.frontNotes,
           image_url: '',
           keywords: [],
           created_at: new Date().toISOString(),
@@ -345,7 +362,7 @@ class MilkaApp {
         const backFace = {
           id: `face_${timestamp}_back_${randomId}`,
           main_text: card.back,
-          notes: '',
+          notes: card.backNotes,
           image_url: '',
           keywords: [],
           created_at: new Date().toISOString(),
@@ -505,7 +522,7 @@ class MilkaApp {
   // 显示创建主题对话框
   showCreateThemeDialog() {
     this.state.currentView = 'theme-editor';
-    this.state.selectedThemeStyle = 'minimalist-white';
+    this.state.selectedThemeStyle = this.state.styleTheme; // 使用当前全局主题
     this.render();
   }
 
@@ -545,7 +562,7 @@ class MilkaApp {
       const themeData = {
         title: formData.get('title'),
         description: formData.get('description'),
-        styleTheme: this.state.selectedThemeStyle
+        styleTheme: this.state.styleTheme // 使用当前全局主题
       };
       
       await this.createTheme(themeData);
@@ -557,26 +574,28 @@ class MilkaApp {
   }
 
   // 处理卡片表单提交
-  async handleCardSubmit(event, themeId) {
-    event.preventDefault();
+async handleCardSubmit(event, themeId) {
+  event.preventDefault();
+  
+  try {
+    const formData = new FormData(event.target);
+    const frontText = formData.get('frontText');
+    const backText = formData.get('backText');
+    const frontNotes = formData.get('frontNotes');
+    const backNotes = formData.get('backNotes');
     
-    try {
-      const formData = new FormData(event.target);
-      const frontText = formData.get('frontText');
-      const backText = formData.get('backText');
-      const notes = formData.get('notes');
-      
-      await this.addCard(themeId, frontText, backText, notes);
-      
-      // 返回主题详情页
-      this.state.currentView = 'theme-detail';
-      this.render();
-      
-    } catch (error) {
-      console.error('❌ 卡片提交失败:', error);
-      this.showNotification('添加卡片失败: ' + error.message, 'error');
-    }
+    await this.addCard(themeId, frontText, backText, frontNotes, backNotes);
+    
+    // 返回主题详情页
+    this.state.currentView = 'theme-detail';
+    this.render();
+    
+  } catch (error) {
+    console.error('❌ 卡片提交失败:', error);
+    this.showNotification('添加卡片失败: ' + error.message, 'error');
   }
+}
+
 
   // 创建新主题
   async createTheme(themeData) {
@@ -630,7 +649,7 @@ class MilkaApp {
   }
 
   // 添加卡片到主题
-  async addCard(themeId, frontText, backText, notes = '') {
+  async addCard(themeId, frontText, backText, frontNotes = '', backNotes = '') {
     try {
       console.log(`🃏 开始添加卡片到主题 ${themeId}...`);
       
@@ -644,7 +663,7 @@ class MilkaApp {
       const frontFace = {
         id: `face_${timestamp}_front_${randomId}`,
         main_text: frontText,
-        notes: notes,
+        notes: frontNotes,
         image_url: '',
         keywords: [],
         created_at: new Date().toISOString(),
@@ -655,7 +674,7 @@ class MilkaApp {
       const backFace = {
         id: `face_${timestamp}_back_${randomId}`,
         main_text: backText,
-        notes: '',
+        notes: backNotes,
         image_url: '',
         keywords: [],
         created_at: new Date().toISOString(),
@@ -700,42 +719,86 @@ class MilkaApp {
     }
   }
 
+    resetFlipState() {
+        try{
+            document.querySelector('.flipped').classList.remove('flipped');
+        }catch(e){
+            console.log('没有卡片被翻转')
+        }
+    }
   // 翻转卡片
   flipCard(cardIndex) {
-    if (cardIndex >= 0 && cardIndex < this.state.currentCards.length) {
-      this.state.currentCards[cardIndex].isFlipped = !this.state.currentCards[cardIndex].isFlipped;
-      
-      // 更新DOM中的卡片状态
-      const cardElement = document.querySelector(`[data-card-index="${cardIndex}"]`);
-      if (cardElement) {
-        const cardInner = cardElement.querySelector('.card');
-        if (this.state.currentCards[cardIndex].isFlipped) {
-          cardInner.classList.add('flipped');
-        } else {
-          cardInner.classList.remove('flipped');
+
+
+    const cardElement = document.querySelector(`[data-card-index="${cardIndex}"]`);
+    const cardInner = cardElement.querySelector('.card');
+    console.log(cardInner,cardInner.classList.contains('flipped'));
+
+        if ( cardInner.classList.contains('flipped')) {
+            this.resetFlipState();
+            // cardInner.classList.remove('flipped');
+          } else {
+            this.resetFlipState();
+            cardInner.classList.add('flipped');
+          }
+           console.log(cardInner.classList.contains('flipped'));
+          return;
+ 
+      // 列表模式下允许翻转
+      if (cardIndex >= 0 && cardIndex < this.state.currentCards.length) {
+        // this.state.currentCards[cardIndex].isFlipped = !this.state.currentCards[cardIndex].isFlipped;
+        
+        // 更新DOM中的卡片状态
+        const cardElement = document.querySelector(`[data-card-index="${cardIndex}"]`);
+        if (cardElement) {
+          const cardInner = cardElement.querySelector('.card');
+        //   if (this.state.currentCards[cardIndex].isFlipped) {
+          if ( cardInner.classList.contains('flipped')) {
+            cardInner.classList.remove('flipped');
+          } else {
+            cardInner.classList.add('flipped');
+          }
+        console.log(cardInner.classList.contains('flipped'))
+        
+        // 播放翻转音效（可选）
+        this.playFlipSound();
+
         }
       }
-      
-      // 播放翻转音效（可选）
-      this.playFlipSound();
-    }
+    
   }
 
-  // 预览卡片翻转
+  // 预览卡片翻转 - 移除此功能
   flipPreviewCard() {
-    const previewCard = document.getElementById('preview-card');
-    if (previewCard) {
-      previewCard.classList.toggle('flipped');
-    }
+    // 移除预览卡片翻转功能
+    console.log('预览卡片不支持翻转');
   }
 
-  // 更新卡片预览内容
-  updateCardPreview(side, content) {
-    const previewElement = document.getElementById(`preview-${side}`);
+// 更新卡片预览内容
+updateCardPreview(side, content) {
+  if (side === 'front') {
+    const previewElement = document.getElementById('preview-front');
     if (previewElement) {
-      previewElement.textContent = content || `${side === 'front' ? '正面' : '背面'}内容预览`;
+      previewElement.textContent = content || '正面内容预览';
+    }
+  } else if (side === 'back') {
+    const previewElement = document.getElementById('preview-back');
+    if (previewElement) {
+      previewElement.textContent = content || '背面内容预览';
+    }
+  } else if (side === 'front-notes') {
+    const previewElement = document.getElementById('preview-front-notes');
+    if (previewElement) {
+      previewElement.textContent = content || '正面备注';
+    }
+  } else if (side === 'back-notes') {
+    const previewElement = document.getElementById('preview-back-notes');
+    if (previewElement) {
+      previewElement.textContent = content || '背面备注';
     }
   }
+}
+
 
   // 播放翻转音效（可选功能）
   playFlipSound() {
@@ -765,9 +828,12 @@ class MilkaApp {
 
   // 切换模式
   toggleMode() {
+
     this.state.currentMode = this.state.currentMode === 'list' ? 'slideshow' : 'list';
     this.state.currentCardIndex = 0;
     this.render();
+    
+   
   }
 
   // 切换主题
@@ -800,12 +866,15 @@ class MilkaApp {
   }
 
   // 导航到指定视图
-  navigateTo(view) {
+  navigateTo(view, data = null) {
     this.state.currentView = view;
+    if (data) {
+      Object.assign(this.state, data);
+    }
     this.render();
   }
 
-  // 应用主题样式
+  // 应用主题
   applyTheme() {
     const app = document.getElementById('app');
     if (app) {
@@ -815,10 +884,10 @@ class MilkaApp {
 
   // 绑定事件监听器
   bindEvents() {
-    // 键盘事件监听
+    // 键盘事件
     document.addEventListener('keydown', this.handleKeyPress);
     
-    // 窗口大小变化监听
+    // 窗口大小变化
     window.addEventListener('resize', () => {
       this.render();
     });
@@ -831,64 +900,54 @@ class MilkaApp {
 
   // 键盘事件处理
   handleKeyPress(event) {
-    // ESC键返回
-    if (event.key === 'Escape') {
-      this.goBack();
-    }
-    
-    // 空格键翻转卡片
-    if (event.key === ' ' && this.state.currentView === 'theme-detail') {
-      event.preventDefault();
-      if (this.state.currentMode === 'slideshow') {
-        this.flipCard(this.state.currentCardIndex);
-      }
-    }
-    
-    // 左右箭头切换卡片
-    if (this.state.currentView === 'theme-detail' && this.state.currentMode === 'slideshow') {
-      if (event.key === 'ArrowLeft') {
-        this.previousCard();
-      } else if (event.key === 'ArrowRight') {
-        this.nextCard();
-      }
+    switch (event.key) {
+      case 'Escape':
+        this.goBack();
+        break;
+      case ' ':
+        if (this.state.currentView === 'theme-detail' && this.state.currentMode === 'slideshow') {
+          event.preventDefault();
+          this.flipCard(this.state.currentCardIndex);
+        }
+        break;
+      case 'ArrowLeft':
+        if (this.state.currentView === 'theme-detail' && this.state.currentMode === 'slideshow') {
+          this.previousCard();
+        }
+        break;
+      case 'ArrowRight':
+        if (this.state.currentView === 'theme-detail' && this.state.currentMode === 'slideshow') {
+          this.nextCard();
+        }
+        break;
     }
   }
 
   // 显示通知
   showNotification(message, type = 'info') {
-    console.log(`📢 ${type.toUpperCase()}: ${message}`);
-    
-    // 创建通知元素
-    const notification = document.createElement('div');
-    notification.className = `notification notification-${type}`;
-    notification.innerHTML = `
-      <span class="notification-message">${message}</span>
-      <button class="notification-close" onclick="this.parentElement.remove()">×</button>
-    `;
-    
-    // 添加到通知容器
-    let container = document.getElementById('notifications');
-    if (!container) {
-      container = document.createElement('div');
-      container.id = 'notifications';
-      container.className = 'notifications-container';
-      document.body.appendChild(container);
-    }
-    
-    container.appendChild(notification);
-    
-    // 自动移除通知
-    setTimeout(() => {
-      if (notification.parentElement) {
-        notification.remove();
-      }
-    }, 3000);
+    console.log(`${type.toUpperCase()}: ${message}`);
+    // 这里可以实现更复杂的通知系统
   }
 
   // 错误处理
   dismissError() {
     this.state.initError = null;
     this.render();
+  }
+
+  // 获取错误横幅HTML
+  getErrorBannerHTML() {
+    if (!this.state.initError) return '';
+    
+    return `
+      <div class="error-banner">
+        <div class="error-content">
+          <span class="error-icon">⚠️</span>
+          <span class="error-message">${this.escapeHtml(this.state.initError)}</span>
+          <button class="error-close" onclick="app.dismissError()">×</button>
+        </div>
+      </div>
+    `;
   }
 
   // 界面渲染方法
@@ -900,59 +959,82 @@ class MilkaApp {
     this.bindDOMEvents();
   }
 
-getAppHTML() {
-  if (!this.state.isInitialized) {
-    return '<div class="loading">正在初始化应用...</div>';
+  getAppHTML() {
+    if (!this.state.isInitialized) {
+      return '<div class="loading">正在初始化应用...</div>';
+    }
+
+    return `
+      <div class="milka-app theme-${this.state.styleTheme}">
+        ${this.getErrorBannerHTML()}
+        <header class="app-header">
+          <div class="header-left">
+            ${this.getHeaderLeftContent()}
+          </div>
+          <div class="header-right">
+            ${this.getHeaderActions()}
+            <button class="btn btn-theme-toggle" onclick="app.toggleTheme()">
+              <div class="theme-toggle-content">
+                <div class="theme-icon"></div>
+                <span class="theme-name">${this.state.styleTheme === 'minimalist-white' ? '极简白' : '暗夜黑'}</span>
+              </div>
+            </button>
+          </div>
+        </header>
+        <main class="app-main">
+          ${this.getCurrentViewHTML()}
+        </main>
+      </div>
+    `;
   }
 
-  return ` <div class="milka-app theme-${this.state.styleTheme}"> ${this.getErrorBannerHTML()} <header class="app-header"> <div class="header-left"> ${this.getHeaderLeftContent()} </div> <div class="header-right"> ${this.getHeaderActions()} 
- <button class="btn btn-theme-toggle" onclick="app.toggleTheme()">
-  <div class="theme-toggle-content"> <div class="theme-icon"></div> <span class="theme-name">${this.state.styleTheme === 'minimalist-white' ? '极简白' : '暗夜黑'}</span> </div>
-</button>
-   </div> </header> <main class="app-main"> ${this.getCurrentViewHTML()} </main> </div> `;
-}
-
-// 新增方法：获取页头左侧内容
-getHeaderLeftContent() {
-  if (this.state.currentView === 'theme-detail' && this.state.currentTheme) {
-    // 主题详情页：显示返回箭头叠加在LOGO上 + 主题标题
-    return ` <div class="logo-with-back" onclick="app.goBack()"> <img src="./assets/logo.png" alt="喵卡" class="app-logo"> <div class="back-arrow">↩</div> </div> <h1>${this.escapeHtml(this.state.currentTheme.title)}</h1> `;
-  } else if (this.state.currentView === 'theme-editor' || this.state.currentView === 'card-editor') {
-    // 编辑页面：显示返回箭头叠加在LOGO上 + 产品标题
-    return ` <div class="logo-with-back" onclick="app.goBack()"> <img src="./assets/logo.png" alt="喵卡" class="app-logo"> <div class="back-arrow">↩</div> </div> <h1>喵卡 Milka</h1> `;
-  } else {
-    // 首页：只显示产品标题
-    return ` <h1> <img src="./assets/logo.png" alt="喵卡" class="app-logo"> 喵卡 Milka </h1> `;
+  // 获取页头左侧内容
+  getHeaderLeftContent() {
+    if (this.state.currentView === 'theme-detail' && this.state.currentTheme) {
+      // 主题详情页：显示返回箭头叠加在LOGO上 + 主题标题
+      return `
+        <div class="logo-with-back" onclick="app.goBack()">
+          <img src="./assets/logo.png" alt="喵卡" class="app-logo">
+          <div class="back-arrow">↩</div>
+        </div>
+        <h1>${this.escapeHtml(this.state.currentTheme.title)}</h1>
+      `;
+    } else if (this.state.currentView === 'theme-editor' || this.state.currentView === 'card-editor') {
+      // 编辑页面：显示返回箭头叠加在LOGO上 + 产品标题
+      return `
+        <div class="logo-with-back" onclick="app.goBack()">
+          <img src="./assets/logo.png" alt="喵卡" class="app-logo">
+          <div class="back-arrow">↩</div>
+        </div>
+        <h1>喵卡 Milka</h1>
+      `;
+    } else {
+      // 首页：只显示产品标题
+      return `
+        <h1>
+          <img src="./assets/logo.png" alt="喵卡" class="app-logo">
+          喵卡 Milka
+        </h1>
+      `;
+    }
   }
-}
+
   getHeaderActions() {
     switch (this.state.currentView) {
       case 'themes':
-        return '<button class="btn btn-primary" onclick="app.showCreateThemeDialog()">+ 新建主题</button>';
+        return `<button class="btn btn-primary" onclick="app.showCreateThemeDialog()">+ 新建主题</button>
+        <button class="btn btn-secondary" onclick="app.navigateToSettings()">设置</button> `;
       case 'theme-detail':
         return `
           <button class="btn btn-primary" onclick="app.showAddCardDialog()">+ 添加卡片</button>
           <button class="btn btn-secondary" onclick="app.toggleMode()">
-            ${this.state.currentMode === 'list' ? '▷ 幻灯片模式' : '⊞ 列表模式'}
+            ${this.state.currentMode === 'list' ? '幻灯片模式' : '列表模式'}
           </button>
+          <button class="btn btn-secondary" onclick="app.navigateToSettings()">设置</button> 
         `;
       default:
         return '';
     }
-  }
-
-  getErrorBannerHTML() {
-    if (!this.state.initError) return '';
-    
-    return `
-      <div class="error-banner">
-        <div class="error-content">
-          <span class="error-icon">⚠️</span>
-          <span class="error-message">${this.state.initError}</span>
-          <button class="error-close" onclick="app.dismissError()">×</button>
-        </div>
-      </div>
-    `;
   }
 
   getCurrentViewHTML() {
@@ -965,19 +1047,31 @@ getHeaderLeftContent() {
         return this.themeEditor.render();
       case 'card-editor':
         return this.cardEditor.render(null, this.state.currentTheme?.id);
+      case 'settings': // 添加这个case
+        return this.settingsPage.render();
       default:
         return '<div class="error">未知视图</div>';
     }
   }
-
+navigateToSettings() {
+  this.state.currentView = 'settings';
+  this.render();
+  
+  // 初始化设置页面
+  setTimeout(() => {
+    window.settingsPage = this.settingsPage;
+    this.settingsPage.init();
+  }, 100);
+}
+  // 主题列表HTML
   getThemesListHTML() {
     if (this.state.themes.length === 0) {
       return `
         <div class="empty-state">
-          <h2>⇉ 开始创建您的第一个主题</h2>
+          <h2>🎯 开始创建您的第一个主题</h2>
           <p>主题是一组相关卡片的集合，比如英语单词、历史知识等</p>
           <button class="btn btn-primary" onclick="app.showCreateThemeDialog()">
-            + 创建第一个主题
+            + 创建主题
           </button>
         </div>
       `;
@@ -989,15 +1083,11 @@ getHeaderLeftContent() {
           ${this.state.themes.map(theme => `
             <div class="theme-card" onclick="app.handleThemeSelect('${theme.id}')">
               <div class="theme-card-header">
-                <h3>${theme.title}</h3>
+                <h3>${this.escapeHtml(theme.title)}</h3>
                 ${theme.is_pinned ? '<span class="pin-badge">📌</span>' : ''}
               </div>
               <div class="theme-card-body">
-                <p>${theme.description || '暂无描述'}</p>
-              </div>
-              <div class="theme-meta">
-                <span>创建于 ${this.formatDate(theme.created_at)}</span>
-                <span>${theme.style_config?.theme === 'night-black' ? '🌙' : '☀️'}</span>
+                <p>${this.escapeHtml(theme.description || '暂无描述')}</p>
               </div>
             </div>
           `).join('')}
@@ -1006,92 +1096,45 @@ getHeaderLeftContent() {
     `;
   }
 
+  // 主题详情HTML
   getThemeDetailHTML() {
     if (!this.state.currentTheme) {
       return '<div class="error">主题不存在</div>';
     }
 
-    if (this.state.currentCards.length === 0) {
-      return `
-        <div class="theme-detail">
-          <div class="empty-state">
-            <h2>📚 ${this.state.currentTheme.title}</h2>
-            <p>这个主题还没有卡片，开始添加第一张卡片吧！</p>
-            <button class="btn btn-primary" onclick="app.showAddCardDialog()">
-              + 添加第一张卡片
-            </button>
-          </div>
-        </div>
-      `;
-    }
-
     if (this.state.currentMode === 'slideshow') {
       return this.getSlideshowHTML();
-    } else {
-      return this.getCardsListHTML();
     }
+
+    return this.getCardsListHTML();
   }
 
-  getCardsListHTML() {
-    return `
-      <div class="theme-detail">
-        <div class="cards-list">
-          <div class="cards-grid">
-            ${this.state.currentCards.map((card, index) => `
-              <div class="card-item" data-card-index="${index}">
-                <div class="card ${card.isFlipped ? 'flipped' : ''}" onclick="app.handleCardClick(${index})">
-                  <div class="card-face card-front">
-                    <div class="card-content">${card.front?.main_text || '正面内容'}</div>
-                  </div>
-                  <div class="card-face card-back">
-                    <div class="card-content">${card.back?.main_text || '背面内容'}</div>
-                  </div>
-                </div>
-              </div>
-            `).join('')}
-          </div>
-        </div>
-      </div>
-    `;
+// 获取卡片列表HTML
+getCardsListHTML() {
+  if (this.state.currentCards.length === 0) {
+    return ` <div class="empty-state"> <h3>暂无卡片</h3> <p>点击上方"添加卡片"按钮创建第一张卡片</p> </div> `;
   }
 
-  getSlideshowHTML() {
-    const currentCard = this.state.currentCards[this.state.currentCardIndex];
-    if (!currentCard) return '<div class="error">卡片不存在</div>';
+  return ` <div class="cards-list"> <div class="cards-grid"> ${this.state.currentCards.map((card, index) => ` <div class="card-item" data-card-index="${index}"> 
+  <div class="card" onclick="app.flipCard(${index})">
+   <div class="card-face card-front"> <div class="card-content">${this.escapeHtml(card.front?.main_text || '正面内容')}</div> ${card.front?.notes ? `<div class="card-notes">${this.escapeHtml(card.front.notes)}</div>` : ''} </div> <div class="card-face card-back"> <div class="card-content">${this.escapeHtml(card.back?.main_text || '背面内容')}</div> ${card.back?.notes ? `<div class="card-notes">${this.escapeHtml(card.back.notes)}</div>` : ''} </div> </div> </div> `).join('')} </div> </div> `;
+}
 
-    return `
-      <div class="slideshow-container">
-        <div class="slideshow-header">
-          <div class="slideshow-counter">
-            ${this.state.currentCardIndex + 1} / ${this.state.currentCards.length}
-          </div>
-        </div>
-        
-        <div class="slideshow-card">
-          <div class="card ${currentCard.isFlipped ? 'flipped' : ''}" onclick="app.flipCard(${this.state.currentCardIndex})">
-            <div class="card-face card-front">
-              <div class="card-content">${currentCard.front?.main_text || '正面内容'}</div>
-            </div>
-            <div class="card-face card-back">
-              <div class="card-content">${currentCard.back?.main_text || '背面内容'}</div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="slideshow-navigation">
-          <button class="btn btn-secondary" onclick="app.previousCard()" ${this.state.currentCardIndex === 0 ? 'disabled' : ''}>
-            ← 上一张
-          </button>
-          <button class="btn btn-secondary" onclick="app.flipCard(${this.state.currentCardIndex})">
-            🔄 翻转
-          </button>
-          <button class="btn btn-secondary" onclick="app.nextCard()" ${this.state.currentCardIndex === this.state.currentCards.length - 1 ? 'disabled' : ''}>
-            下一张 →
-          </button>
-        </div>
-      </div>
-    `;
+ // 获取幻灯片模式HTML
+getSlideshowHTML() {
+  if (this.state.currentCards.length === 0) {
+    return ` <div class="empty-state"> <h3>暂无卡片</h3> <p>点击上方"添加卡片"按钮创建第一张卡片</p> </div> `;
   }
+
+  const currentCard = this.state.currentCards[this.state.currentCardIndex];
+  
+  return ` <div class="slideshow-container"> <div class="slideshow-header">
+   <div class="slideshow-counter"> ${this.state.currentCardIndex + 1} / ${this.state.currentCards.length} </div> 
+   <div class="slideshow-controls"> </div> </div> 
+   <div class="slideshow-card-container" data-card-index="${this.state.currentCardIndex}"> 
+   <div class="slideshow-card card ${currentCard.isFlipped ? 'flipped' : ''}" onclick="app.flipCard(${this.state.currentCardIndex})"> 
+   <div class="card-face card-front"> <div class="card-content">${this.escapeHtml(currentCard.front?.main_text || '正面内容')}</div> ${currentCard.front?.notes ? `<div class="card-notes">${this.escapeHtml(currentCard.front.notes)}</div>` : ''} </div> <div class="card-face card-back"> <div class="card-content">${this.escapeHtml(currentCard.back?.main_text || '背面内容')}</div> ${currentCard.back?.notes ? `<div class="card-notes">${this.escapeHtml(currentCard.back.notes)}</div>` : ''} </div> </div> </div> <div class="slideshow-navigation"> <button class="btn btn-secondary" onclick="app.previousCard()" ${this.state.currentCardIndex === 0 ? 'disabled' : ''}> ← 上一张 </button> <button class="btn btn-secondary" onclick="app.flipCard(${this.state.currentCardIndex})"> 🔄 翻转 </button> <button class="btn btn-secondary" onclick="app.nextCard()" ${this.state.currentCardIndex === this.state.currentCards.length - 1 ? 'disabled' : ''}> 下一张 → </button> </div> </div> `;
+}
 
   // 工具方法
   formatDate(dateString) {
