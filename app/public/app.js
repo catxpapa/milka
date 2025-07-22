@@ -900,48 +900,36 @@ class MilkaApp {
     this.bindDOMEvents();
   }
 
-  getAppHTML() {
-    if (!this.state.isInitialized) {
-      return '<div class="loading">正在初始化应用...</div>';
-    }
-
-    return `
-      <div class="milka-app theme-${this.state.styleTheme}">
-        ${this.getErrorBannerHTML()}
-        <header class="app-header">
-          <div class="header-left">
-            ${this.state.currentView !== 'themes' ? 
-              '<button class="btn btn-back" onclick="app.goBack()">← 返回</button>' : 
-              ''
-            }
-            <h1>
-              <img src="./assets/logo.png" alt="喵卡" class="app-logo">
-              喵卡 Milka
-            </h1>
-          </div>
-          <div class="header-right">
-            ${this.getHeaderActions()}
-            <button class="btn btn-theme-toggle" onclick="app.toggleTheme()">
-              ${this.state.styleTheme === 'minimalist-white' ? '🌙' : '☀️'}
-            </button>
-          </div>
-        </header>
-        <main class="app-main">
-          ${this.getCurrentViewHTML()}
-        </main>
-      </div>
-    `;
+getAppHTML() {
+  if (!this.state.isInitialized) {
+    return '<div class="loading">正在初始化应用...</div>';
   }
 
+  return ` <div class="milka-app theme-${this.state.styleTheme}"> ${this.getErrorBannerHTML()} <header class="app-header"> <div class="header-left"> ${this.getHeaderLeftContent()} </div> <div class="header-right"> ${this.getHeaderActions()} <button class="btn btn-theme-toggle" onclick="app.toggleTheme()"> ${this.state.styleTheme === 'minimalist-white' ? '🌙' : '☀️'} </button> </div> </header> <main class="app-main"> ${this.getCurrentViewHTML()} </main> </div> `;
+}
+
+// 新增方法：获取页头左侧内容
+getHeaderLeftContent() {
+  if (this.state.currentView === 'theme-detail' && this.state.currentTheme) {
+    // 主题详情页：显示返回箭头叠加在LOGO上 + 主题标题
+    return ` <div class="logo-with-back" onclick="app.goBack()"> <img src="./assets/logo.png" alt="喵卡" class="app-logo"> <div class="back-arrow">↩</div> </div> <h1>${this.escapeHtml(this.state.currentTheme.title)}</h1> `;
+  } else if (this.state.currentView !== 'themes') {
+    // 其他页面：显示返回按钮 + 产品标题
+    return ` <button class="btn btn-back" onclick="app.goBack()">← 返回</button> <h1> <img src="./assets/logo.png" alt="喵卡" class="app-logo"> 喵卡 Milka </h1> `;
+  } else {
+    // 首页：只显示产品标题
+    return ` <h1> <img src="./assets/logo.png" alt="喵卡" class="app-logo"> 喵卡 Milka </h1> `;
+  }
+}
   getHeaderActions() {
     switch (this.state.currentView) {
       case 'themes':
-        return '<button class="btn btn-primary" onclick="app.showCreateThemeDialog()">➕ 新建主题</button>';
+        return '<button class="btn btn-primary" onclick="app.showCreateThemeDialog()">+ 新建主题</button>';
       case 'theme-detail':
         return `
-          <button class="btn btn-primary" onclick="app.showAddCardDialog()">➕ 添加卡片</button>
+          <button class="btn btn-primary" onclick="app.showAddCardDialog()">+ 添加卡片</button>
           <button class="btn btn-secondary" onclick="app.toggleMode()">
-            ${this.state.currentMode === 'list' ? '🎬 幻灯片模式' : '📋 列表模式'}
+            ${this.state.currentMode === 'list' ? '▷ 幻灯片模式' : '⊞ 列表模式'}
           </button>
         `;
       default:
@@ -982,10 +970,10 @@ class MilkaApp {
     if (this.state.themes.length === 0) {
       return `
         <div class="empty-state">
-          <h2>🎯 开始创建您的第一个主题</h2>
+          <h2>⇉ 开始创建您的第一个主题</h2>
           <p>主题是一组相关卡片的集合，比如英语单词、历史知识等</p>
           <button class="btn btn-primary" onclick="app.showCreateThemeDialog()">
-            ➕ 创建第一个主题
+            + 创建第一个主题
           </button>
         </div>
       `;
@@ -1026,7 +1014,7 @@ class MilkaApp {
             <h2>📚 ${this.state.currentTheme.title}</h2>
             <p>这个主题还没有卡片，开始添加第一张卡片吧！</p>
             <button class="btn btn-primary" onclick="app.showAddCardDialog()">
-              ➕ 添加第一张卡片
+              + 添加第一张卡片
             </button>
           </div>
         </div>

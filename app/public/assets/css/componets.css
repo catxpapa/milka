@@ -672,3 +672,81 @@
 .theme-meta .meta-time {
   display: none;
 }
+
+/* ===== 主题卡片堆叠效果 ===== */
+.theme-card {
+  position: relative;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--shadow-light);
+  z-index: 3; /* 确保主卡片在最上层 */
+}
+
+/* 第一个伪元素 - 向上旋转的卡片 */
+.theme-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  transform: rotate(-2deg) translateY(-3px) translateX(-1px);
+  z-index: 1;
+  box-shadow: var(--shadow-light);
+  opacity: 0.8;
+}
+
+/* 第二个伪元素 - 向下旋转的卡片 */
+.theme-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  transform: rotate(1.5deg) translateY(-6px) translateX(1px);
+  z-index: 2;
+  box-shadow: var(--shadow-light);
+  opacity: 0.9;
+}
+
+/* 悬停效果优化 */
+.theme-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: var(--shadow-medium);
+  z-index: 10; /* 悬停时提升层级 */
+}
+
+.theme-card:hover::before {
+  transform: rotate(-2.5deg) translateY(-5px) translateX(-2px);
+  opacity: 0.7;
+}
+
+.theme-card:hover::after {
+  transform: rotate(2deg) translateY(-8px) translateX(2px);
+  opacity: 0.8;
+}
+
+/* 暗夜黑主题适配 */
+.theme-night-black .theme-card::before,
+.theme-night-black .theme-card::after {
+  background: var(--bg-primary);
+  border-color: var(--border-color);
+}
+
+/* 确保卡片内容在最上层 */
+.theme-card-header,
+.theme-card-body {
+  position: relative;
+  z-index: 4;
+}
