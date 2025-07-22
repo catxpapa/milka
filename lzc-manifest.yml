@@ -1,7 +1,7 @@
 # 应用元信息配置
 name: 喵卡 milka
 package: cloud.lazycat.app.milka
-version: 0.1.1
+version: 0.2.1
 description: 漂亮的记忆闪卡应用，支持自定义界面及内容，帮助用户学习语言、背诵知识点
 license: https://choosealicense.com/licenses/mit/
 homepage: https://catxpapa.com
@@ -11,24 +11,24 @@ application:
   workdir: /lzcapp/pkg/content/
   routes:
     - /=file:///lzcapp/pkg/content/public
-  upstreams:
-    - location: /api/
-      workdir: /lzcapp/pkg/content/
-      backend: http://127.0.0.1:3000/api/
-      # 在下方 backend_launch_command 中添加启动命令
-      backend_launch_command: |
-        cd /lzcapp/pkg/content
-        apk update
-        apk add nodejs npm
-        npm run start
-      environment:
-      - name: NODE_ENV
-        value: "production"
-      - name: PORT
-        value: "3000"
-      - name: TEMP_PATH
-        value: "/lzcapp/tmp/milka"
-      - name: UPLOAD_PATH
-        value: "/lzcapp/var/milka/uploads"
-      - name: MAX_FILE_SIZE
-        value: "52428800"  # 50MB
+  # upstreams:
+  #   - location: /api/
+  #     workdir: /lzcapp/pkg/content/
+  #     backend: http://127.0.0.1:3000/api/
+  #     # 在下方 backend_launch_command 中添加启动命令
+  #     backend_launch_command: |
+  #       cd /lzcapp/pkg/content
+  #       apk update
+  #       apk add nodejs npm
+  #       npm run start
+  #     environment:
+  #     - name: NODE_ENV
+  #       value: "production"
+  #     - name: PORT
+  #       value: "3000"
+  #     - name: TEMP_PATH
+  #       value: "/lzcapp/tmp/milka"
+  #     - name: UPLOAD_PATH
+  #       value: "/lzcapp/var/milka/uploads"
+  #     - name: MAX_FILE_SIZE
+  #       value: "52428800"  # 50MB

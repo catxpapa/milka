@@ -9,20 +9,19 @@
     <meta name="author" content="CATxPAPA@gmail.com">
     
     <!-- 预加载关键资源 -->
-    <link rel="preload" href="./assets/css/styles.css" as="style">
-    <link rel="preload" href="./assets/css/card-animations.css" as="style">
+    <link rel="preload" href="./assets/css/base.css" as="style">
     
     <!-- 样式表 -->
-    <link rel="stylesheet" href="./assets/css/styles.css">
-    <link rel="stylesheet" href="./assets/css/card-animations.css">
-    
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/forms.css">
+    <link rel="stylesheet" href="./assets/css/componets.css">
     <!-- PWA 支持 -->
-    <link rel="manifest" href="./manifest.json">
+    <!-- <link rel="manifest" href="./manifest.json"> -->
     <meta name="theme-color" content="#667eea">
     
     <!-- 图标 -->
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/logo.png">
     <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png">
     
     <!-- 社交媒体元标签 -->
@@ -130,21 +129,8 @@
     <!-- 主应用脚本 -->
     <script type="module" src="./app.js"></script>
 
-    <!-- 服务工作者注册（PWA支持） -->
+    <!-- 全局错误处理 -->
     <script>
-        // 注册 Service Worker
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./sw.js')
-                    .then(registration => {
-                        console.log('🔧 Service Worker 注册成功:', registration.scope);
-                    })
-                    .catch(error => {
-                        console.log('❌ Service Worker 注册失败:', error);
-                    });
-            });
-        }
-
         // 全局错误处理
         window.addEventListener('error', (event) => {
             console.error('🚨 全局错误:', event.error);
@@ -173,52 +159,52 @@
             if (document.visibilityState === 'visible' && window.app) {
                 // 页面重新可见时刷新数据
                 console.log('📱 页面重新可见，检查数据更新');
-                window.app.checkForUpdates?.();
+                if (window.app.checkForUpdates) {
+                    window.app.checkForUpdates();
+                }
             }
         });
 
         // 网络状态监听
         window.addEventListener('online', () => {
             console.log('🌐 网络连接已恢复');
-            if (window.app) {
-                window.app.showNotification?.('网络连接已恢复', 'success');
-                window.app.syncData?.();
+            if (window.app && window.app.showNotification) {
+                window.app.showNotification('网络连接已恢复', 'success');
+                if (window.app.syncData) {
+                    window.app.syncData();
+                }
             }
         });
 
         window.addEventListener('offline', () => {
             console.log('📵 网络连接已断开');
-            if (window.app) {
-                window.app.showNotification?.('网络连接已断开，应用将在离线模式下运行', 'warning');
+            if (window.app && window.app.showNotification) {
+                window.app.showNotification('网络连接已断开，应用将在离线模式下运行', 'warning');
             }
         });
-    </script>
 
-    <!-- 性能监控 -->
-    <script>
         // 页面加载性能监控
         window.addEventListener('load', () => {
             setTimeout(() => {
                 const perfData = performance.getEntriesByType('navigation')[0];
-                const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
-                
-                console.log('📊 页面加载性能:', {
-                    loadTime: `${loadTime}ms`,
-                    domContentLoaded: `${perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart}ms`,
-                    firstPaint: performance.getEntriesByType('paint')[0]?.startTime || 'N/A'
-                });
-                
-                // 如果加载时间过长，显示提示
-                if (loadTime > 3000) {
-                    console.warn('⚠️ 页面加载时间较长，建议优化');
+                if (perfData) {
+                    const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
+                    
+                    console.log('📊 页面加载性能:', {
+                        loadTime: `${loadTime}ms`,
+                        domContentLoaded: `${perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart}ms`,
+                        firstPaint: performance.getEntriesByType('paint')[0]?.startTime || 'N/A'
+                    });
+                    
+                    // 如果加载时间过长，显示提示
+                    if (loadTime > 3000) {
+                        console.warn('⚠️ 页面加载时间较长，建议优化');
+                    }
                 }
             }, 0);
         });
-    </script>
 
-    <!-- 开发环境调试工具 -->
-    <script>
-        // 仅在开发环境显示调试信息
+        // 开发环境调试工具
         if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
             console.log('🔧 开发模式已启用');
             
@@ -236,5 +222,7 @@
             });
         }
     </script>
+
+
 </body>
 </html>
