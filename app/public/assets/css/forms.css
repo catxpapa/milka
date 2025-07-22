@@ -299,3 +299,19 @@
   border-color: var(--primary-color);
   background: rgba(102, 126, 234, 0.1);
 }
+
+/* 隐藏主题创建表单中的风格选择器 */
+.theme-editor-form .form-group:has(.style-selector),
+.theme-editor-form .style-selector {
+  display: none;
+}
+
+/* 如果浏览器不支持 :has 选择器，使用类名方式 */
+.style-selector-hidden {
+  display: none !important;
+}
+
+/* 隐藏主题编辑器中的风格选择器 */
+.theme-editor-form .style-selector {
+  display: none;
+}

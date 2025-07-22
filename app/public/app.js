@@ -905,7 +905,11 @@ getAppHTML() {
     return '<div class="loading">正在初始化应用...</div>';
   }
 
-  return ` <div class="milka-app theme-${this.state.styleTheme}"> ${this.getErrorBannerHTML()} <header class="app-header"> <div class="header-left"> ${this.getHeaderLeftContent()} </div> <div class="header-right"> ${this.getHeaderActions()} <button class="btn btn-theme-toggle" onclick="app.toggleTheme()"> ${this.state.styleTheme === 'minimalist-white' ? '🌙' : '☀️'} </button> </div> </header> <main class="app-main"> ${this.getCurrentViewHTML()} </main> </div> `;
+  return ` <div class="milka-app theme-${this.state.styleTheme}"> ${this.getErrorBannerHTML()} <header class="app-header"> <div class="header-left"> ${this.getHeaderLeftContent()} </div> <div class="header-right"> ${this.getHeaderActions()} 
+ <button class="btn btn-theme-toggle" onclick="app.toggleTheme()">
+  <div class="theme-toggle-content"> <div class="theme-icon"></div> <span class="theme-name">${this.state.styleTheme === 'minimalist-white' ? '极简白' : '暗夜黑'}</span> </div>
+</button>
+   </div> </header> <main class="app-main"> ${this.getCurrentViewHTML()} </main> </div> `;
 }
 
 // 新增方法：获取页头左侧内容
@@ -913,9 +917,9 @@ getHeaderLeftContent() {
   if (this.state.currentView === 'theme-detail' && this.state.currentTheme) {
     // 主题详情页：显示返回箭头叠加在LOGO上 + 主题标题
     return ` <div class="logo-with-back" onclick="app.goBack()"> <img src="./assets/logo.png" alt="喵卡" class="app-logo"> <div class="back-arrow">↩</div> </div> <h1>${this.escapeHtml(this.state.currentTheme.title)}</h1> `;
-  } else if (this.state.currentView !== 'themes') {
-    // 其他页面：显示返回按钮 + 产品标题
-    return ` <button class="btn btn-back" onclick="app.goBack()">← 返回</button> <h1> <img src="./assets/logo.png" alt="喵卡" class="app-logo"> 喵卡 Milka </h1> `;
+  } else if (this.state.currentView === 'theme-editor' || this.state.currentView === 'card-editor') {
+    // 编辑页面：显示返回箭头叠加在LOGO上 + 产品标题
+    return ` <div class="logo-with-back" onclick="app.goBack()"> <img src="./assets/logo.png" alt="喵卡" class="app-logo"> <div class="back-arrow">↩</div> </div> <h1>喵卡 Milka</h1> `;
   } else {
     // 首页：只显示产品标题
     return ` <h1> <img src="./assets/logo.png" alt="喵卡" class="app-logo"> 喵卡 Milka </h1> `;
