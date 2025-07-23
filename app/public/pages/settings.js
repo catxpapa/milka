@@ -307,7 +307,7 @@ export class SettingsPage {
           top: 0;
           right: 0;
           background: #dc3545;
-          color: #999;
+          color: #fff;
           border: none;
           padding: 0.5rem;
           border-radius: 50%;
