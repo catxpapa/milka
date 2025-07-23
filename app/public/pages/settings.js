@@ -306,7 +306,7 @@ export class SettingsPage {
           position: absolute;
           top: 0;
           right: 0;
-          background: transparent;
+          background: #dc3545;
           color: #999;
           border: none;
           padding: 0.5rem;
@@ -1298,6 +1298,10 @@ export class SettingsPage {
   // 执行导入操作 - 修复版本
   // 执行导入操作 - 增强参数验证和错误处理
   async executeImport(importData, mode) {
+    console.log("开始执行导入操作，参数:", {
+      importData: importData,
+      mode: mode,
+    });
     try {
       console.log("executeImport 被调用，参数检查:");
       console.log("- importData:", importData);

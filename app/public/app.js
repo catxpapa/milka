@@ -877,7 +877,7 @@ updateCardPreview(side, content) {
             <button class="btn btn-theme-toggle" onclick="app.toggleTheme()">
               <div class="theme-toggle-content">
                 <div class="theme-icon"></div>
-                <span class="theme-name">${this.state.styleTheme === 'minimalist-white' ? '极简白' : '暗夜黑'}</span>
+                <span class="theme-name">${this.state.styleTheme === 'minimalist-white' ? '太空白' : '星辰灰'}</span>
               </div>
             </button>
             <button class="btn btn-secondary" onclick="app.navigateToSettings()">设置</button>
@@ -980,7 +980,7 @@ navigateToSettings() {
         </div>
       `;
     }
-
+    console.log('渲染主题列表', this.state.themes);
     return `
       <div class="themes-container">
         <div class="themes-grid">
