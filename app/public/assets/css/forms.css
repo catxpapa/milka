@@ -31,7 +31,7 @@
 
 .theme-editor-form,
 .card-editor-form {
-  padding: 2rem;
+  /* padding: 2rem; */
 }
 
 /* 确保卡片编辑器内容区域布局稳定 */
@@ -65,7 +65,6 @@
   flex-direction: row;
     flex-wrap: wrap; /* 允许换行 */
   align-items: center;
-  min-height: 250px;
   /* max-height: 300px; 添加最大高度限制 */
   overflow: hidden; /* 防止溢出 */
   position: relative; /* 确保定位上下文 */
@@ -79,18 +78,26 @@
     justify-content: center;
   width: 100%;
   gap: 1rem;
-  height: 180px;
+  height: 100%;
   position: relative; /* 改为相对定位，避免绝对定位导致的溢出 */
   flex-shrink: 0; /* 防止被压缩 */
+  box-shadow: none!important; /* 确保没有阴影 */
+}
+
+.preview-card:hover{
+  transform: none!important; /* 确保悬停时没有变形 */
+  box-shadow: none!important; /* 确保没有阴影 */
 }
 
 /* 确保预览卡片的卡面不会溢出 */
 .preview-card .card-face {
   position: relative;
   width: auto;
+  max-width:250px;
   height: 100%;
 min-width: 250px; /* 确保卡片有最小宽度 */
-  max-height: 180px; /* 明确限制最大高度 */
+    max-height: 200px;
+    min-height: 180px;
   backface-visibility: hidden;
   border-radius: var(--border-radius);
   display: flex;
@@ -102,15 +109,26 @@ min-width: 250px; /* 确保卡片有最小宽度 */
   border: 1px solid var(--border-color);
   overflow: hidden;
   -webkit-backface-visibility: hidden;
+
+& .card-content{
+  flex:3;
+  height: 100%;
+}
+& .card-notes{
+  flex:1;
+  height: 100%;
+  overflow-y: auto;
+}
 }
 .preview-card .card-back {
     transform: rotateY(0);
 min-width: 250px; /* 确保卡片有最小宽度 */
   position: relative;
   width:auto;
+  max-width:250px;
   height: 100%;
-
-  max-height: 180px; /* 明确限制最大高度 */
+    max-height: 200px;
+    min-height: 180px;
   backface-visibility: hidden;
   border-radius: var(--border-radius);
   display: flex;
@@ -122,13 +140,22 @@ min-width: 250px; /* 确保卡片有最小宽度 */
   border: 1px solid var(--border-color);
   overflow: hidden;
   -webkit-backface-visibility: hidden;
+
+& .card-content{
+  flex:2;
+  height: 100%;
+}
+& .card-notes{
+  flex:3;
+  height: 100%;
+  overflow-y: auto;
+}
 }
 
 .preview-card-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 250px;
 }
 
 
@@ -256,18 +283,18 @@ min-width: 250px; /* 确保卡片有最小宽度 */
   }
   
   .preview-card-container {
-    min-height: 200px;
-    max-height: 220px;
+    height:auto;
   }
   
   .preview-card {
     width: 200px;
-    height: 150px;
+    min-height: 180px;
   }
   
   .preview-card .card-face {
     max-width: 200px;
-    max-height: 150px;
+    max-height: 200px;
+    min-height: 180px;
     padding: 10px;
   }
   

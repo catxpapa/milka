@@ -783,6 +783,25 @@
   gap: 8px;
 }
 
+.card-front .card-content{
+  flex: 3;
+  height: 100%;
+}
+.card-front .card-notes {
+  flex: 1;
+  height: 100%;
+  overflow-y: auto;
+}
+.card-back .card-content {
+  flex: 2;
+  height: 100%;
+}
+.card-back .card-notes {
+  flex: 3;
+  height: 100%;
+  overflow-y: auto;
+}
+
 .card-main-text {
 
   font-size: 24px;
