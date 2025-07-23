@@ -1,7 +1,7 @@
 # 应用元信息配置
 name: 喵卡 milka
 package: cloud.lazycat.app.milka
-version: 0.2.1
+version: 1.0.0
 description: 漂亮的记忆闪卡应用，支持自定义界面及内容，帮助用户学习语言、背诵知识点
 license: https://choosealicense.com/licenses/mit/
 homepage: https://catxpapa.com
@@ -10,7 +10,7 @@ application:
   subdomain: milka
   workdir: /lzcapp/pkg/content/
   routes:
-    - /=file:///lzcapp/pkg/content/public
+    - /=file:///lzcapp/pkg/content/public/
   # upstreams:
   #   - location: /api/
   #     workdir: /lzcapp/pkg/content/

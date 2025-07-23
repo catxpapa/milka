@@ -880,7 +880,7 @@ updateCardPreview(side, content) {
                 <span class="theme-name">${this.state.styleTheme === 'minimalist-white' ? '太空白' : '星辰灰'}</span>
               </div>
             </button>
-            <button class="btn btn-secondary" onclick="app.navigateToSettings()">设置</button>
+            <button class="settings-button" onclick="app.navigateToSettings()" title="设置"></button>
           </div>
         </header>
         <main class="app-main">
@@ -900,8 +900,9 @@ updateCardPreview(side, content) {
           <div class="back-arrow">↩</div>
         </div>
         <h1>${this.escapeHtml(this.state.currentTheme.title)}</h1>
+        
       `;
-    } else if (this.state.currentView === 'theme-editor' || this.state.currentView === 'card-editor') {
+    } else if (this.state.currentView === 'theme-editor' || this.state.currentView === 'card-editor' || this.state.currentView === 'settings') {
       // 编辑页面：显示返回箭头叠加在LOGO上 + 产品标题
       return `
         <div class="logo-with-back" onclick="app.goBack()">

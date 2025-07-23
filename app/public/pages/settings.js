@@ -285,7 +285,7 @@ export class SettingsPage {
           margin-bottom: 1.5rem;
           padding-bottom: 1rem;
           border-bottom: 1px solid #e9ecef;
-          position: relative;
+          // position: relative;
         }
 
         .section-header h3 {
@@ -303,9 +303,9 @@ export class SettingsPage {
         }
 
         .btn-close-settings {
-          position: absolute;
-          top: 0;
-          right: 0;
+          position: fixed;
+          top: 5rem;
+          right: 2rem;
           background: #dc3545;
           color: #fff;
           border: none;
@@ -838,7 +838,7 @@ export class SettingsPage {
         data: {
           themes: themes.map((theme) => ({
             // 使用 _id 作为主键，但在导出时转换为 id 以保持兼容性
-            id: theme._id || theme.id,
+            id: theme.id ,
             title: theme.title,
             description: theme.description,
             cover_image_url: theme.cover_image_url || "",
@@ -853,7 +853,7 @@ export class SettingsPage {
             updated_at: theme.updated_at,
           })),
           cards: associations.map((assoc) => ({
-            id: assoc._id || assoc.id,
+            id: assoc.id,
             theme_id: assoc.theme_id,
             front_face_id: assoc.front_face_id,
             back_face_id: assoc.back_face_id,
@@ -861,7 +861,7 @@ export class SettingsPage {
             created_at: assoc.created_at,
           })),
           faces: faces.map((face) => ({
-            id: face._id || face.id,
+            id: face.id,
             main_text: face.main_text,
             notes: face.notes || "",
             image_url: face.image_url || "",
@@ -921,7 +921,7 @@ export class SettingsPage {
 
       if (includeThemes) {
         exportData.data.themes = themes.map((theme) => ({
-          id: theme.id || theme._id,
+          id: theme.id,
           title: theme.title,
           description: theme.description,
           style_config: theme.style_config,
@@ -949,7 +949,7 @@ export class SettingsPage {
 
         // 获取所有卡面
         const faces = await this.app.cardFacesCollection
-          .find({ _id: { $in: faceIds } })
+          .find({ id: { $in: faceIds } })
           .fetch();
 
         // 构建卡片数据结构
@@ -957,16 +957,16 @@ export class SettingsPage {
 
         for (const theme of themes) {
           const themeAssociations = associations.filter(
-            (a) => a.theme_id === (theme.id || theme._id)
+            (a) => a.theme_id === (theme.id)
           );
 
           for (const assoc of themeAssociations) {
-            const frontFace = faces.find((f) => f._id === assoc.front_face_id);
-            const backFace = faces.find((f) => f._id === assoc.back_face_id);
+            const frontFace = faces.find((f) => f.id === assoc.front_face_id);
+            const backFace = faces.find((f) => f.id === assoc.back_face_id);
 
             if (frontFace && backFace) {
               exportData.data.cards.push({
-                id: assoc.id || assoc._id,
+                id: assoc.id ,
                 theme_id: assoc.theme_id,
                 sort_order: assoc.sort_order,
                 front: {
@@ -1330,6 +1330,8 @@ export class SettingsPage {
 
       // 第二层验证：检查数据结构
       if (!importData.data) {
+
+
         console.error("数据结构验证失败:", {
           importData: importData,
           hasData: !!importData.data,
@@ -1370,7 +1372,7 @@ export class SettingsPage {
       for (const face of importFaces) {
         try {
           const faceData = {
-            _id: face.id, // 使用 _id 作为 MiniDB 主键
+            id: face.id, // 使用 id 作为 MiniDB 主键
             main_text: face.main_text,
             notes: face.notes || "",
             image_url: face.image_url || "",
@@ -1382,7 +1384,7 @@ export class SettingsPage {
           if (mode === "merge") {
             // 增量模式：检查是否已存在
             const existing = await this.app.cardFacesCollection.findOne({
-              _id: face.id,
+              id: face.id,
             });
             if (existing) {
               importStats.faces.skipped++;
@@ -1403,7 +1405,7 @@ export class SettingsPage {
       for (const theme of importThemes) {
         try {
           const themeData = {
-            _id: theme.id, // 使用 _id 作为 MiniDB 主键
+            id: theme.id, // 使用 id 作为 MiniDB 主键
             title: theme.title,
             description: theme.description || "",
             cover_image_url: theme.cover_image_url || "",
@@ -1421,7 +1423,7 @@ export class SettingsPage {
           if (mode === "merge") {
             // 增量模式：检查是否已存在
             const existing = await this.app.themesCollection.findOne({
-              _id: theme.id,
+              id: theme.id,
             });
             if (existing) {
               importStats.themes.skipped++;
@@ -1442,7 +1444,7 @@ export class SettingsPage {
       for (const card of importCards) {
         try {
           const cardData = {
-            _id: card.id, // 使用 _id 作为 MiniDB 主键
+            id: card.id, // 使用 _id 作为 MiniDB 主键
             theme_id: card.theme_id,
             front_face_id: card.front_face_id,
             back_face_id: card.back_face_id,
@@ -1453,7 +1455,7 @@ export class SettingsPage {
           if (mode === "merge") {
             // 增量模式：检查是否已存在
             const existing = await this.app.associationsCollection.findOne({
-              _id: card.id,
+              id: card.id,
             });
             if (existing) {
               importStats.cards.skipped++;

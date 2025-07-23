@@ -46,6 +46,8 @@ html, body {
   --border-radius: 12px;
   --transition: all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
   background: #f3f3f3; /* 统一浅灰色背景 */
+  background-size: fill;
+  background-repeat: no-repeat;
   min-height: 100vh;
   font-weight: 300; /* 细体字体 */
 }
@@ -53,6 +55,7 @@ html, body {
 /* 极简白主题 */
 .milka-app.theme-minimalist-white {
   background: #f3f3f3; /* 统一浅灰色背景 */
+  background-image: url('../back2.jpg'); /* 背景图案 */
   color: var(--text-primary);
 }
 
@@ -71,6 +74,7 @@ html, body {
 
   --border-color: #292a2f;
   background: #191a1f; /* 暗色统一背景 */
+  background-image: url('../back4.jpg'); /* 背景图案 */
   color: var(--text-primary);
 }
 
@@ -78,6 +82,7 @@ html, body {
 .app-header {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
   padding: 1.5rem 2rem;
   background: transparent; /* 透明背景，融入整体 */
@@ -95,6 +100,8 @@ html, body {
 
 .header-left h1 {
   font-size: 1.5rem;
+  word-break: keep-all;
+  workd-wrap: nowrap;
   font-weight: 300; /* 细体 */
   color: var(--text-primary);
   margin: 0;
@@ -434,7 +441,7 @@ html, body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-60%, -50%); /* 居中定位 */
+  transform: translate(-60%, -50%); 居中定位
   color: rgb(0, 0, 0);
   width: 28px;
   height: 28px;
@@ -532,5 +539,36 @@ html, body {
   .btn-theme-toggle {
     padding: 0.5rem;
     min-width: 40px;
+  }
+}
+
+
+.settings-button{
+  color: var(--text-primary);
+  position: relative;
+  width:16px;
+  height: 16px;
+  border-radius: 50%;
+  border:3px dashed currentColor;
+  box-sizing:content-box;
+  opacity: .7;
+  background: none;
+  &::after {
+    color: var(--text-primary);
+    display: block;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    content: '';
+    width: 7px;
+    height: 7px;
+  border-radius: 50%;
+    border: 5px solid currentColor;
+    box-sizing: content-box;
+    z-index: 1;
+  }
+  &:hover {
+    opacity: 1;
   }
 }
