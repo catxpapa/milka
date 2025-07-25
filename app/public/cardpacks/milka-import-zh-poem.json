@@ -1,0 +1,668 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "export_date": "2025-07-25T18:57:17.463Z",
+    "source": "喵卡批量创建工具"
+  },
+  "data": {
+    "themes": [
+      {
+        "id": "theme_1753469837463_9ca8prhkp",
+        "title": "古诗词经典对句",
+        "description": "本组精选古代诗词名句，适合用于表达心境、描绘景色等场景。",
+        "cover_image_url": "",
+        "style_config": {
+          "theme": "minimalist-white",
+          "custom_styles": {}
+        },
+        "is_official": false,
+        "sort_order": 0,
+        "is_pinned": false,
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      }
+    ],
+    "cards": [
+      {
+        "id": "assoc_1753469837463",
+        "theme_id": "theme_1753469837463_9ca8prhkp",
+        "front_face_id": "face_1753469837463_front",
+        "back_face_id": "face_1753469837463_back",
+        "sort_order": 0,
+        "created_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "assoc_1753469837464",
+        "theme_id": "theme_1753469837463_9ca8prhkp",
+        "front_face_id": "face_1753469837464_front",
+        "back_face_id": "face_1753469837464_back",
+        "sort_order": 1,
+        "created_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "assoc_1753469837465",
+        "theme_id": "theme_1753469837463_9ca8prhkp",
+        "front_face_id": "face_1753469837465_front",
+        "back_face_id": "face_1753469837465_back",
+        "sort_order": 2,
+        "created_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "assoc_1753469837466",
+        "theme_id": "theme_1753469837463_9ca8prhkp",
+        "front_face_id": "face_1753469837466_front",
+        "back_face_id": "face_1753469837466_back",
+        "sort_order": 3,
+        "created_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "assoc_1753469837467",
+        "theme_id": "theme_1753469837463_9ca8prhkp",
+        "front_face_id": "face_1753469837467_front",
+        "back_face_id": "face_1753469837467_back",
+        "sort_order": 4,
+        "created_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "assoc_1753469837468",
+        "theme_id": "theme_1753469837463_9ca8prhkp",
+        "front_face_id": "face_1753469837468_front",
+        "back_face_id": "face_1753469837468_back",
+        "sort_order": 5,
+        "created_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "assoc_1753469837469",
+        "theme_id": "theme_1753469837463_9ca8prhkp",
+        "front_face_id": "face_1753469837469_front",
+        "back_face_id": "face_1753469837469_back",
+        "sort_order": 6,
+        "created_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "assoc_1753469837470",
+        "theme_id": "theme_1753469837463_9ca8prhkp",
+        "front_face_id": "face_1753469837470_front",
+        "back_face_id": "face_1753469837470_back",
+        "sort_order": 7,
+        "created_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "assoc_1753469837471",
+        "theme_id": "theme_1753469837463_9ca8prhkp",
+        "front_face_id": "face_1753469837471_front",
+        "back_face_id": "face_1753469837471_back",
+        "sort_order": 8,
+        "created_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "assoc_1753469837472",
+        "theme_id": "theme_1753469837463_9ca8prhkp",
+        "front_face_id": "face_1753469837472_front",
+        "back_face_id": "face_1753469837472_back",
+        "sort_order": 9,
+        "created_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "assoc_1753469837473",
+        "theme_id": "theme_1753469837463_9ca8prhkp",
+        "front_face_id": "face_1753469837473_front",
+        "back_face_id": "face_1753469837473_back",
+        "sort_order": 10,
+        "created_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "assoc_1753469837474",
+        "theme_id": "theme_1753469837463_9ca8prhkp",
+        "front_face_id": "face_1753469837474_front",
+        "back_face_id": "face_1753469837474_back",
+        "sort_order": 11,
+        "created_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "assoc_1753469837475",
+        "theme_id": "theme_1753469837463_9ca8prhkp",
+        "front_face_id": "face_1753469837475_front",
+        "back_face_id": "face_1753469837475_back",
+        "sort_order": 12,
+        "created_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "assoc_1753469837476",
+        "theme_id": "theme_1753469837463_9ca8prhkp",
+        "front_face_id": "face_1753469837476_front",
+        "back_face_id": "face_1753469837476_back",
+        "sort_order": 13,
+        "created_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "assoc_1753469837477",
+        "theme_id": "theme_1753469837463_9ca8prhkp",
+        "front_face_id": "face_1753469837477_front",
+        "back_face_id": "face_1753469837477_back",
+        "sort_order": 14,
+        "created_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "assoc_1753469837478",
+        "theme_id": "theme_1753469837463_9ca8prhkp",
+        "front_face_id": "face_1753469837478_front",
+        "back_face_id": "face_1753469837478_back",
+        "sort_order": 15,
+        "created_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "assoc_1753469837479",
+        "theme_id": "theme_1753469837463_9ca8prhkp",
+        "front_face_id": "face_1753469837479_front",
+        "back_face_id": "face_1753469837479_back",
+        "sort_order": 16,
+        "created_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "assoc_1753469837480",
+        "theme_id": "theme_1753469837463_9ca8prhkp",
+        "front_face_id": "face_1753469837480_front",
+        "back_face_id": "face_1753469837480_back",
+        "sort_order": 17,
+        "created_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "assoc_1753469837481",
+        "theme_id": "theme_1753469837463_9ca8prhkp",
+        "front_face_id": "face_1753469837481_front",
+        "back_face_id": "face_1753469837481_back",
+        "sort_order": 18,
+        "created_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "assoc_1753469837482",
+        "theme_id": "theme_1753469837463_9ca8prhkp",
+        "front_face_id": "face_1753469837482_front",
+        "back_face_id": "face_1753469837482_back",
+        "sort_order": 19,
+        "created_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "assoc_1753469837483",
+        "theme_id": "theme_1753469837463_9ca8prhkp",
+        "front_face_id": "face_1753469837483_front",
+        "back_face_id": "face_1753469837483_back",
+        "sort_order": 20,
+        "created_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "assoc_1753469837484",
+        "theme_id": "theme_1753469837463_9ca8prhkp",
+        "front_face_id": "face_1753469837484_front",
+        "back_face_id": "face_1753469837484_back",
+        "sort_order": 21,
+        "created_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "assoc_1753469837485",
+        "theme_id": "theme_1753469837463_9ca8prhkp",
+        "front_face_id": "face_1753469837485_front",
+        "back_face_id": "face_1753469837485_back",
+        "sort_order": 22,
+        "created_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "assoc_1753469837486",
+        "theme_id": "theme_1753469837463_9ca8prhkp",
+        "front_face_id": "face_1753469837486_front",
+        "back_face_id": "face_1753469837486_back",
+        "sort_order": 23,
+        "created_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "assoc_1753469837487",
+        "theme_id": "theme_1753469837463_9ca8prhkp",
+        "front_face_id": "face_1753469837487_front",
+        "back_face_id": "face_1753469837487_back",
+        "sort_order": 24,
+        "created_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "assoc_1753469837488",
+        "theme_id": "theme_1753469837463_9ca8prhkp",
+        "front_face_id": "face_1753469837488_front",
+        "back_face_id": "face_1753469837488_back",
+        "sort_order": 25,
+        "created_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "assoc_1753469837489",
+        "theme_id": "theme_1753469837463_9ca8prhkp",
+        "front_face_id": "face_1753469837489_front",
+        "back_face_id": "face_1753469837489_back",
+        "sort_order": 26,
+        "created_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "assoc_1753469837490",
+        "theme_id": "theme_1753469837463_9ca8prhkp",
+        "front_face_id": "face_1753469837490_front",
+        "back_face_id": "face_1753469837490_back",
+        "sort_order": 27,
+        "created_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "assoc_1753469837491",
+        "theme_id": "theme_1753469837463_9ca8prhkp",
+        "front_face_id": "face_1753469837491_front",
+        "back_face_id": "face_1753469837491_back",
+        "sort_order": 28,
+        "created_at": "2025-07-25T18:57:17.463Z"
+      }
+    ],
+    "faces": [
+      {
+        "id": "face_1753469837463_front",
+        "main_text": "大漠孤烟直",
+        "notes": "《使至塞上》 王维",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837463_back",
+        "main_text": "长河落日圆",
+        "notes": "描写边塞壮阔景色，适合表现辽阔与孤独",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837464_front",
+        "main_text": "劝君更尽一杯酒",
+        "notes": "《送元二使安西》 王维",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837464_back",
+        "main_text": "西出阳关无故人",
+        "notes": "惜别友人，表达离愁别绪",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837465_front",
+        "main_text": "人生自是有情痴",
+        "notes": "《玉楼春》 欧阳修",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837465_back",
+        "main_text": "此恨不关风与月",
+        "notes": "表达痴情与无奈，适合抒发情感",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837466_front",
+        "main_text": "江流天地外",
+        "notes": "《登江中孤屿》 谢灵运",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837466_back",
+        "main_text": "山色有无中",
+        "notes": "描绘江山辽阔，适合写景抒怀",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837467_front",
+        "main_text": "黑发不知勤学早",
+        "notes": "《劝学诗》 颜真卿",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837467_back",
+        "main_text": "白首方悔读书迟",
+        "notes": "强调学习要趁早，适合激励学生",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837468_front",
+        "main_text": "纸上得来终觉浅",
+        "notes": "《冬夜读书示子聿》 陆游",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837468_back",
+        "main_text": "绝知此事要躬行",
+        "notes": "强调实践的重要性，适合鼓励动手实践",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837469_front",
+        "main_text": "天生我材必有用",
+        "notes": "《将进酒》 李白",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837469_back",
+        "main_text": "千金散尽还复来",
+        "notes": "自信人生价值，适合自我激励",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837470_front",
+        "main_text": "人生得意须尽欢",
+        "notes": "《将进酒》 李白",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837470_back",
+        "main_text": "莫使金樽空对月",
+        "notes": "劝人及时行乐，珍惜当下",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837471_front",
+        "main_text": "不畏浮云遮望眼",
+        "notes": "《登飞来峰》 王安石",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837471_back",
+        "main_text": "自缘身在最高层",
+        "notes": "鼓励突破障碍，追求卓越",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837472_front",
+        "main_text": "千磨万击还坚劲",
+        "notes": "《竹石》 郑燮",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837472_back",
+        "main_text": "任尔东西南北风",
+        "notes": "比喻坚韧不拔的精神",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837473_front",
+        "main_text": "沉舟侧畔千帆过",
+        "notes": "《酬乐天扬州初逢席上见赠》 刘禹锡",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837473_back",
+        "main_text": "病树前头万木春",
+        "notes": "比喻新事物不断涌现，适合鼓励乐观",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837474_front",
+        "main_text": "莫愁前路无知己",
+        "notes": "《别董大》 高适",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837474_back",
+        "main_text": "天下谁人不识君",
+        "notes": "表达自信与乐观，适合送别或自勉",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837475_front",
+        "main_text": "世事一场大梦",
+        "notes": "《西江月》 苏轼",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837475_back",
+        "main_text": "人生几度秋凉",
+        "notes": "感叹人生短暂，适合哲理思考",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837476_front",
+        "main_text": "不经一番寒彻骨",
+        "notes": "《黄檗禅师诗》 释义",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837476_back",
+        "main_text": "怎得梅花扑鼻香",
+        "notes": "比喻经历磨难才能成功",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837477_front",
+        "main_text": "相见时难别亦难",
+        "notes": "《无题》 李商隐",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837477_back",
+        "main_text": "东风无力百花残",
+        "notes": "表达离别的无奈与伤感",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837478_front",
+        "main_text": "此情可待成追忆",
+        "notes": "《锦瑟》 李商隐",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837478_back",
+        "main_text": "只是当时已惘然",
+        "notes": "回忆往事，感叹时光流逝",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837479_front",
+        "main_text": "洛阳亲友如相问",
+        "notes": "《芙蓉楼送辛渐》 王昌龄",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837479_back",
+        "main_text": "一片冰心在玉壶",
+        "notes": "表达清白为人，适合送别",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837480_front",
+        "main_text": "山回路转不见君",
+        "notes": "《白雪歌送武判官归京》 岑参",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837480_back",
+        "main_text": "雪上空留马行处",
+        "notes": "送别友人，表达依依惜别",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837481_front",
+        "main_text": "山有木兮木有枝",
+        "notes": "《越人歌》 佚名",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837481_back",
+        "main_text": "心悦君兮君不知",
+        "notes": "表达暗恋与思念，适合表白场合",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837482_front",
+        "main_text": "接天莲叶无穷碧",
+        "notes": "《晓出净慈寺送林子方》 杨万里",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837482_back",
+        "main_text": "映日荷花别样红",
+        "notes": "夏日荷塘美景，适合描写夏天",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837483_front",
+        "main_text": "小荷才露尖尖角",
+        "notes": "《小池》 杨万里",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837483_back",
+        "main_text": "早有蜻蜓立上头",
+        "notes": "初夏池塘景色，适合表现生机",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837484_front",
+        "main_text": "银烛秋光冷画屏",
+        "notes": "《秋夕》 杜牧",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837484_back",
+        "main_text": "轻罗小扇扑流萤",
+        "notes": "秋夜幽静美景，适合表现秋意",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837485_front",
+        "main_text": "千里黄云白日曛",
+        "notes": "《白雪歌送武判官归京》 岑参",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837485_back",
+        "main_text": "北风吹雁雪纷纷",
+        "notes": "冬日北国风光，适合描写冬天",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837486_front",
+        "main_text": "草长莺飞二月天",
+        "notes": "《村居》 高鼎",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837486_back",
+        "main_text": "拂堤杨柳醉春烟",
+        "notes": "描写早春景色，适合表现生机",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837487_front",
+        "main_text": "竹外桃花三两枝",
+        "notes": "《惠崇春江晚景》 苏轼",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837487_back",
+        "main_text": "春江水暖鸭先知",
+        "notes": "春江景色，适合描写春天",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837488_front",
+        "main_text": "衣带渐宽终不悔",
+        "notes": "《蝶恋花》 柳永",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837488_back",
+        "main_text": "为伊消得人憔悴",
+        "notes": "表达痴情与思念，适合恋人间",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837489_front",
+        "main_text": "天街小雨润如酥",
+        "notes": "《早春呈水部张十八员外》 韩愈",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837489_back",
+        "main_text": "草色遥看近却无",
+        "notes": "早春细雨，适合表现春意",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837490_front",
+        "main_text": "梅子金黄杏子肥",
+        "notes": "《四时田园杂兴》 范成大",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837490_back",
+        "main_text": "麦花雪白菜花稀",
+        "notes": "描写初夏田园景色",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837491_front",
+        "main_text": "绿树村边合",
+        "notes": "《过故人庄》 孟浩然",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      },
+      {
+        "id": "face_1753469837491_back",
+        "main_text": "青山郭外斜",
+        "notes": "夏日田园景色，适合表现宁静",
+        "created_at": "2025-07-25T18:57:17.463Z",
+        "updated_at": "2025-07-25T18:57:17.463Z"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1042 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "export_date": "2025-07-25T16:39:39.841Z",
+    "source": "喵卡批量创建工具"
+  },
+  "data": {
+    "themes": [
+      {
+        "id": "theme_1753461579840_cpwr9rhuo",
+        "title": "日语五十音图",
+        "description": "包含五十音图的所有平假名/片假名，帮您记忆发音，卡片背面是罗马音拼写及例词。",
+        "cover_image_url": "",
+        "style_config": {
+          "theme": "minimalist-white",
+          "custom_styles": {}
+        },
+        "is_official": false,
+        "sort_order": 0,
+        "is_pinned": false,
+        "created_at": "2025-07-25T16:39:39.841Z",
+        "updated_at": "2025-07-25T16:39:39.841Z"
+      }
+    ],
+    "cards": [
+      {
+        "id": "assoc_1753461579840",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579840_front",
+        "back_face_id": "face_1753461579840_back",
+        "sort_order": 0,
+        "created_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "assoc_1753461579841",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579841_front",
+        "back_face_id": "face_1753461579841_back",
+        "sort_order": 1,
+        "created_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "assoc_1753461579842",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579842_front",
+        "back_face_id": "face_1753461579842_back",
+        "sort_order": 2,
+        "created_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "assoc_1753461579843",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579843_front",
+        "back_face_id": "face_1753461579843_back",
+        "sort_order": 3,
+        "created_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "assoc_1753461579844",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579844_front",
+        "back_face_id": "face_1753461579844_back",
+        "sort_order": 4,
+        "created_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "assoc_1753461579845",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579845_front",
+        "back_face_id": "face_1753461579845_back",
+        "sort_order": 5,
+        "created_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "assoc_1753461579846",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579846_front",
+        "back_face_id": "face_1753461579846_back",
+        "sort_order": 6,
+        "created_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "assoc_1753461579847",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579847_front",
+        "back_face_id": "face_1753461579847_back",
+        "sort_order": 7,
+        "created_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "assoc_1753461579848",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579848_front",
+        "back_face_id": "face_1753461579848_back",
+        "sort_order": 8,
+        "created_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "assoc_1753461579849",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579849_front",
+        "back_face_id": "face_1753461579849_back",
+        "sort_order": 9,
+        "created_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "assoc_1753461579850",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579850_front",
+        "back_face_id": "face_1753461579850_back",
+        "sort_order": 10,
+        "created_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "assoc_1753461579851",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579851_front",
+        "back_face_id": "face_1753461579851_back",
+        "sort_order": 11,
+        "created_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "assoc_1753461579852",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579852_front",
+        "back_face_id": "face_1753461579852_back",
+        "sort_order": 12,
+        "created_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "assoc_1753461579853",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579853_front",
+        "back_face_id": "face_1753461579853_back",
+        "sort_order": 13,
+        "created_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "assoc_1753461579854",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579854_front",
+        "back_face_id": "face_1753461579854_back",
+        "sort_order": 14,
+        "created_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "assoc_1753461579855",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579855_front",
+        "back_face_id": "face_1753461579855_back",
+        "sort_order": 15,
+        "created_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "assoc_1753461579856",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579856_front",
+        "back_face_id": "face_1753461579856_back",
+        "sort_order": 16,
+        "created_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "assoc_1753461579857",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579857_front",
+        "back_face_id": "face_1753461579857_back",
+        "sort_order": 17,
+        "created_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "assoc_1753461579858",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579858_front",
+        "back_face_id": "face_1753461579858_back",
+        "sort_order": 18,
+        "created_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "assoc_1753461579859",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579859_front",
+        "back_face_id": "face_1753461579859_back",
+        "sort_order": 19,
+        "created_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "assoc_1753461579860",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579860_front",
+        "back_face_id": "face_1753461579860_back",
+        "sort_order": 20,
+        "created_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "assoc_1753461579861",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579861_front",
+        "back_face_id": "face_1753461579861_back",
+        "sort_order": 21,
+        "created_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "assoc_1753461579862",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579862_front",
+        "back_face_id": "face_1753461579862_back",
+        "sort_order": 22,
+        "created_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "assoc_1753461579863",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579863_front",
+        "back_face_id": "face_1753461579863_back",
+        "sort_order": 23,
+        "created_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "assoc_1753461579864",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579864_front",
+        "back_face_id": "face_1753461579864_back",
+        "sort_order": 24,
+        "created_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "assoc_1753461579865",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579865_front",
+        "back_face_id": "face_1753461579865_back",
+        "sort_order": 25,
+        "created_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "assoc_1753461579866",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579866_front",
+        "back_face_id": "face_1753461579866_back",
+        "sort_order": 26,
+        "created_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "assoc_1753461579867",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579867_front",
+        "back_face_id": "face_1753461579867_back",
+        "sort_order": 27,
+        "created_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "assoc_1753461579868",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579868_front",
+        "back_face_id": "face_1753461579868_back",
+        "sort_order": 28,
+        "created_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "assoc_1753461579869",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579869_front",
+        "back_face_id": "face_1753461579869_back",
+        "sort_order": 29,
+        "created_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "assoc_1753461579870",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579870_front",
+        "back_face_id": "face_1753461579870_back",
+        "sort_order": 30,
+        "created_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "assoc_1753461579871",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579871_front",
+        "back_face_id": "face_1753461579871_back",
+        "sort_order": 31,
+        "created_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "assoc_1753461579872",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579872_front",
+        "back_face_id": "face_1753461579872_back",
+        "sort_order": 32,
+        "created_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "assoc_1753461579873",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579873_front",
+        "back_face_id": "face_1753461579873_back",
+        "sort_order": 33,
+        "created_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "assoc_1753461579874",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579874_front",
+        "back_face_id": "face_1753461579874_back",
+        "sort_order": 34,
+        "created_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "assoc_1753461579875",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579875_front",
+        "back_face_id": "face_1753461579875_back",
+        "sort_order": 35,
+        "created_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "assoc_1753461579876",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579876_front",
+        "back_face_id": "face_1753461579876_back",
+        "sort_order": 36,
+        "created_at": "2025-07-25T16:39:39.841Z"
+      },
+      {
+        "id": "assoc_1753461579878",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579878_front",
+        "back_face_id": "face_1753461579878_back",
+        "sort_order": 37,
+        "created_at": "2025-07-25T16:39:39.841Z"
+      },
+      {
+        "id": "assoc_1753461579879",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579879_front",
+        "back_face_id": "face_1753461579879_back",
+        "sort_order": 38,
+        "created_at": "2025-07-25T16:39:39.841Z"
+      },
+      {
+        "id": "assoc_1753461579880",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579880_front",
+        "back_face_id": "face_1753461579880_back",
+        "sort_order": 39,
+        "created_at": "2025-07-25T16:39:39.841Z"
+      },
+      {
+        "id": "assoc_1753461579881",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579881_front",
+        "back_face_id": "face_1753461579881_back",
+        "sort_order": 40,
+        "created_at": "2025-07-25T16:39:39.841Z"
+      },
+      {
+        "id": "assoc_1753461579882",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579882_front",
+        "back_face_id": "face_1753461579882_back",
+        "sort_order": 41,
+        "created_at": "2025-07-25T16:39:39.841Z"
+      },
+      {
+        "id": "assoc_1753461579883",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579883_front",
+        "back_face_id": "face_1753461579883_back",
+        "sort_order": 42,
+        "created_at": "2025-07-25T16:39:39.841Z"
+      },
+      {
+        "id": "assoc_1753461579884",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579884_front",
+        "back_face_id": "face_1753461579884_back",
+        "sort_order": 43,
+        "created_at": "2025-07-25T16:39:39.841Z"
+      },
+      {
+        "id": "assoc_1753461579885",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579885_front",
+        "back_face_id": "face_1753461579885_back",
+        "sort_order": 44,
+        "created_at": "2025-07-25T16:39:39.841Z"
+      },
+      {
+        "id": "assoc_1753461579886",
+        "theme_id": "theme_1753461579840_cpwr9rhuo",
+        "front_face_id": "face_1753461579886_front",
+        "back_face_id": "face_1753461579886_back",
+        "sort_order": 45,
+        "created_at": "2025-07-25T16:39:39.841Z"
+      }
+    ],
+    "faces": [
+      {
+        "id": "face_1753461579840_front",
+        "main_text": "あ/ア",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579840_back",
+        "main_text": "a",
+        "notes": "あさ asahi (朝日) / あめ ame (雨) / あき aki (秋)",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579841_front",
+        "main_text": "い/イ",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579841_back",
+        "main_text": "i",
+        "notes": "いえ ie (家) / いぬ inu (犬) / いろ iro (色)",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579842_front",
+        "main_text": "う/ウ",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579842_back",
+        "main_text": "u",
+        "notes": "うみ umi (海) / うた uta (歌) / うま uma (馬)",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579843_front",
+        "main_text": "え/エ",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579843_back",
+        "main_text": "e",
+        "notes": "えき eki (駅) / えいが eiga (映画) / えん en (円)",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579844_front",
+        "main_text": "お/オ",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579844_back",
+        "main_text": "o",
+        "notes": "おかね okane (お金) / おんがく ongaku (音楽) / おちゃ ocha (お茶)",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579845_front",
+        "main_text": "か/カ",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579845_back",
+        "main_text": "ka",
+        "notes": "かぞく kazoku (家族) / かばん kaban (鞄) / かみ kami (紙)",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579846_front",
+        "main_text": "き/キ",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579846_back",
+        "main_text": "ki",
+        "notes": "きのう kinou (昨日) / きれい kirei (綺麗) / きもの kimono (着物)",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579847_front",
+        "main_text": "く/ク",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579847_back",
+        "main_text": "ku",
+        "notes": "くるま kuruma (車) / くも kumo (雲) / くつ kutsu (靴)",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579848_front",
+        "main_text": "け/ケ",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579848_back",
+        "main_text": "ke",
+        "notes": "けさ kesa (今朝) / けっこん kekkon (結婚) / けいき keiki (景気)",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579849_front",
+        "main_text": "こ/コ",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579849_back",
+        "main_text": "ko",
+        "notes": "こども kodomo (子供) / こうえん kouen (公園) / こめ kome (米)",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579850_front",
+        "main_text": "さ/サ",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579850_back",
+        "main_text": "sa",
+        "notes": "さくら sakura (桜) / さかな sakana (魚) / さとう satou (砂糖)",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579851_front",
+        "main_text": "し/シ",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579851_back",
+        "main_text": "shi",
+        "notes": "しごと shigoto (仕事) / しんぶん shinbun (新聞) / しお shio (塩)",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579852_front",
+        "main_text": "す/ス",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579852_back",
+        "main_text": "su",
+        "notes": "すし sushi (寿司) / すいか suika (西瓜) / すずき suzuki (鈴木)",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579853_front",
+        "main_text": "せ/セ",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579853_back",
+        "main_text": "se",
+        "notes": "せんせい sensei (先生) / せかい sekai (世界) / せつめい setsumei (説明)",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579854_front",
+        "main_text": "そ/ソ",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579854_back",
+        "main_text": "so",
+        "notes": "そら sora (空) / そば soba (蕎麦) / そうじ souji (掃除)",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579855_front",
+        "main_text": "た/タ",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579855_back",
+        "main_text": "ta",
+        "notes": "たべもの tabemono (食べ物) / たまご tamago (卵) / たいよう taiyou (太陽)",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579856_front",
+        "main_text": "ち/チ",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579856_back",
+        "main_text": "chi",
+        "notes": "ちず chizu (地図) / ちいさい chiisai (小さい) / ちゃ cha (茶)",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579857_front",
+        "main_text": "つ/ツ",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579857_back",
+        "main_text": "tsu",
+        "notes": "つき tsuki (月) / つくえ tsukue (机) / つめたい tsumetai (冷たい)",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579858_front",
+        "main_text": "て/テ",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579858_back",
+        "main_text": "te",
+        "notes": "てがみ tegami (手紙) / てんき tenki (天気) / てつだう tetsudau (手伝う)",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579859_front",
+        "main_text": "と/ト",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579859_back",
+        "main_text": "to",
+        "notes": "ともだち tomodachi (友達) / とけい tokei (時計) / とり tori (鳥)",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579860_front",
+        "main_text": "な/ナ",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579860_back",
+        "main_text": "na",
+        "notes": "なまえ namae (名前) / なつ natsu (夏) / なに nani (何)",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579861_front",
+        "main_text": "に/ニ",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579861_back",
+        "main_text": "ni",
+        "notes": "にほん nihon (日本) / にく niku (肉) / にわ niwa (庭)",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579862_front",
+        "main_text": "ぬ/ヌ",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579862_back",
+        "main_text": "nu",
+        "notes": "ぬの nuno (布) / ぬるい nurui (温い) / ぬく nuku (抜く)",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579863_front",
+        "main_text": "ね/ネ",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579863_back",
+        "main_text": "ne",
+        "notes": "ねこ neko (猫) / ねる neru (寝る) / ねだん nedan (値段)",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579864_front",
+        "main_text": "の/ノ",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579864_back",
+        "main_text": "no",
+        "notes": "のみもの nomimono (飲み物) / のうぎょう nougyou (農業) / のど nodo (喉)",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579865_front",
+        "main_text": "は/ハ",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579865_back",
+        "main_text": "ha",
+        "notes": "はな hana (花) / はは haha (母) / はし hashi (橋)",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579866_front",
+        "main_text": "ひ/ヒ",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579866_back",
+        "main_text": "hi",
+        "notes": "ひと hito (人) / ひかり hikari (光) / ひるごはん hirugohan (昼御飯)",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579867_front",
+        "main_text": "ふ/フ",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579867_back",
+        "main_text": "fu",
+        "notes": "ふゆ fuyu (冬) / ふね fune (船) / ふとん futon (布団)",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579868_front",
+        "main_text": "へ/ヘ",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579868_back",
+        "main_text": "he",
+        "notes": "へや heya (部屋) / へいわ heiwa (平和) / へん hen (変)",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579869_front",
+        "main_text": "ほ/ホ",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579869_back",
+        "main_text": "ho",
+        "notes": "ほん hon (本) / ほし hoshi (星) / ほんとう hontou (本当)",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579870_front",
+        "main_text": "ま/マ",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579870_back",
+        "main_text": "ma",
+        "notes": "まち machi (町) / まいにち mainichi (毎日) / まど mado (窓)",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579871_front",
+        "main_text": "み/ミ",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579871_back",
+        "main_text": "mi",
+        "notes": "みず mizu (水) / みせ mise (店) / みんな minna (皆)",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579872_front",
+        "main_text": "む/ム",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579872_back",
+        "main_text": "mu",
+        "notes": "むし mushi (虫) / むずかしい muzukashii (難しい) / むかし mukashi (昔)",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579873_front",
+        "main_text": "め/メ",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579873_back",
+        "main_text": "me",
+        "notes": "めがね megane (眼鏡) / めし meshi (飯) / めいじ meiji (明治)",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579874_front",
+        "main_text": "も/モ",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579874_back",
+        "main_text": "mo",
+        "notes": "もの mono (物) / もり mori (森) / もんだい mondai (問題)",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579875_front",
+        "main_text": "や/ヤ",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579875_back",
+        "main_text": "ya",
+        "notes": "やま yama (山) / やさい yasai (野菜) / やすい yasui (安い)",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579876_front",
+        "main_text": "ゆ/ユ",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.840Z"
+      },
+      {
+        "id": "face_1753461579876_back",
+        "main_text": "yu",
+        "notes": "ゆき yuki (雪) / ゆうびん yuubin (郵便) / ゆめ yume (夢)",
+        "created_at": "2025-07-25T16:39:39.840Z",
+        "updated_at": "2025-07-25T16:39:39.841Z"
+      },
+      {
+        "id": "face_1753461579878_front",
+        "main_text": "よ/ヨ",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.841Z",
+        "updated_at": "2025-07-25T16:39:39.841Z"
+      },
+      {
+        "id": "face_1753461579878_back",
+        "main_text": "yo",
+        "notes": "よる yoru (夜) / よみもの yomimono (読み物) / よろしい yoroshii (宜しい)",
+        "created_at": "2025-07-25T16:39:39.841Z",
+        "updated_at": "2025-07-25T16:39:39.841Z"
+      },
+      {
+        "id": "face_1753461579879_front",
+        "main_text": "ら/ラ",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.841Z",
+        "updated_at": "2025-07-25T16:39:39.841Z"
+      },
+      {
+        "id": "face_1753461579879_back",
+        "main_text": "ra",
+        "notes": "らいねん rainen (来年) / らくだ rakuda (駱駝) / らじお rajio (ラジオ)",
+        "created_at": "2025-07-25T16:39:39.841Z",
+        "updated_at": "2025-07-25T16:39:39.841Z"
+      },
+      {
+        "id": "face_1753461579880_front",
+        "main_text": "り/リ",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.841Z",
+        "updated_at": "2025-07-25T16:39:39.841Z"
+      },
+      {
+        "id": "face_1753461579880_back",
+        "main_text": "ri",
+        "notes": "りんご ringo (林檎) / りょうり ryouri (料理) / りゆう riyuu (理由)",
+        "created_at": "2025-07-25T16:39:39.841Z",
+        "updated_at": "2025-07-25T16:39:39.841Z"
+      },
+      {
+        "id": "face_1753461579881_front",
+        "main_text": "る/ル",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.841Z",
+        "updated_at": "2025-07-25T16:39:39.841Z"
+      },
+      {
+        "id": "face_1753461579881_back",
+        "main_text": "ru",
+        "notes": "るすばん rusuban (留守番) / るいじ ruiji (類似) / るーる ruuru (ルール)",
+        "created_at": "2025-07-25T16:39:39.841Z",
+        "updated_at": "2025-07-25T16:39:39.841Z"
+      },
+      {
+        "id": "face_1753461579882_front",
+        "main_text": "れ/レ",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.841Z",
+        "updated_at": "2025-07-25T16:39:39.841Z"
+      },
+      {
+        "id": "face_1753461579882_back",
+        "main_text": "re",
+        "notes": "れいぞうこ reizouko (冷蔵庫) / れきし rekishi (歴史) / れんしゅう renshuu (練習)",
+        "created_at": "2025-07-25T16:39:39.841Z",
+        "updated_at": "2025-07-25T16:39:39.841Z"
+      },
+      {
+        "id": "face_1753461579883_front",
+        "main_text": "ろ/ロ",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.841Z",
+        "updated_at": "2025-07-25T16:39:39.841Z"
+      },
+      {
+        "id": "face_1753461579883_back",
+        "main_text": "ro",
+        "notes": "ろくじ rokuji (六時) / ろうそく rousoku (蝋燭) / ろんぶん ronbun (論文)",
+        "created_at": "2025-07-25T16:39:39.841Z",
+        "updated_at": "2025-07-25T16:39:39.841Z"
+      },
+      {
+        "id": "face_1753461579884_front",
+        "main_text": "わ/ワ",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.841Z",
+        "updated_at": "2025-07-25T16:39:39.841Z"
+      },
+      {
+        "id": "face_1753461579884_back",
+        "main_text": "wa",
+        "notes": "わたし watashi (私) / わかる wakaru (分かる) / わらう warau (笑う)",
+        "created_at": "2025-07-25T16:39:39.841Z",
+        "updated_at": "2025-07-25T16:39:39.841Z"
+      },
+      {
+        "id": "face_1753461579885_front",
+        "main_text": "を/ヲ",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.841Z",
+        "updated_at": "2025-07-25T16:39:39.841Z"
+      },
+      {
+        "id": "face_1753461579885_back",
+        "main_text": "wo",
+        "notes": "これを kore wo (これを) / ほんを hon wo (本を) / みずを mizu wo (水を)",
+        "created_at": "2025-07-25T16:39:39.841Z",
+        "updated_at": "2025-07-25T16:39:39.841Z"
+      },
+      {
+        "id": "face_1753461579886_front",
+        "main_text": "ん/ン",
+        "notes": "",
+        "created_at": "2025-07-25T16:39:39.841Z",
+        "updated_at": "2025-07-25T16:39:39.841Z"
+      },
+      {
+        "id": "face_1753461579886_back",
+        "main_text": "n",
+        "notes": "にほん nihon (日本) / せんせい sensei (先生) / ほんとう hontou (本当)",
+        "created_at": "2025-07-25T16:39:39.841Z",
+        "updated_at": "2025-07-25T16:39:39.841Z"
+      }
+    ]
+  }
+}

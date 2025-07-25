@@ -1,0 +1,426 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "export_date": "2025-07-25T18:32:46.728Z",
+    "source": "喵卡批量创建工具"
+  },
+  "data": {
+    "themes": [
+      {
+        "id": "theme_1753468366727_inxvxze11",
+        "title": "中法日常用语：问候与礼貌用语",
+        "description": "日常交往中最基础的礼貌表达，适用于各种社交场合。",
+        "cover_image_url": "",
+        "style_config": {
+          "theme": "minimalist-white",
+          "custom_styles": {}
+        },
+        "is_official": false,
+        "sort_order": 0,
+        "is_pinned": false,
+        "created_at": "2025-07-25T18:32:46.728Z",
+        "updated_at": "2025-07-25T18:32:46.728Z"
+      }
+    ],
+    "cards": [
+      {
+        "id": "assoc_1753468366727",
+        "theme_id": "theme_1753468366727_inxvxze11",
+        "front_face_id": "face_1753468366727_front",
+        "back_face_id": "face_1753468366727_back",
+        "sort_order": 0,
+        "created_at": "2025-07-25T18:32:46.727Z"
+      },
+      {
+        "id": "assoc_1753468366728",
+        "theme_id": "theme_1753468366727_inxvxze11",
+        "front_face_id": "face_1753468366728_front",
+        "back_face_id": "face_1753468366728_back",
+        "sort_order": 1,
+        "created_at": "2025-07-25T18:32:46.727Z"
+      },
+      {
+        "id": "assoc_1753468366729",
+        "theme_id": "theme_1753468366727_inxvxze11",
+        "front_face_id": "face_1753468366729_front",
+        "back_face_id": "face_1753468366729_back",
+        "sort_order": 2,
+        "created_at": "2025-07-25T18:32:46.727Z"
+      },
+      {
+        "id": "assoc_1753468366730",
+        "theme_id": "theme_1753468366727_inxvxze11",
+        "front_face_id": "face_1753468366730_front",
+        "back_face_id": "face_1753468366730_back",
+        "sort_order": 3,
+        "created_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "assoc_1753468366732",
+        "theme_id": "theme_1753468366727_inxvxze11",
+        "front_face_id": "face_1753468366732_front",
+        "back_face_id": "face_1753468366732_back",
+        "sort_order": 4,
+        "created_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "assoc_1753468366733",
+        "theme_id": "theme_1753468366727_inxvxze11",
+        "front_face_id": "face_1753468366733_front",
+        "back_face_id": "face_1753468366733_back",
+        "sort_order": 5,
+        "created_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "assoc_1753468366734",
+        "theme_id": "theme_1753468366727_inxvxze11",
+        "front_face_id": "face_1753468366734_front",
+        "back_face_id": "face_1753468366734_back",
+        "sort_order": 6,
+        "created_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "assoc_1753468366735",
+        "theme_id": "theme_1753468366727_inxvxze11",
+        "front_face_id": "face_1753468366735_front",
+        "back_face_id": "face_1753468366735_back",
+        "sort_order": 7,
+        "created_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "assoc_1753468366736",
+        "theme_id": "theme_1753468366727_inxvxze11",
+        "front_face_id": "face_1753468366736_front",
+        "back_face_id": "face_1753468366736_back",
+        "sort_order": 8,
+        "created_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "assoc_1753468366737",
+        "theme_id": "theme_1753468366727_inxvxze11",
+        "front_face_id": "face_1753468366737_front",
+        "back_face_id": "face_1753468366737_back",
+        "sort_order": 9,
+        "created_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "assoc_1753468366738",
+        "theme_id": "theme_1753468366727_inxvxze11",
+        "front_face_id": "face_1753468366738_front",
+        "back_face_id": "face_1753468366738_back",
+        "sort_order": 10,
+        "created_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "assoc_1753468366739",
+        "theme_id": "theme_1753468366727_inxvxze11",
+        "front_face_id": "face_1753468366739_front",
+        "back_face_id": "face_1753468366739_back",
+        "sort_order": 11,
+        "created_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "assoc_1753468366740",
+        "theme_id": "theme_1753468366727_inxvxze11",
+        "front_face_id": "face_1753468366740_front",
+        "back_face_id": "face_1753468366740_back",
+        "sort_order": 12,
+        "created_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "assoc_1753468366741",
+        "theme_id": "theme_1753468366727_inxvxze11",
+        "front_face_id": "face_1753468366741_front",
+        "back_face_id": "face_1753468366741_back",
+        "sort_order": 13,
+        "created_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "assoc_1753468366742",
+        "theme_id": "theme_1753468366727_inxvxze11",
+        "front_face_id": "face_1753468366742_front",
+        "back_face_id": "face_1753468366742_back",
+        "sort_order": 14,
+        "created_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "assoc_1753468366743",
+        "theme_id": "theme_1753468366727_inxvxze11",
+        "front_face_id": "face_1753468366743_front",
+        "back_face_id": "face_1753468366743_back",
+        "sort_order": 15,
+        "created_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "assoc_1753468366744",
+        "theme_id": "theme_1753468366727_inxvxze11",
+        "front_face_id": "face_1753468366744_front",
+        "back_face_id": "face_1753468366744_back",
+        "sort_order": 16,
+        "created_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "assoc_1753468366745",
+        "theme_id": "theme_1753468366727_inxvxze11",
+        "front_face_id": "face_1753468366745_front",
+        "back_face_id": "face_1753468366745_back",
+        "sort_order": 17,
+        "created_at": "2025-07-25T18:32:46.728Z"
+      }
+    ],
+    "faces": [
+      {
+        "id": "face_1753468366727_front",
+        "main_text": "你好",
+        "notes": "见面时的基本问候语，适用于白天任何时候",
+        "created_at": "2025-07-25T18:32:46.727Z",
+        "updated_at": "2025-07-25T18:32:46.727Z"
+      },
+      {
+        "id": "face_1753468366727_back",
+        "main_text": "Bonjour",
+        "notes": "/bon.ˈʒuʁ/<br>A: Bonjour! Comment allez-vous?<br>B: Bonjour! Je vais bien merci.",
+        "created_at": "2025-07-25T18:32:46.727Z",
+        "updated_at": "2025-07-25T18:32:46.727Z"
+      },
+      {
+        "id": "face_1753468366728_front",
+        "main_text": "晚上好",
+        "notes": "傍晚和夜晚时间的问候语，通常18点后使用",
+        "created_at": "2025-07-25T18:32:46.727Z",
+        "updated_at": "2025-07-25T18:32:46.727Z"
+      },
+      {
+        "id": "face_1753468366728_back",
+        "main_text": "Bonsoir",
+        "notes": "/bon.ˈswaʁ/<br>A: Bonsoir madame!<br>B: Bonsoir! Bonne soirée!",
+        "created_at": "2025-07-25T18:32:46.727Z",
+        "updated_at": "2025-07-25T18:32:46.727Z"
+      },
+      {
+        "id": "face_1753468366729_front",
+        "main_text": "再见",
+        "notes": "告别时的标准用语，正式且礼貌",
+        "created_at": "2025-07-25T18:32:46.727Z",
+        "updated_at": "2025-07-25T18:32:46.727Z"
+      },
+      {
+        "id": "face_1753468366729_back",
+        "main_text": "Au revoir",
+        "notes": "/o ʁə.ˈvwaʁ/<br>A: Au revoir et à bientôt!<br>B: Au revoir! Bon voyage!",
+        "created_at": "2025-07-25T18:32:46.727Z",
+        "updated_at": "2025-07-25T18:32:46.727Z"
+      },
+      {
+        "id": "face_1753468366730_front",
+        "main_text": "谢谢",
+        "notes": "表达感谢的基本用语，使用频率极高",
+        "created_at": "2025-07-25T18:32:46.727Z",
+        "updated_at": "2025-07-25T18:32:46.727Z"
+      },
+      {
+        "id": "face_1753468366730_back",
+        "main_text": "Merci",
+        "notes": "/mɛʁ.ˈsi/<br>A: Voici votre café.<br>B: Merci beaucoup!",
+        "created_at": "2025-07-25T18:32:46.727Z",
+        "updated_at": "2025-07-25T18:32:46.727Z"
+      },
+      {
+        "id": "face_1753468366732_front",
+        "main_text": "不客气",
+        "notes": "回应别人感谢时的礼貌用语",
+        "created_at": "2025-07-25T18:32:46.728Z",
+        "updated_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "face_1753468366732_back",
+        "main_text": "De rien",
+        "notes": "/də ʁjɛ̃/<br>A: Merci pour votre aide!<br>B: De rien c'est normal.",
+        "created_at": "2025-07-25T18:32:46.728Z",
+        "updated_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "face_1753468366733_front",
+        "main_text": "对不起",
+        "notes": "道歉或请求原谅时使用，比较正式",
+        "created_at": "2025-07-25T18:32:46.728Z",
+        "updated_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "face_1753468366733_back",
+        "main_text": "Pardon",
+        "notes": "/paʁ.ˈdɔ̃/<br>A: Pardon je suis en retard.<br>B: Ce n'est pas grave.",
+        "created_at": "2025-07-25T18:32:46.728Z",
+        "updated_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "face_1753468366734_front",
+        "main_text": "打扰一下",
+        "notes": "需要引起注意或道歉时使用",
+        "created_at": "2025-07-25T18:32:46.728Z",
+        "updated_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "face_1753468366734_back",
+        "main_text": "Excusez-moi",
+        "notes": "/ɛk.sky.ze ˈmwa/<br>A: Excusez-moi où est la gare?<br>B: C'est par là-bas.",
+        "created_at": "2025-07-25T18:32:46.728Z",
+        "updated_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "face_1753468366735_front",
+        "main_text": "请",
+        "notes": "请求帮助或服务时的礼貌用语",
+        "created_at": "2025-07-25T18:32:46.728Z",
+        "updated_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "face_1753468366735_back",
+        "main_text": "S'il vous plaît",
+        "notes": "/sil vu ˈplɛ/<br>A: Un café s'il vous plaît.<br>B: Tout de suite monsieur.",
+        "created_at": "2025-07-25T18:32:46.728Z",
+        "updated_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "face_1753468366736_front",
+        "main_text": "你好吗",
+        "notes": "询问对方近况的礼貌表达",
+        "created_at": "2025-07-25T18:32:46.728Z",
+        "updated_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "face_1753468366736_back",
+        "main_text": "Comment allez-vous",
+        "notes": "/ko.mɑ̃.t‿a.le ˈvu/<br>A: Comment allez-vous?<br>B: Très bien et vous?",
+        "created_at": "2025-07-25T18:32:46.728Z",
+        "updated_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "face_1753468366737_front",
+        "main_text": "很好谢谢",
+        "notes": "回答近况询问的标准回复",
+        "created_at": "2025-07-25T18:32:46.728Z",
+        "updated_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "face_1753468366737_back",
+        "main_text": "Très bien merci",
+        "notes": "/tʁɛ bjɛ̃ mɛʁ.ˈsi/<br>A: Comment ça va?<br>B: Très bien merci et toi?",
+        "created_at": "2025-07-25T18:32:46.728Z",
+        "updated_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "face_1753468366738_front",
+        "main_text": "祝你好运",
+        "notes": "祝愿别人成功或顺利",
+        "created_at": "2025-07-25T18:32:46.728Z",
+        "updated_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "face_1753468366738_back",
+        "main_text": "Bonne chance",
+        "notes": "/bɔn ˈʃɑ̃s/<br>A: J'ai un examen demain.<br>B: Bonne chance!",
+        "created_at": "2025-07-25T18:32:46.728Z",
+        "updated_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "face_1753468366739_front",
+        "main_text": "生日快乐",
+        "notes": "庆祝生日时的祝福语",
+        "created_at": "2025-07-25T18:32:46.728Z",
+        "updated_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "face_1753468366739_back",
+        "main_text": "Bon anniversaire",
+        "notes": "/bon a.ni.vɛʁ.ˈsɛʁ/<br>A: Bon anniversaire!<br>B: Merci c'est gentil!",
+        "created_at": "2025-07-25T18:32:46.728Z",
+        "updated_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "face_1753468366740_front",
+        "main_text": "新年快乐",
+        "notes": "新年祝福的标准表达",
+        "created_at": "2025-07-25T18:32:46.728Z",
+        "updated_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "face_1753468366740_back",
+        "main_text": "Bonne année",
+        "notes": "/bɔn a.ˈne/<br>A: Bonne année!<br>B: Bonne année à vous aussi!",
+        "created_at": "2025-07-25T18:32:46.728Z",
+        "updated_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "face_1753468366741_front",
+        "main_text": "圣诞快乐",
+        "notes": "圣诞节祝福语",
+        "created_at": "2025-07-25T18:32:46.728Z",
+        "updated_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "face_1753468366741_back",
+        "main_text": "Joyeux Noël",
+        "notes": "/ʒwa.jø no.ˈɛl/<br>A: Joyeux Noël!<br>B: Joyeux Noël et bonne santé!",
+        "created_at": "2025-07-25T18:32:46.728Z",
+        "updated_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "face_1753468366742_front",
+        "main_text": "祝您愉快",
+        "notes": "白天告别时的祝福",
+        "created_at": "2025-07-25T18:32:46.728Z",
+        "updated_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "face_1753468366742_back",
+        "main_text": "Bonne journée",
+        "notes": "/bɔn ʒuʁ.ˈne/<br>A: Au revoir bonne journée!<br>B: Merci vous aussi!",
+        "created_at": "2025-07-25T18:32:46.728Z",
+        "updated_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "face_1753468366743_front",
+        "main_text": "晚安",
+        "notes": "睡前或深夜告别时使用",
+        "created_at": "2025-07-25T18:32:46.728Z",
+        "updated_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "face_1753468366743_back",
+        "main_text": "Bonne nuit",
+        "notes": "/bɔn ˈnɥi/<br>A: Il est tard bonne nuit!<br>B: Bonne nuit dormez bien!",
+        "created_at": "2025-07-25T18:32:46.728Z",
+        "updated_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "face_1753468366744_front",
+        "main_text": "欢迎",
+        "notes": "欢迎客人或新来者",
+        "created_at": "2025-07-25T18:32:46.728Z",
+        "updated_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "face_1753468366744_back",
+        "main_text": "Bienvenue",
+        "notes": "/bjɛ̃.və.ˈny/<br>A: Bienvenue chez nous!<br>B: Merci c'est très gentil!",
+        "created_at": "2025-07-25T18:32:46.728Z",
+        "updated_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "face_1753468366745_front",
+        "main_text": "没关系",
+        "notes": "表示不介意或没关系",
+        "created_at": "2025-07-25T18:32:46.728Z",
+        "updated_at": "2025-07-25T18:32:46.728Z"
+      },
+      {
+        "id": "face_1753468366745_back",
+        "main_text": "Ça ne fait rien",
+        "notes": "/sa nə fɛ ʁjɛ̃/<br>A: Désolé je suis en retard.<br>B: Ça ne fait rien.",
+        "created_at": "2025-07-25T18:32:46.728Z",
+        "updated_at": "2025-07-25T18:32:46.728Z"
+      }
+    ]
+  }
+}

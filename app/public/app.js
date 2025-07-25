@@ -833,10 +833,40 @@ class MilkaApp {
     }
   }
 
-  // 显示通知
+// 在 app.js 的 MilkaApp 类中
+
+  /**
+   * 在页面右上角显示一个非模态通知
+   * @param {string} message - 要显示的消息内容
+   * @param {string} type - 通知类型 (info, success, error, warning)
+   */
   showNotification(message, type = "info") {
-    console.log(`${type.toUpperCase()}: ${message}`);
-    // 这里可以实现更复杂的通知系统
+    // 1. 查找或创建通知的容器
+    let container = document.getElementById('notification-container');
+    if (!container) {
+      container = document.createElement('div');
+      container.id = 'notification-container';
+      document.body.appendChild(container);
+    }
+
+    // 2. 创建新的通知元素
+    const toast = document.createElement('div');
+    toast.className = `notification-toast ${type}`;
+    toast.textContent = message;
+
+    // 3. 将通知添加到容器中
+    container.appendChild(toast);
+
+    // 4. 设置一个定时器，在3秒后移除通知
+    setTimeout(() => {
+      // 添加淡出动画类
+      toast.classList.add('fade-out');
+      
+      // 在CSS动画结束后，从DOM中彻底移除元素，避免残留
+      toast.addEventListener('transitionend', () => {
+        toast.remove();
+      });
+    }, 3000);
   }
 
   // 错误处理
@@ -1060,9 +1090,11 @@ class MilkaApp {
           card.back?.main_text || "背面内容"
         )}</div> ${
           card.back?.notes
-            ? `<div class="card-notes">${this.escapeHtml(
-                card.back.notes
-              )}</div>`
+            // ? `<div class="card-notes">${this.escapeHtml(
+            //     card.back.notes
+            //   )}</div>`
+              //是否显示HTML格式的背面说明
+            ? `<div class="card-notes">${card.back.notes}</div>`
             : ""
         } </div> </div> </div> `
       )

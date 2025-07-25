@@ -1,0 +1,470 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "export_date": "2025-07-25T15:48:10.697Z",
+    "source": "喵卡批量创建工具"
+  },
+  "data": {
+    "themes": [
+      {
+        "id": "theme_1753458490697_6anpruany",
+        "title": "中英词汇：学习教育与知识技能",
+        "description": "涵盖学习过程、教育环境、知识获取和技能发展相关词汇，适合学术和培训场景。",
+        "cover_image_url": "",
+        "style_config": {
+          "theme": "minimalist-white",
+          "custom_styles": {}
+        },
+        "is_official": false,
+        "sort_order": 0,
+        "is_pinned": false,
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      }
+    ],
+    "cards": [
+      {
+        "id": "assoc_1753458490697",
+        "theme_id": "theme_1753458490697_6anpruany",
+        "front_face_id": "face_1753458490697_front",
+        "back_face_id": "face_1753458490697_back",
+        "sort_order": 0,
+        "created_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "assoc_1753458490698",
+        "theme_id": "theme_1753458490697_6anpruany",
+        "front_face_id": "face_1753458490698_front",
+        "back_face_id": "face_1753458490698_back",
+        "sort_order": 1,
+        "created_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "assoc_1753458490699",
+        "theme_id": "theme_1753458490697_6anpruany",
+        "front_face_id": "face_1753458490699_front",
+        "back_face_id": "face_1753458490699_back",
+        "sort_order": 2,
+        "created_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "assoc_1753458490700",
+        "theme_id": "theme_1753458490697_6anpruany",
+        "front_face_id": "face_1753458490700_front",
+        "back_face_id": "face_1753458490700_back",
+        "sort_order": 3,
+        "created_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "assoc_1753458490701",
+        "theme_id": "theme_1753458490697_6anpruany",
+        "front_face_id": "face_1753458490701_front",
+        "back_face_id": "face_1753458490701_back",
+        "sort_order": 4,
+        "created_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "assoc_1753458490702",
+        "theme_id": "theme_1753458490697_6anpruany",
+        "front_face_id": "face_1753458490702_front",
+        "back_face_id": "face_1753458490702_back",
+        "sort_order": 5,
+        "created_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "assoc_1753458490703",
+        "theme_id": "theme_1753458490697_6anpruany",
+        "front_face_id": "face_1753458490703_front",
+        "back_face_id": "face_1753458490703_back",
+        "sort_order": 6,
+        "created_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "assoc_1753458490704",
+        "theme_id": "theme_1753458490697_6anpruany",
+        "front_face_id": "face_1753458490704_front",
+        "back_face_id": "face_1753458490704_back",
+        "sort_order": 7,
+        "created_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "assoc_1753458490705",
+        "theme_id": "theme_1753458490697_6anpruany",
+        "front_face_id": "face_1753458490705_front",
+        "back_face_id": "face_1753458490705_back",
+        "sort_order": 8,
+        "created_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "assoc_1753458490706",
+        "theme_id": "theme_1753458490697_6anpruany",
+        "front_face_id": "face_1753458490706_front",
+        "back_face_id": "face_1753458490706_back",
+        "sort_order": 9,
+        "created_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "assoc_1753458490707",
+        "theme_id": "theme_1753458490697_6anpruany",
+        "front_face_id": "face_1753458490707_front",
+        "back_face_id": "face_1753458490707_back",
+        "sort_order": 10,
+        "created_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "assoc_1753458490708",
+        "theme_id": "theme_1753458490697_6anpruany",
+        "front_face_id": "face_1753458490708_front",
+        "back_face_id": "face_1753458490708_back",
+        "sort_order": 11,
+        "created_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "assoc_1753458490709",
+        "theme_id": "theme_1753458490697_6anpruany",
+        "front_face_id": "face_1753458490709_front",
+        "back_face_id": "face_1753458490709_back",
+        "sort_order": 12,
+        "created_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "assoc_1753458490710",
+        "theme_id": "theme_1753458490697_6anpruany",
+        "front_face_id": "face_1753458490710_front",
+        "back_face_id": "face_1753458490710_back",
+        "sort_order": 13,
+        "created_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "assoc_1753458490711",
+        "theme_id": "theme_1753458490697_6anpruany",
+        "front_face_id": "face_1753458490711_front",
+        "back_face_id": "face_1753458490711_back",
+        "sort_order": 14,
+        "created_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "assoc_1753458490712",
+        "theme_id": "theme_1753458490697_6anpruany",
+        "front_face_id": "face_1753458490712_front",
+        "back_face_id": "face_1753458490712_back",
+        "sort_order": 15,
+        "created_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "assoc_1753458490713",
+        "theme_id": "theme_1753458490697_6anpruany",
+        "front_face_id": "face_1753458490713_front",
+        "back_face_id": "face_1753458490713_back",
+        "sort_order": 16,
+        "created_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "assoc_1753458490714",
+        "theme_id": "theme_1753458490697_6anpruany",
+        "front_face_id": "face_1753458490714_front",
+        "back_face_id": "face_1753458490714_back",
+        "sort_order": 17,
+        "created_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "assoc_1753458490715",
+        "theme_id": "theme_1753458490697_6anpruany",
+        "front_face_id": "face_1753458490715_front",
+        "back_face_id": "face_1753458490715_back",
+        "sort_order": 18,
+        "created_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "assoc_1753458490716",
+        "theme_id": "theme_1753458490697_6anpruany",
+        "front_face_id": "face_1753458490716_front",
+        "back_face_id": "face_1753458490716_back",
+        "sort_order": 19,
+        "created_at": "2025-07-25T15:48:10.697Z"
+      }
+    ],
+    "faces": [
+      {
+        "id": "face_1753458490697_front",
+        "main_text": "勤奋好学的",
+        "notes": "形容专心学习、求知欲强",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "face_1753458490697_back",
+        "main_text": "studious",
+        "notes": "/ˈstuːdiəs/ She is a studious student.",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "face_1753458490698_front",
+        "main_text": "知识渊博的",
+        "notes": "形容掌握大量知识",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "face_1753458490698_back",
+        "main_text": "knowledgeable",
+        "notes": "/ˈnɑːlɪdʒəbl/ The professor is very knowledgeable.",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "face_1753458490699_front",
+        "main_text": "好奇的",
+        "notes": "形容对学习新知识感兴趣",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "face_1753458490699_back",
+        "main_text": "curious",
+        "notes": "/ˈkjʊriəs/ Curious minds learn faster.",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "face_1753458490700_front",
+        "main_text": "善于分析的",
+        "notes": "形容能够深入分析问题",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "face_1753458490700_back",
+        "main_text": "analytical",
+        "notes": "/ˌænəˈlɪtɪkl/ Scientists need analytical skills.",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "face_1753458490701_front",
+        "main_text": "逻辑性强的",
+        "notes": "形容思维清晰、推理合理",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "face_1753458490701_back",
+        "main_text": "logical",
+        "notes": "/ˈlɑːdʒɪkl/ His argument is very logical.",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "face_1753458490702_front",
+        "main_text": "善于观察的",
+        "notes": "形容注意细节、观察力强",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "face_1753458490702_back",
+        "main_text": "observant",
+        "notes": "/əbˈzɜːrvənt/ Good researchers are observant.",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "face_1753458490703_front",
+        "main_text": "表达清晰的",
+        "notes": "形容能够清楚表达想法",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "face_1753458490703_back",
+        "main_text": "articulate",
+        "notes": "/ɑːrˈtɪkjələt/ She is very articulate in presentations.",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "face_1753458490704_front",
+        "main_text": "专注的",
+        "notes": "形容能够集中注意力",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "face_1753458490704_back",
+        "main_text": "focused",
+        "notes": "/ˈfoʊkəst/ Stay focused during the lecture.",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "face_1753458490705_front",
+        "main_text": "有条理的",
+        "notes": "形容做事按步骤、有方法",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "face_1753458490705_back",
+        "main_text": "methodical",
+        "notes": "/məˈθɑːdɪkl/ He has a methodical approach to learning.",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "face_1753458490706_front",
+        "main_text": "爱询问的",
+        "notes": "形容喜欢提问、探究",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "face_1753458490706_back",
+        "main_text": "inquisitive",
+        "notes": "/ɪnˈkwɪzətɪv/ Inquisitive students ask good questions.",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "face_1753458490707_front",
+        "main_text": "勤奋的",
+        "notes": "形容学习努力、不懈怠",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "face_1753458490707_back",
+        "main_text": "diligent",
+        "notes": "/ˈdɪlɪdʒənt/ Diligent practice leads to success.",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "face_1753458490708_front",
+        "main_text": "洞察力强的",
+        "notes": "形容能够理解深层含义",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "face_1753458490708_back",
+        "main_text": "perceptive",
+        "notes": "/pərˈseptɪv/ She is perceptive about human nature.",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "face_1753458490709_front",
+        "main_text": "彻底的",
+        "notes": "形容做事完整、不遗漏",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "face_1753458490709_back",
+        "main_text": "thorough",
+        "notes": "/ˈθɜːroʊ/ Do a thorough review before the exam.",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "face_1753458490710_front",
+        "main_text": "系统性的",
+        "notes": "形容按系统方法进行",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "face_1753458490710_back",
+        "main_text": "systematic",
+        "notes": "/ˌsɪstəˈmætɪk/ Use a systematic approach to study.",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "face_1753458490711_front",
+        "main_text": "智力的",
+        "notes": "形容与思维、理性相关",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "face_1753458490711_back",
+        "main_text": "intellectual",
+        "notes": "/ˌɪntəˈlektʃuəl/ He enjoys intellectual discussions.",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "face_1753458490712_front",
+        "main_text": "学者的",
+        "notes": "形容具有学术水平",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "face_1753458490712_back",
+        "main_text": "scholarly",
+        "notes": "/ˈskɑːlərli/ She wrote a scholarly article.",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "face_1753458490713_front",
+        "main_text": "有洞察力的",
+        "notes": "形容能够看透事物本质",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "face_1753458490713_back",
+        "main_text": "insightful",
+        "notes": "/ˈɪnsaɪtfl/ His comments were very insightful.",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "face_1753458490714_front",
+        "main_text": "足智多谋的",
+        "notes": "形容善于利用资源解决问题",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "face_1753458490714_back",
+        "main_text": "resourceful",
+        "notes": "/rɪˈsɔːrsfl/ A resourceful student finds solutions.",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "face_1753458490715_front",
+        "main_text": "善于反思的",
+        "notes": "形容能够深入思考",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "face_1753458490715_back",
+        "main_text": "reflective",
+        "notes": "/rɪˈflektɪv/ Reflective learning improves understanding.",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "face_1753458490716_front",
+        "main_text": "多才多艺的",
+        "notes": "形容在多个领域都有能力",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      },
+      {
+        "id": "face_1753458490716_back",
+        "main_text": "versatile",
+        "notes": "/ˈvɜːrsətl/ She is versatile in many subjects.",
+        "created_at": "2025-07-25T15:48:10.697Z",
+        "updated_at": "2025-07-25T15:48:10.697Z"
+      }
+    ]
+  }
+}

@@ -1,0 +1,360 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "export_date": "2025-07-25T18:37:56.758Z",
+    "source": "喵卡批量创建工具"
+  },
+  "data": {
+    "themes": [
+      {
+        "id": "theme_1753468676758_zp8ohnkiw",
+        "title": "中法日常用语：日常购物",
+        "description": "购物时与店员交流的常用表达，涵盖询价、选择、付款等场景。",
+        "cover_image_url": "",
+        "style_config": {
+          "theme": "minimalist-white",
+          "custom_styles": {}
+        },
+        "is_official": false,
+        "sort_order": 0,
+        "is_pinned": false,
+        "created_at": "2025-07-25T18:37:56.758Z",
+        "updated_at": "2025-07-25T18:37:56.758Z"
+      }
+    ],
+    "cards": [
+      {
+        "id": "assoc_1753468676758",
+        "theme_id": "theme_1753468676758_zp8ohnkiw",
+        "front_face_id": "face_1753468676758_front",
+        "back_face_id": "face_1753468676758_back",
+        "sort_order": 0,
+        "created_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "assoc_1753468676759",
+        "theme_id": "theme_1753468676758_zp8ohnkiw",
+        "front_face_id": "face_1753468676759_front",
+        "back_face_id": "face_1753468676759_back",
+        "sort_order": 1,
+        "created_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "assoc_1753468676760",
+        "theme_id": "theme_1753468676758_zp8ohnkiw",
+        "front_face_id": "face_1753468676760_front",
+        "back_face_id": "face_1753468676760_back",
+        "sort_order": 2,
+        "created_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "assoc_1753468676761",
+        "theme_id": "theme_1753468676758_zp8ohnkiw",
+        "front_face_id": "face_1753468676761_front",
+        "back_face_id": "face_1753468676761_back",
+        "sort_order": 3,
+        "created_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "assoc_1753468676762",
+        "theme_id": "theme_1753468676758_zp8ohnkiw",
+        "front_face_id": "face_1753468676762_front",
+        "back_face_id": "face_1753468676762_back",
+        "sort_order": 4,
+        "created_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "assoc_1753468676763",
+        "theme_id": "theme_1753468676758_zp8ohnkiw",
+        "front_face_id": "face_1753468676763_front",
+        "back_face_id": "face_1753468676763_back",
+        "sort_order": 5,
+        "created_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "assoc_1753468676764",
+        "theme_id": "theme_1753468676758_zp8ohnkiw",
+        "front_face_id": "face_1753468676764_front",
+        "back_face_id": "face_1753468676764_back",
+        "sort_order": 6,
+        "created_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "assoc_1753468676765",
+        "theme_id": "theme_1753468676758_zp8ohnkiw",
+        "front_face_id": "face_1753468676765_front",
+        "back_face_id": "face_1753468676765_back",
+        "sort_order": 7,
+        "created_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "assoc_1753468676766",
+        "theme_id": "theme_1753468676758_zp8ohnkiw",
+        "front_face_id": "face_1753468676766_front",
+        "back_face_id": "face_1753468676766_back",
+        "sort_order": 8,
+        "created_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "assoc_1753468676767",
+        "theme_id": "theme_1753468676758_zp8ohnkiw",
+        "front_face_id": "face_1753468676767_front",
+        "back_face_id": "face_1753468676767_back",
+        "sort_order": 9,
+        "created_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "assoc_1753468676768",
+        "theme_id": "theme_1753468676758_zp8ohnkiw",
+        "front_face_id": "face_1753468676768_front",
+        "back_face_id": "face_1753468676768_back",
+        "sort_order": 10,
+        "created_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "assoc_1753468676769",
+        "theme_id": "theme_1753468676758_zp8ohnkiw",
+        "front_face_id": "face_1753468676769_front",
+        "back_face_id": "face_1753468676769_back",
+        "sort_order": 11,
+        "created_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "assoc_1753468676770",
+        "theme_id": "theme_1753468676758_zp8ohnkiw",
+        "front_face_id": "face_1753468676770_front",
+        "back_face_id": "face_1753468676770_back",
+        "sort_order": 12,
+        "created_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "assoc_1753468676771",
+        "theme_id": "theme_1753468676758_zp8ohnkiw",
+        "front_face_id": "face_1753468676771_front",
+        "back_face_id": "face_1753468676771_back",
+        "sort_order": 13,
+        "created_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "assoc_1753468676772",
+        "theme_id": "theme_1753468676758_zp8ohnkiw",
+        "front_face_id": "face_1753468676772_front",
+        "back_face_id": "face_1753468676772_back",
+        "sort_order": 14,
+        "created_at": "2025-07-25T18:37:56.758Z"
+      }
+    ],
+    "faces": [
+      {
+        "id": "face_1753468676758_front",
+        "main_text": "我想要……",
+        "notes": "表达购买意愿的礼貌方式",
+        "created_at": "2025-07-25T18:37:56.758Z",
+        "updated_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "face_1753468676758_back",
+        "main_text": "Je voudrais...",
+        "notes": "/ʒə vu.ˈdʁɛ/<br>A: Je voudrais du pain s'il vous plaît.<br>B: Quel type de pain?",
+        "created_at": "2025-07-25T18:37:56.758Z",
+        "updated_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "face_1753468676759_front",
+        "main_text": "这个多少钱？",
+        "notes": "询问特定物品价格",
+        "created_at": "2025-07-25T18:37:56.758Z",
+        "updated_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "face_1753468676759_back",
+        "main_text": "Ça coûte combien?",
+        "notes": "/sa kut kɔ̃.ˈbjɛ̃/<br>A: Ce livre ça coûte combien?<br>B: Quinze euros monsieur.",
+        "created_at": "2025-07-25T18:37:56.758Z",
+        "updated_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "face_1753468676760_front",
+        "main_text": "太贵了",
+        "notes": "表示价格过高",
+        "created_at": "2025-07-25T18:37:56.758Z",
+        "updated_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "face_1753468676760_back",
+        "main_text": "C'est trop cher",
+        "notes": "/sɛ tʁo ˈʃɛʁ/<br>A: Cinquante euros pour ça?<br>B: C'est trop cher effectivement.",
+        "created_at": "2025-07-25T18:37:56.758Z",
+        "updated_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "face_1753468676761_front",
+        "main_text": "有折扣吗？",
+        "notes": "询问是否有优惠",
+        "created_at": "2025-07-25T18:37:56.758Z",
+        "updated_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "face_1753468676761_back",
+        "main_text": "Il y a une réduction?",
+        "notes": "/il j‿a yn ʁe.dyk.ˈsjɔ̃/<br>A: Il y a une réduction?<br>B: Oui 20% de réduction.",
+        "created_at": "2025-07-25T18:37:56.758Z",
+        "updated_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "face_1753468676762_front",
+        "main_text": "我买了",
+        "notes": "决定购买时的表达",
+        "created_at": "2025-07-25T18:37:56.758Z",
+        "updated_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "face_1753468676762_back",
+        "main_text": "Je le prends",
+        "notes": "/ʒə lə ˈpʁɑ̃/<br>A: Ce sac me plaît je le prends.<br>B: Très bon choix!",
+        "created_at": "2025-07-25T18:37:56.758Z",
+        "updated_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "face_1753468676763_front",
+        "main_text": "在哪里付款？",
+        "notes": "询问付款地点",
+        "created_at": "2025-07-25T18:37:56.758Z",
+        "updated_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "face_1753468676763_back",
+        "main_text": "Où est-ce qu'on paie?",
+        "notes": "/u ɛs kɔ̃ ˈpɛ/<br>A: Où est-ce qu'on paie?<br>B: À la caisse là-bas.",
+        "created_at": "2025-07-25T18:37:56.758Z",
+        "updated_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "face_1753468676764_front",
+        "main_text": "可以刷卡吗？",
+        "notes": "询问是否接受信用卡",
+        "created_at": "2025-07-25T18:37:56.758Z",
+        "updated_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "face_1753468676764_back",
+        "main_text": "Je peux payer par carte?",
+        "notes": "/ʒə pø pe.je paʁ ˈkaʁt/<br>A: Je peux payer par carte?<br>B: Oui bien sûr.",
+        "created_at": "2025-07-25T18:37:56.758Z",
+        "updated_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "face_1753468676765_front",
+        "main_text": "给我账单",
+        "notes": "餐厅用餐后要求结账",
+        "created_at": "2025-07-25T18:37:56.758Z",
+        "updated_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "face_1753468676765_back",
+        "main_text": "L'addition s'il vous plaît",
+        "notes": "/la.di.sjɔ̃ sil vu ˈplɛ/<br>A: L'addition s'il vous plaît.<br>B: Voici l'addition.",
+        "created_at": "2025-07-25T18:37:56.758Z",
+        "updated_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "face_1753468676766_front",
+        "main_text": "有什么推荐？",
+        "notes": "寻求店员建议",
+        "created_at": "2025-07-25T18:37:56.758Z",
+        "updated_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "face_1753468676766_back",
+        "main_text": "Qu'est-ce que vous conseillez?",
+        "notes": "/kɛs kə vu kɔ̃.sɛ.ˈje/<br>A: Qu'est-ce que vous conseillez?<br>B: Je recommande ce produit.",
+        "created_at": "2025-07-25T18:37:56.758Z",
+        "updated_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "face_1753468676767_front",
+        "main_text": "可以试穿吗？",
+        "notes": "购买衣物时询问试穿",
+        "created_at": "2025-07-25T18:37:56.758Z",
+        "updated_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "face_1753468676767_back",
+        "main_text": "Je peux l'essayer?",
+        "notes": "/ʒə pø le.sɛ.ˈje/<br>A: Je peux l'essayer?<br>B: Bien sûr la cabine est là.",
+        "created_at": "2025-07-25T18:37:56.758Z",
+        "updated_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "face_1753468676768_front",
+        "main_text": "有我的尺码吗？",
+        "notes": "询问是否有合适尺码",
+        "created_at": "2025-07-25T18:37:56.758Z",
+        "updated_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "face_1753468676768_back",
+        "main_text": "Vous avez ma taille?",
+        "notes": "/vu z‿a.ve ma ˈtaj/<br>A: Vous avez ma taille?<br>B: Quelle taille faites-vous?",
+        "created_at": "2025-07-25T18:37:56.758Z",
+        "updated_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "face_1753468676769_front",
+        "main_text": "可以退货吗？",
+        "notes": "询问是否能退货",
+        "created_at": "2025-07-25T18:37:56.758Z",
+        "updated_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "face_1753468676769_back",
+        "main_text": "Je peux le rendre?",
+        "notes": "/ʒə pø lə ˈʁɑ̃dʁ/<br>A: Si ça ne va pas je peux le rendre?<br>B: Oui dans les 15 jours.",
+        "created_at": "2025-07-25T18:37:56.758Z",
+        "updated_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "face_1753468676770_front",
+        "main_text": "有保修吗？",
+        "notes": "询问产品保修情况",
+        "created_at": "2025-07-25T18:37:56.758Z",
+        "updated_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "face_1753468676770_back",
+        "main_text": "Il y a une garantie?",
+        "notes": "/il j‿a yn ga.ʁɑ̃.ˈti/<br>A: Il y a une garantie?<br>B: Oui deux ans de garantie.",
+        "created_at": "2025-07-25T18:37:56.758Z",
+        "updated_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "face_1753468676771_front",
+        "main_text": "打包吗？",
+        "notes": "询问顾客是否需要包装",
+        "created_at": "2025-07-25T18:37:56.758Z",
+        "updated_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "face_1753468676771_back",
+        "main_text": "Vous voulez un sac?",
+        "notes": "/vu vu.le œ̃ ˈsak/<br>A: Vous voulez un sac?<br>B: Oui s'il vous plaît.",
+        "created_at": "2025-07-25T18:37:56.758Z",
+        "updated_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "face_1753468676772_front",
+        "main_text": "营业到几点？",
+        "notes": "询问商店营业时间",
+        "created_at": "2025-07-25T18:37:56.758Z",
+        "updated_at": "2025-07-25T18:37:56.758Z"
+      },
+      {
+        "id": "face_1753468676772_back",
+        "main_text": "Vous fermez à quelle heure?",
+        "notes": "/vu fɛʁ.me a kɛl ˈœʁ/<br>A: Vous fermez à quelle heure?<br>B: À dix-neuf heures.",
+        "created_at": "2025-07-25T18:37:56.758Z",
+        "updated_at": "2025-07-25T18:37:56.758Z"
+      }
+    ]
+  }
+}

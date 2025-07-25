@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>批量卡片创建工具 - 喵卡</title>
+  <link rel="stylesheet" href="assets/css/import.css">
+</head>
+<body>
+  <div class="importer-container">
+    <header class="importer-header">
+      <h1>🚀 批量卡片创建工具</h1>
+      <a href="index.html" class="back-link">&larr; 返回主应用</a>
+    </header>
+
+    <main class="importer-main">
+      <!-- 步骤一：主题选择 -->
+      <section id="theme-section" class="step-section">
+        <h2>步骤 1: 选择或创建主题</h2>
+        <div class="theme-options">
+          <label><input type="radio" name="theme-choice" value="new" checked> 新建主题</label>
+          <input type="text" id="new-theme-name" placeholder="输入新主题的名称">
+          <textarea id="new-theme-description" placeholder="输入新主题的描述（可选）" rows="2"></textarea>
+        </div>
+        <div class="theme-options">
+          <label><input type="radio" name="theme-choice" value="existing"> 添加到现有主题</label>
+          <select id="existing-themes-select" disabled></select>
+        </div>
+      </section>
+
+      <!-- 步骤二：数据输入 -->
+      <section class="step-section">
+        <h2>步骤 2: 输入或上传 CSV 数据</h2>
+        <p>格式: <code>正面内容,背面内容,正面注释,背面注释</code> (后两项可选)。每行一张卡片。</p>
+        <textarea id="csv-input" rows="10" placeholder="示例:&#10;Hello,你好,常用问候语,发音 /həˈloʊ/&#10;Knowledge,知识,不可数名词"></textarea>
+        
+                   <!-- 新增的AI生成器部分 -->
+        <div class="ai-generator">
+          <h3 id ="ai-generator-toggle" class="ai-generator-title">
+            🤖 想用AI生成卡片列表?(提示词模板)
+            <span class="toggle-icon">▶</span>
+          </h3>
+          <div id="ai-generator-content" class="ai-generator-content">
+            <textarea id="ai-prompt-template" rows="5" placeholder="在这里输入或粘贴您的提示词模板..."></textarea>
+            <div class="ai-actions">
+              <button id="copy-prompt-btn" class="btn btn-info">复制提示词</button>
+              <button id="submit-ai-btn" class="btn btn-secondary" disabled>提交给AI (计划中)</button>
+            </div>
+          </div>
+        </div>
+        <!-- AI生成器部分结束 -->
+        
+        <div class="input-actions">
+          <input type="file" id="csv-file-input" accept=".csv, .txt" style="display: none;">
+          <button id="upload-btn" class="btn btn-secondary">上传 CSV 文件</button>
+          <button id="preview-btn" class="btn btn-primary">预览和处理</button>
+        </div>
+
+      </section>
+
+      <!-- 步骤三：预览和操作 -->
+      <section id="preview-section" class="step-section hidden">
+        <h2>步骤 3: 预览并生成数据</h2>
+        <p>共检测到 <strong id="card-count">0</strong> 张卡片。</p>
+        <div id="preview-list-container">
+          <div class="preview-header">
+            <div class="preview-col">正面 (Front)</div>
+            <div class="preview-col">背面 (Back)</div>
+          </div>
+          <div id="preview-list"></div>
+        </div>
+        <div class="output-actions">
+          <button id="import-db-btn" class="btn btn-success">直接导入数据库</button>
+          <button id="download-json-btn" class="btn btn-info">下载为 JSON 文件</button>
+        </div>
+      </section>
+    </main>
+
+    <!-- 通知区域 -->
+    <div id="notification-area"></div>
+  </div>
+
+    <!-- 脚本加载 -->
+    <script type="importmap">
+    {
+        "imports": {
+            "@lazycatcloud/minidb": "https://cdn.skypack.dev/@lazycatcloud/minidb"
+        }
+    }
+    </script>
+  <!-- 引入 MiniDB SDK 和页面逻辑脚本 -->
+    <script type="module" src="./app.js"></script>
+  <script type="module" src="utils/import.js"></script>
+</body>
+</html>

@@ -573,3 +573,40 @@ html, body {
     opacity: 1;
   }
 }
+
+/* --- 通知提示框系统样式 --- */
+#notification-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2000; /* 确保在最上层 */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none; /* 允许点击穿透容器 */
+}
+
+.notification-toast {
+  padding: 15px 20px;
+  border-radius: 8px;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  pointer-events: auto; /* 提示框本身可以响应事件 */
+}
+
+/* 不同类型的颜色 */
+.notification-toast.info { background-color: #3498db; }
+.notification-toast.success { background-color: #2ecc71; }
+.notification-toast.error { background-color: #e74c3c; }
+.notification-toast.warning { background-color: #f39c12; }
+
+/* 淡出动画效果 */
+.notification-toast.fade-out {
+  opacity: 0;
+  transform: translateX(110%);
+}

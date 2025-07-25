@@ -1,0 +1,470 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "export_date": "2025-07-25T15:42:28.865Z",
+    "source": "喵卡批量创建工具"
+  },
+  "data": {
+    "themes": [
+      {
+        "id": "theme_1753458148864_flre1fgoh",
+        "title": "中英词汇：能力品质与职业技能",
+        "description": "描述人的能力、天赋、品质和职业相关技能，适合面试、评价、工作场景使用。",
+        "cover_image_url": "",
+        "style_config": {
+          "theme": "minimalist-white",
+          "custom_styles": {}
+        },
+        "is_official": false,
+        "sort_order": 0,
+        "is_pinned": false,
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      }
+    ],
+    "cards": [
+      {
+        "id": "assoc_1753458148864",
+        "theme_id": "theme_1753458148864_flre1fgoh",
+        "front_face_id": "face_1753458148864_front",
+        "back_face_id": "face_1753458148864_back",
+        "sort_order": 0,
+        "created_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "assoc_1753458148865",
+        "theme_id": "theme_1753458148864_flre1fgoh",
+        "front_face_id": "face_1753458148865_front",
+        "back_face_id": "face_1753458148865_back",
+        "sort_order": 1,
+        "created_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "assoc_1753458148866",
+        "theme_id": "theme_1753458148864_flre1fgoh",
+        "front_face_id": "face_1753458148866_front",
+        "back_face_id": "face_1753458148866_back",
+        "sort_order": 2,
+        "created_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "assoc_1753458148867",
+        "theme_id": "theme_1753458148864_flre1fgoh",
+        "front_face_id": "face_1753458148867_front",
+        "back_face_id": "face_1753458148867_back",
+        "sort_order": 3,
+        "created_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "assoc_1753458148868",
+        "theme_id": "theme_1753458148864_flre1fgoh",
+        "front_face_id": "face_1753458148868_front",
+        "back_face_id": "face_1753458148868_back",
+        "sort_order": 4,
+        "created_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "assoc_1753458148869",
+        "theme_id": "theme_1753458148864_flre1fgoh",
+        "front_face_id": "face_1753458148869_front",
+        "back_face_id": "face_1753458148869_back",
+        "sort_order": 5,
+        "created_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "assoc_1753458148870",
+        "theme_id": "theme_1753458148864_flre1fgoh",
+        "front_face_id": "face_1753458148870_front",
+        "back_face_id": "face_1753458148870_back",
+        "sort_order": 6,
+        "created_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "assoc_1753458148871",
+        "theme_id": "theme_1753458148864_flre1fgoh",
+        "front_face_id": "face_1753458148871_front",
+        "back_face_id": "face_1753458148871_back",
+        "sort_order": 7,
+        "created_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "assoc_1753458148872",
+        "theme_id": "theme_1753458148864_flre1fgoh",
+        "front_face_id": "face_1753458148872_front",
+        "back_face_id": "face_1753458148872_back",
+        "sort_order": 8,
+        "created_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "assoc_1753458148873",
+        "theme_id": "theme_1753458148864_flre1fgoh",
+        "front_face_id": "face_1753458148873_front",
+        "back_face_id": "face_1753458148873_back",
+        "sort_order": 9,
+        "created_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "assoc_1753458148874",
+        "theme_id": "theme_1753458148864_flre1fgoh",
+        "front_face_id": "face_1753458148874_front",
+        "back_face_id": "face_1753458148874_back",
+        "sort_order": 10,
+        "created_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "assoc_1753458148875",
+        "theme_id": "theme_1753458148864_flre1fgoh",
+        "front_face_id": "face_1753458148875_front",
+        "back_face_id": "face_1753458148875_back",
+        "sort_order": 11,
+        "created_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "assoc_1753458148876",
+        "theme_id": "theme_1753458148864_flre1fgoh",
+        "front_face_id": "face_1753458148876_front",
+        "back_face_id": "face_1753458148876_back",
+        "sort_order": 12,
+        "created_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "assoc_1753458148877",
+        "theme_id": "theme_1753458148864_flre1fgoh",
+        "front_face_id": "face_1753458148877_front",
+        "back_face_id": "face_1753458148877_back",
+        "sort_order": 13,
+        "created_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "assoc_1753458148878",
+        "theme_id": "theme_1753458148864_flre1fgoh",
+        "front_face_id": "face_1753458148878_front",
+        "back_face_id": "face_1753458148878_back",
+        "sort_order": 14,
+        "created_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "assoc_1753458148879",
+        "theme_id": "theme_1753458148864_flre1fgoh",
+        "front_face_id": "face_1753458148879_front",
+        "back_face_id": "face_1753458148879_back",
+        "sort_order": 15,
+        "created_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "assoc_1753458148880",
+        "theme_id": "theme_1753458148864_flre1fgoh",
+        "front_face_id": "face_1753458148880_front",
+        "back_face_id": "face_1753458148880_back",
+        "sort_order": 16,
+        "created_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "assoc_1753458148881",
+        "theme_id": "theme_1753458148864_flre1fgoh",
+        "front_face_id": "face_1753458148881_front",
+        "back_face_id": "face_1753458148881_back",
+        "sort_order": 17,
+        "created_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "assoc_1753458148882",
+        "theme_id": "theme_1753458148864_flre1fgoh",
+        "front_face_id": "face_1753458148882_front",
+        "back_face_id": "face_1753458148882_back",
+        "sort_order": 18,
+        "created_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "assoc_1753458148883",
+        "theme_id": "theme_1753458148864_flre1fgoh",
+        "front_face_id": "face_1753458148883_front",
+        "back_face_id": "face_1753458148883_back",
+        "sort_order": 19,
+        "created_at": "2025-07-25T15:42:28.864Z"
+      }
+    ],
+    "faces": [
+      {
+        "id": "face_1753458148864_front",
+        "main_text": "有才华的",
+        "notes": "形容人在某方面有天赋",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "face_1753458148864_back",
+        "main_text": "talented",
+        "notes": "/ˈtæləntɪd/ She is a talented musician.",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "face_1753458148865_front",
+        "main_text": "才华横溢的",
+        "notes": "比talented更强调卓越",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "face_1753458148865_back",
+        "main_text": "brilliant",
+        "notes": "/ˈbrɪliənt/ He gave a brilliant performance.",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "face_1753458148866_front",
+        "main_text": "有耐心的",
+        "notes": "适合教师、医生等职业",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "face_1753458148866_back",
+        "main_text": "patient",
+        "notes": "/ˈpeɪʃnt/ A good teacher is patient.",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "face_1753458148867_front",
+        "main_text": "坚决的",
+        "notes": "形容意志坚定、不轻易放弃",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "face_1753458148867_back",
+        "main_text": "determined",
+        "notes": "/dɪˈtɜːrmɪnd/ She is determined to succeed.",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "face_1753458148868_front",
+        "main_text": "聪明的",
+        "notes": "形容反应快、善于解决问题",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "face_1753458148868_back",
+        "main_text": "clever",
+        "notes": "/ˈklevər/ He is clever at puzzles.",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "face_1753458148869_front",
+        "main_text": "勤劳的",
+        "notes": "形容努力工作、不怕吃苦",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "face_1753458148869_back",
+        "main_text": "hard-working",
+        "notes": "/ˌhɑːrdˈwɜːrkɪŋ/ She is a hard-working student.",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "face_1753458148870_front",
+        "main_text": "有创造力的",
+        "notes": "形容善于创新、想象力丰富",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "face_1753458148870_back",
+        "main_text": "creative",
+        "notes": "/kriˈeɪtɪv/ Artists need to be creative.",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "face_1753458148871_front",
+        "main_text": "可靠的",
+        "notes": "形容值得信赖、说话算数",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "face_1753458148871_back",
+        "main_text": "reliable",
+        "notes": "/rɪˈlaɪəbl/ He is a reliable friend.",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "face_1753458148872_front",
+        "main_text": "负责任的",
+        "notes": "形容做事认真、有担当",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "face_1753458148872_back",
+        "main_text": "responsible",
+        "notes": "/rɪˈspɑːnsəbl/ She is responsible for the project.",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "face_1753458148873_front",
+        "main_text": "有条理的",
+        "notes": "形容做事井井有条",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "face_1753458148873_back",
+        "main_text": "organized",
+        "notes": "/ˈɔːrɡənaɪzd/ An organized person saves time.",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "face_1753458148874_front",
+        "main_text": "灵活的",
+        "notes": "形容适应性强、能变通",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "face_1753458148874_back",
+        "main_text": "flexible",
+        "notes": "/ˈfleksəbl/ You need to be flexible in this job.",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "face_1753458148875_front",
+        "main_text": "有抱负的",
+        "notes": "形容有远大目标和理想",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "face_1753458148875_back",
+        "main_text": "ambitious",
+        "notes": "/æmˈbɪʃəs/ He is ambitious about his career.",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "face_1753458148876_front",
+        "main_text": "诚实的",
+        "notes": "形容说话真实、不撒谎",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "face_1753458148876_back",
+        "main_text": "honest",
+        "notes": "/ˈɑːnɪst/ Honesty is the best policy.",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "face_1753458148877_front",
+        "main_text": "守时的",
+        "notes": "形容按时到达、不迟到",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "face_1753458148877_back",
+        "main_text": "punctual",
+        "notes": "/ˈpʌŋktʃuəl/ She is always punctual for meetings.",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "face_1753458148878_front",
+        "main_text": "高效的",
+        "notes": "形容工作速度快、效果好",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "face_1753458148878_back",
+        "main_text": "efficient",
+        "notes": "/ɪˈfɪʃnt/ This method is very efficient.",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "face_1753458148879_front",
+        "main_text": "独立的",
+        "notes": "形容能够自主完成任务",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "face_1753458148879_back",
+        "main_text": "independent",
+        "notes": "/ˌɪndɪˈpendənt/ She is an independent worker.",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "face_1753458148880_front",
+        "main_text": "合作的",
+        "notes": "形容善于团队协作",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "face_1753458148880_back",
+        "main_text": "cooperative",
+        "notes": "/koʊˈɑːpərətɪv/ Team members should be cooperative.",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "face_1753458148881_front",
+        "main_text": "专业的",
+        "notes": "形容具备专业知识和技能",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "face_1753458148881_back",
+        "main_text": "professional",
+        "notes": "/prəˈfeʃənl/ He maintains a professional attitude.",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "face_1753458148882_front",
+        "main_text": "创新的",
+        "notes": "形容能提出新想法、新方法",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "face_1753458148882_back",
+        "main_text": "innovative",
+        "notes": "/ˈɪnəveɪtɪv/ The company values innovative thinking.",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "face_1753458148883_front",
+        "main_text": "外交的",
+        "notes": "形容善于处理人际关系",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      },
+      {
+        "id": "face_1753458148883_back",
+        "main_text": "diplomatic",
+        "notes": "/ˌdɪpləˈmætɪk/ A manager needs diplomatic skills.",
+        "created_at": "2025-07-25T15:42:28.864Z",
+        "updated_at": "2025-07-25T15:42:28.864Z"
+      }
+    ]
+  }
+}

@@ -1,0 +1,470 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "export_date": "2025-07-25T15:49:25.024Z",
+    "source": "喵卡批量创建工具"
+  },
+  "data": {
+    "themes": [
+      {
+        "id": "theme_1753458565023_ulay655gr",
+        "title": "中英词汇：社交沟通与人际关系",
+        "description": "描述人际交往、沟通技巧和社交能力相关词汇，适合商务、社交和团队合作场景。",
+        "cover_image_url": "",
+        "style_config": {
+          "theme": "minimalist-white",
+          "custom_styles": {}
+        },
+        "is_official": false,
+        "sort_order": 0,
+        "is_pinned": false,
+        "created_at": "2025-07-25T15:49:25.024Z",
+        "updated_at": "2025-07-25T15:49:25.024Z"
+      }
+    ],
+    "cards": [
+      {
+        "id": "assoc_1753458565023",
+        "theme_id": "theme_1753458565023_ulay655gr",
+        "front_face_id": "face_1753458565023_front",
+        "back_face_id": "face_1753458565023_back",
+        "sort_order": 0,
+        "created_at": "2025-07-25T15:49:25.023Z"
+      },
+      {
+        "id": "assoc_1753458565024",
+        "theme_id": "theme_1753458565023_ulay655gr",
+        "front_face_id": "face_1753458565024_front",
+        "back_face_id": "face_1753458565024_back",
+        "sort_order": 1,
+        "created_at": "2025-07-25T15:49:25.023Z"
+      },
+      {
+        "id": "assoc_1753458565025",
+        "theme_id": "theme_1753458565023_ulay655gr",
+        "front_face_id": "face_1753458565025_front",
+        "back_face_id": "face_1753458565025_back",
+        "sort_order": 2,
+        "created_at": "2025-07-25T15:49:25.023Z"
+      },
+      {
+        "id": "assoc_1753458565026",
+        "theme_id": "theme_1753458565023_ulay655gr",
+        "front_face_id": "face_1753458565026_front",
+        "back_face_id": "face_1753458565026_back",
+        "sort_order": 3,
+        "created_at": "2025-07-25T15:49:25.023Z"
+      },
+      {
+        "id": "assoc_1753458565027",
+        "theme_id": "theme_1753458565023_ulay655gr",
+        "front_face_id": "face_1753458565027_front",
+        "back_face_id": "face_1753458565027_back",
+        "sort_order": 4,
+        "created_at": "2025-07-25T15:49:25.023Z"
+      },
+      {
+        "id": "assoc_1753458565028",
+        "theme_id": "theme_1753458565023_ulay655gr",
+        "front_face_id": "face_1753458565028_front",
+        "back_face_id": "face_1753458565028_back",
+        "sort_order": 5,
+        "created_at": "2025-07-25T15:49:25.023Z"
+      },
+      {
+        "id": "assoc_1753458565029",
+        "theme_id": "theme_1753458565023_ulay655gr",
+        "front_face_id": "face_1753458565029_front",
+        "back_face_id": "face_1753458565029_back",
+        "sort_order": 6,
+        "created_at": "2025-07-25T15:49:25.023Z"
+      },
+      {
+        "id": "assoc_1753458565030",
+        "theme_id": "theme_1753458565023_ulay655gr",
+        "front_face_id": "face_1753458565030_front",
+        "back_face_id": "face_1753458565030_back",
+        "sort_order": 7,
+        "created_at": "2025-07-25T15:49:25.023Z"
+      },
+      {
+        "id": "assoc_1753458565031",
+        "theme_id": "theme_1753458565023_ulay655gr",
+        "front_face_id": "face_1753458565031_front",
+        "back_face_id": "face_1753458565031_back",
+        "sort_order": 8,
+        "created_at": "2025-07-25T15:49:25.023Z"
+      },
+      {
+        "id": "assoc_1753458565032",
+        "theme_id": "theme_1753458565023_ulay655gr",
+        "front_face_id": "face_1753458565032_front",
+        "back_face_id": "face_1753458565032_back",
+        "sort_order": 9,
+        "created_at": "2025-07-25T15:49:25.024Z"
+      },
+      {
+        "id": "assoc_1753458565034",
+        "theme_id": "theme_1753458565023_ulay655gr",
+        "front_face_id": "face_1753458565034_front",
+        "back_face_id": "face_1753458565034_back",
+        "sort_order": 10,
+        "created_at": "2025-07-25T15:49:25.024Z"
+      },
+      {
+        "id": "assoc_1753458565035",
+        "theme_id": "theme_1753458565023_ulay655gr",
+        "front_face_id": "face_1753458565035_front",
+        "back_face_id": "face_1753458565035_back",
+        "sort_order": 11,
+        "created_at": "2025-07-25T15:49:25.024Z"
+      },
+      {
+        "id": "assoc_1753458565036",
+        "theme_id": "theme_1753458565023_ulay655gr",
+        "front_face_id": "face_1753458565036_front",
+        "back_face_id": "face_1753458565036_back",
+        "sort_order": 12,
+        "created_at": "2025-07-25T15:49:25.024Z"
+      },
+      {
+        "id": "assoc_1753458565037",
+        "theme_id": "theme_1753458565023_ulay655gr",
+        "front_face_id": "face_1753458565037_front",
+        "back_face_id": "face_1753458565037_back",
+        "sort_order": 13,
+        "created_at": "2025-07-25T15:49:25.024Z"
+      },
+      {
+        "id": "assoc_1753458565038",
+        "theme_id": "theme_1753458565023_ulay655gr",
+        "front_face_id": "face_1753458565038_front",
+        "back_face_id": "face_1753458565038_back",
+        "sort_order": 14,
+        "created_at": "2025-07-25T15:49:25.024Z"
+      },
+      {
+        "id": "assoc_1753458565039",
+        "theme_id": "theme_1753458565023_ulay655gr",
+        "front_face_id": "face_1753458565039_front",
+        "back_face_id": "face_1753458565039_back",
+        "sort_order": 15,
+        "created_at": "2025-07-25T15:49:25.024Z"
+      },
+      {
+        "id": "assoc_1753458565040",
+        "theme_id": "theme_1753458565023_ulay655gr",
+        "front_face_id": "face_1753458565040_front",
+        "back_face_id": "face_1753458565040_back",
+        "sort_order": 16,
+        "created_at": "2025-07-25T15:49:25.024Z"
+      },
+      {
+        "id": "assoc_1753458565041",
+        "theme_id": "theme_1753458565023_ulay655gr",
+        "front_face_id": "face_1753458565041_front",
+        "back_face_id": "face_1753458565041_back",
+        "sort_order": 17,
+        "created_at": "2025-07-25T15:49:25.024Z"
+      },
+      {
+        "id": "assoc_1753458565042",
+        "theme_id": "theme_1753458565023_ulay655gr",
+        "front_face_id": "face_1753458565042_front",
+        "back_face_id": "face_1753458565042_back",
+        "sort_order": 18,
+        "created_at": "2025-07-25T15:49:25.024Z"
+      },
+      {
+        "id": "assoc_1753458565043",
+        "theme_id": "theme_1753458565023_ulay655gr",
+        "front_face_id": "face_1753458565043_front",
+        "back_face_id": "face_1753458565043_back",
+        "sort_order": 19,
+        "created_at": "2025-07-25T15:49:25.024Z"
+      }
+    ],
+    "faces": [
+      {
+        "id": "face_1753458565023_front",
+        "main_text": "善于社交的",
+        "notes": "形容喜欢与人交往",
+        "created_at": "2025-07-25T15:49:25.023Z",
+        "updated_at": "2025-07-25T15:49:25.023Z"
+      },
+      {
+        "id": "face_1753458565023_back",
+        "main_text": "sociable",
+        "notes": "/ˈsoʊʃəbl/ He is very sociable at parties.",
+        "created_at": "2025-07-25T15:49:25.023Z",
+        "updated_at": "2025-07-25T15:49:25.023Z"
+      },
+      {
+        "id": "face_1753458565024_front",
+        "main_text": "外向的",
+        "notes": "形容性格开朗、主动交流",
+        "created_at": "2025-07-25T15:49:25.023Z",
+        "updated_at": "2025-07-25T15:49:25.023Z"
+      },
+      {
+        "id": "face_1753458565024_back",
+        "main_text": "outgoing",
+        "notes": "/ˈaʊtɡoɪŋ/ She has an outgoing personality.",
+        "created_at": "2025-07-25T15:49:25.023Z",
+        "updated_at": "2025-07-25T15:49:25.023Z"
+      },
+      {
+        "id": "face_1753458565025_front",
+        "main_text": "友好的",
+        "notes": "形容待人和善、容易相处",
+        "created_at": "2025-07-25T15:49:25.023Z",
+        "updated_at": "2025-07-25T15:49:25.023Z"
+      },
+      {
+        "id": "face_1753458565025_back",
+        "main_text": "friendly",
+        "notes": "/ˈfrendli/ The staff are very friendly.",
+        "created_at": "2025-07-25T15:49:25.023Z",
+        "updated_at": "2025-07-25T15:49:25.023Z"
+      },
+      {
+        "id": "face_1753458565026_front",
+        "main_text": "平易近人的",
+        "notes": "形容容易接近、不摆架子",
+        "created_at": "2025-07-25T15:49:25.023Z",
+        "updated_at": "2025-07-25T15:49:25.023Z"
+      },
+      {
+        "id": "face_1753458565026_back",
+        "main_text": "approachable",
+        "notes": "/əˈproʊtʃəbl/ The manager is very approachable.",
+        "created_at": "2025-07-25T15:49:25.023Z",
+        "updated_at": "2025-07-25T15:49:25.023Z"
+      },
+      {
+        "id": "face_1753458565027_front",
+        "main_text": "有魅力的",
+        "notes": "形容个人魅力强、吸引人",
+        "created_at": "2025-07-25T15:49:25.023Z",
+        "updated_at": "2025-07-25T15:49:25.023Z"
+      },
+      {
+        "id": "face_1753458565027_back",
+        "main_text": "charismatic",
+        "notes": "/ˌkærɪzˈmætɪk/ He is a charismatic leader.",
+        "created_at": "2025-07-25T15:49:25.023Z",
+        "updated_at": "2025-07-25T15:49:25.023Z"
+      },
+      {
+        "id": "face_1753458565028_front",
+        "main_text": "有说服力的",
+        "notes": "形容能够说服他人",
+        "created_at": "2025-07-25T15:49:25.023Z",
+        "updated_at": "2025-07-25T15:49:25.023Z"
+      },
+      {
+        "id": "face_1753458565028_back",
+        "main_text": "persuasive",
+        "notes": "/pərˈsweɪsɪv/ She gave a persuasive speech.",
+        "created_at": "2025-07-25T15:49:25.023Z",
+        "updated_at": "2025-07-25T15:49:25.023Z"
+      },
+      {
+        "id": "face_1753458565029_front",
+        "main_text": "机智的",
+        "notes": "形容说话得体、不伤人",
+        "created_at": "2025-07-25T15:49:25.023Z",
+        "updated_at": "2025-07-25T15:49:25.023Z"
+      },
+      {
+        "id": "face_1753458565029_back",
+        "main_text": "tactful",
+        "notes": "/ˈtæktfl/ Be tactful when giving criticism.",
+        "created_at": "2025-07-25T15:49:25.023Z",
+        "updated_at": "2025-07-25T15:49:25.023Z"
+      },
+      {
+        "id": "face_1753458565030_front",
+        "main_text": "有同理心的",
+        "notes": "形容能够理解他人感受",
+        "created_at": "2025-07-25T15:49:25.023Z",
+        "updated_at": "2025-07-25T15:49:25.023Z"
+      },
+      {
+        "id": "face_1753458565030_back",
+        "main_text": "empathetic",
+        "notes": "/ˌempəˈθetɪk/ Good counselors are empathetic.",
+        "created_at": "2025-07-25T15:49:25.023Z",
+        "updated_at": "2025-07-25T15:49:25.023Z"
+      },
+      {
+        "id": "face_1753458565031_front",
+        "main_text": "支持的",
+        "notes": "形容给予他人帮助和鼓励",
+        "created_at": "2025-07-25T15:49:25.023Z",
+        "updated_at": "2025-07-25T15:49:25.023Z"
+      },
+      {
+        "id": "face_1753458565031_back",
+        "main_text": "supportive",
+        "notes": "/səˈpɔːrtɪv/ She is very supportive of her team.",
+        "created_at": "2025-07-25T15:49:25.023Z",
+        "updated_at": "2025-07-25T15:49:25.023Z"
+      },
+      {
+        "id": "face_1753458565032_front",
+        "main_text": "理解的",
+        "notes": "形容能够体谅他人",
+        "created_at": "2025-07-25T15:49:25.023Z",
+        "updated_at": "2025-07-25T15:49:25.023Z"
+      },
+      {
+        "id": "face_1753458565032_back",
+        "main_text": "understanding",
+        "notes": "/ˌʌndərˈstændɪŋ/ He is understanding about my situation.",
+        "created_at": "2025-07-25T15:49:25.023Z",
+        "updated_at": "2025-07-25T15:49:25.023Z"
+      },
+      {
+        "id": "face_1753458565034_front",
+        "main_text": "体贴的",
+        "notes": "形容为他人着想",
+        "created_at": "2025-07-25T15:49:25.024Z",
+        "updated_at": "2025-07-25T15:49:25.024Z"
+      },
+      {
+        "id": "face_1753458565034_back",
+        "main_text": "considerate",
+        "notes": "/kənˈsɪdərət/ She is considerate of others' feelings.",
+        "created_at": "2025-07-25T15:49:25.024Z",
+        "updated_at": "2025-07-25T15:49:25.024Z"
+      },
+      {
+        "id": "face_1753458565035_front",
+        "main_text": "尊重的",
+        "notes": "形容对他人表示尊重",
+        "created_at": "2025-07-25T15:49:25.024Z",
+        "updated_at": "2025-07-25T15:49:25.024Z"
+      },
+      {
+        "id": "face_1753458565035_back",
+        "main_text": "respectful",
+        "notes": "/rɪˈspektfl/ Always be respectful to elders.",
+        "created_at": "2025-07-25T15:49:25.024Z",
+        "updated_at": "2025-07-25T15:49:25.024Z"
+      },
+      {
+        "id": "face_1753458565036_front",
+        "main_text": "圆滑的",
+        "notes": "形容善于处理敏感问题",
+        "created_at": "2025-07-25T15:49:25.024Z",
+        "updated_at": "2025-07-25T15:49:25.024Z"
+      },
+      {
+        "id": "face_1753458565036_back",
+        "main_text": "diplomatic",
+        "notes": "/ˌdɪpləˈmætɪk/ Handle conflicts diplomatically.",
+        "created_at": "2025-07-25T15:49:25.024Z",
+        "updated_at": "2025-07-25T15:49:25.024Z"
+      },
+      {
+        "id": "face_1753458565037_front",
+        "main_text": "坚定自信的",
+        "notes": "形容能够表达自己观点",
+        "created_at": "2025-07-25T15:49:25.024Z",
+        "updated_at": "2025-07-25T15:49:25.024Z"
+      },
+      {
+        "id": "face_1753458565037_back",
+        "main_text": "assertive",
+        "notes": "/əˈsɜːrtɪv/ Be assertive but not aggressive.",
+        "created_at": "2025-07-25T15:49:25.024Z",
+        "updated_at": "2025-07-25T15:49:25.024Z"
+      },
+      {
+        "id": "face_1753458565038_front",
+        "main_text": "合作的",
+        "notes": "形容善于团队合作",
+        "created_at": "2025-07-25T15:49:25.024Z",
+        "updated_at": "2025-07-25T15:49:25.024Z"
+      },
+      {
+        "id": "face_1753458565038_back",
+        "main_text": "collaborative",
+        "notes": "/kəˈlæbərətɪv/ We need a collaborative approach.",
+        "created_at": "2025-07-25T15:49:25.024Z",
+        "updated_at": "2025-07-25T15:49:25.024Z"
+      },
+      {
+        "id": "face_1753458565039_front",
+        "main_text": "包容的",
+        "notes": "形容接纳不同观点和人群",
+        "created_at": "2025-07-25T15:49:25.024Z",
+        "updated_at": "2025-07-25T15:49:25.024Z"
+      },
+      {
+        "id": "face_1753458565039_back",
+        "main_text": "inclusive",
+        "notes": "/ɪnˈkluːsɪv/ Create an inclusive environment.",
+        "created_at": "2025-07-25T15:49:25.024Z",
+        "updated_at": "2025-07-25T15:49:25.024Z"
+      },
+      {
+        "id": "face_1753458565040_front",
+        "main_text": "善于沟通的",
+        "notes": "形容表达和交流能力强",
+        "created_at": "2025-07-25T15:49:25.024Z",
+        "updated_at": "2025-07-25T15:49:25.024Z"
+      },
+      {
+        "id": "face_1753458565040_back",
+        "main_text": "communicative",
+        "notes": "/kəˈmjuːnɪkətɪv/ Good teachers are communicative.",
+        "created_at": "2025-07-25T15:49:25.024Z",
+        "updated_at": "2025-07-25T15:49:25.024Z"
+      },
+      {
+        "id": "face_1753458565041_front",
+        "main_text": "有影响力的",
+        "notes": "形容能够影响他人",
+        "created_at": "2025-07-25T15:49:25.024Z",
+        "updated_at": "2025-07-25T15:49:25.024Z"
+      },
+      {
+        "id": "face_1753458565041_back",
+        "main_text": "influential",
+        "notes": "/ˌɪnfluˈenʃl/ She is influential in the industry.",
+        "created_at": "2025-07-25T15:49:25.024Z",
+        "updated_at": "2025-07-25T15:49:25.024Z"
+      },
+      {
+        "id": "face_1753458565042_front",
+        "main_text": "善于建立人脉的",
+        "notes": "形容能够建立有效的人际网络",
+        "created_at": "2025-07-25T15:49:25.024Z",
+        "updated_at": "2025-07-25T15:49:25.024Z"
+      },
+      {
+        "id": "face_1753458565042_back",
+        "main_text": "networking",
+        "notes": "/ˈnetwɜːrkɪŋ/ Networking skills are important.",
+        "created_at": "2025-07-25T15:49:25.024Z",
+        "updated_at": "2025-07-25T15:49:25.024Z"
+      },
+      {
+        "id": "face_1753458565043_front",
+        "main_text": "调解的",
+        "notes": "形容能够化解矛盾和冲突",
+        "created_at": "2025-07-25T15:49:25.024Z",
+        "updated_at": "2025-07-25T15:49:25.024Z"
+      },
+      {
+        "id": "face_1753458565043_back",
+        "main_text": "mediating",
+        "notes": "/ˈmiːdieɪtɪŋ/ He has good mediating skills.",
+        "created_at": "2025-07-25T15:49:25.024Z",
+        "updated_at": "2025-07-25T15:49:25.024Z"
+      }
+    ]
+  }
+}

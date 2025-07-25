@@ -1,0 +1,470 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "export_date": "2025-07-25T15:46:09.945Z",
+    "source": "喵卡批量创建工具"
+  },
+  "data": {
+    "themes": [
+      {
+        "id": "theme_1753458369945_nkhyk7mk3",
+        "title": "中英词汇：外貌性格与情感表达",
+        "description": "描述人的外貌特征、性格品质和情感状态，适合自我介绍、人物描写和日常交流场景。",
+        "cover_image_url": "",
+        "style_config": {
+          "theme": "minimalist-white",
+          "custom_styles": {}
+        },
+        "is_official": false,
+        "sort_order": 0,
+        "is_pinned": false,
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      }
+    ],
+    "cards": [
+      {
+        "id": "assoc_1753458369945",
+        "theme_id": "theme_1753458369945_nkhyk7mk3",
+        "front_face_id": "face_1753458369945_front",
+        "back_face_id": "face_1753458369945_back",
+        "sort_order": 0,
+        "created_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "assoc_1753458369946",
+        "theme_id": "theme_1753458369945_nkhyk7mk3",
+        "front_face_id": "face_1753458369946_front",
+        "back_face_id": "face_1753458369946_back",
+        "sort_order": 1,
+        "created_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "assoc_1753458369947",
+        "theme_id": "theme_1753458369945_nkhyk7mk3",
+        "front_face_id": "face_1753458369947_front",
+        "back_face_id": "face_1753458369947_back",
+        "sort_order": 2,
+        "created_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "assoc_1753458369948",
+        "theme_id": "theme_1753458369945_nkhyk7mk3",
+        "front_face_id": "face_1753458369948_front",
+        "back_face_id": "face_1753458369948_back",
+        "sort_order": 3,
+        "created_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "assoc_1753458369949",
+        "theme_id": "theme_1753458369945_nkhyk7mk3",
+        "front_face_id": "face_1753458369949_front",
+        "back_face_id": "face_1753458369949_back",
+        "sort_order": 4,
+        "created_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "assoc_1753458369950",
+        "theme_id": "theme_1753458369945_nkhyk7mk3",
+        "front_face_id": "face_1753458369950_front",
+        "back_face_id": "face_1753458369950_back",
+        "sort_order": 5,
+        "created_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "assoc_1753458369951",
+        "theme_id": "theme_1753458369945_nkhyk7mk3",
+        "front_face_id": "face_1753458369951_front",
+        "back_face_id": "face_1753458369951_back",
+        "sort_order": 6,
+        "created_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "assoc_1753458369952",
+        "theme_id": "theme_1753458369945_nkhyk7mk3",
+        "front_face_id": "face_1753458369952_front",
+        "back_face_id": "face_1753458369952_back",
+        "sort_order": 7,
+        "created_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "assoc_1753458369953",
+        "theme_id": "theme_1753458369945_nkhyk7mk3",
+        "front_face_id": "face_1753458369953_front",
+        "back_face_id": "face_1753458369953_back",
+        "sort_order": 8,
+        "created_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "assoc_1753458369954",
+        "theme_id": "theme_1753458369945_nkhyk7mk3",
+        "front_face_id": "face_1753458369954_front",
+        "back_face_id": "face_1753458369954_back",
+        "sort_order": 9,
+        "created_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "assoc_1753458369955",
+        "theme_id": "theme_1753458369945_nkhyk7mk3",
+        "front_face_id": "face_1753458369955_front",
+        "back_face_id": "face_1753458369955_back",
+        "sort_order": 10,
+        "created_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "assoc_1753458369956",
+        "theme_id": "theme_1753458369945_nkhyk7mk3",
+        "front_face_id": "face_1753458369956_front",
+        "back_face_id": "face_1753458369956_back",
+        "sort_order": 11,
+        "created_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "assoc_1753458369957",
+        "theme_id": "theme_1753458369945_nkhyk7mk3",
+        "front_face_id": "face_1753458369957_front",
+        "back_face_id": "face_1753458369957_back",
+        "sort_order": 12,
+        "created_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "assoc_1753458369958",
+        "theme_id": "theme_1753458369945_nkhyk7mk3",
+        "front_face_id": "face_1753458369958_front",
+        "back_face_id": "face_1753458369958_back",
+        "sort_order": 13,
+        "created_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "assoc_1753458369959",
+        "theme_id": "theme_1753458369945_nkhyk7mk3",
+        "front_face_id": "face_1753458369959_front",
+        "back_face_id": "face_1753458369959_back",
+        "sort_order": 14,
+        "created_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "assoc_1753458369960",
+        "theme_id": "theme_1753458369945_nkhyk7mk3",
+        "front_face_id": "face_1753458369960_front",
+        "back_face_id": "face_1753458369960_back",
+        "sort_order": 15,
+        "created_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "assoc_1753458369961",
+        "theme_id": "theme_1753458369945_nkhyk7mk3",
+        "front_face_id": "face_1753458369961_front",
+        "back_face_id": "face_1753458369961_back",
+        "sort_order": 16,
+        "created_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "assoc_1753458369962",
+        "theme_id": "theme_1753458369945_nkhyk7mk3",
+        "front_face_id": "face_1753458369962_front",
+        "back_face_id": "face_1753458369962_back",
+        "sort_order": 17,
+        "created_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "assoc_1753458369963",
+        "theme_id": "theme_1753458369945_nkhyk7mk3",
+        "front_face_id": "face_1753458369963_front",
+        "back_face_id": "face_1753458369963_back",
+        "sort_order": 18,
+        "created_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "assoc_1753458369964",
+        "theme_id": "theme_1753458369945_nkhyk7mk3",
+        "front_face_id": "face_1753458369964_front",
+        "back_face_id": "face_1753458369964_back",
+        "sort_order": 19,
+        "created_at": "2025-07-25T15:46:09.945Z"
+      }
+    ],
+    "faces": [
+      {
+        "id": "face_1753458369945_front",
+        "main_text": "苗条的",
+        "notes": "形容身材匀称、线条优美的人",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "face_1753458369945_back",
+        "main_text": "slim",
+        "notes": "/slɪm/ She is slim and graceful.",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "face_1753458369946_front",
+        "main_text": "结实的",
+        "notes": "多用于男性，指体格健壮",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "face_1753458369946_back",
+        "main_text": "burly",
+        "notes": "/ˈbɜːrli/ A burly man lifted the box easily.",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "face_1753458369947_front",
+        "main_text": "优雅的",
+        "notes": "常用于描述女性或举止",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "face_1753458369947_back",
+        "main_text": "elegant",
+        "notes": "/ˈelɪɡənt/ She wore an elegant dress.",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "face_1753458369948_front",
+        "main_text": "快乐的",
+        "notes": "形容人性格开朗、乐观",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "face_1753458369948_back",
+        "main_text": "cheerful",
+        "notes": "/ˈtʃɪəfl/ He is always cheerful at work.",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "face_1753458369949_front",
+        "main_text": "害羞的",
+        "notes": "适合描述不善言谈的人",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "face_1753458369949_back",
+        "main_text": "shy",
+        "notes": "/ʃaɪ/ She is too shy to speak in public.",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "face_1753458369950_front",
+        "main_text": "慷慨的",
+        "notes": "形容乐于助人、愿意分享",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "face_1753458369950_back",
+        "main_text": "generous",
+        "notes": "/ˈdʒenərəs/ He is generous with his time.",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "face_1753458369951_front",
+        "main_text": "忠诚的",
+        "notes": "用于描述朋友、宠物等忠心不二",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "face_1753458369951_back",
+        "main_text": "loyal",
+        "notes": "/ˈlɔɪəl/ Dogs are loyal animals.",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "face_1753458369952_front",
+        "main_text": "兴奋的",
+        "notes": "形容遇到好消息或新鲜事时的心情",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "face_1753458369952_back",
+        "main_text": "excited",
+        "notes": "/ɪkˈsaɪtɪd/ The kids are excited about the trip.",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "face_1753458369953_front",
+        "main_text": "焦虑的",
+        "notes": "常用于表达担忧、紧张的情绪",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "face_1753458369953_back",
+        "main_text": "anxious",
+        "notes": "/ˈæŋkʃəs/ She felt anxious before the exam.",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "face_1753458369954_front",
+        "main_text": "高兴的",
+        "notes": "比happy更正式，表达极大的愉快",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "face_1753458369954_back",
+        "main_text": "delighted",
+        "notes": "/dɪˈlaɪtɪd/ I am delighted to meet you.",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "face_1753458369955_front",
+        "main_text": "郁闷的",
+        "notes": "形容情绪低落、缺乏动力",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "face_1753458369955_back",
+        "main_text": "depressed",
+        "notes": "/dɪˈprest/ He became depressed after losing his job.",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "face_1753458369956_front",
+        "main_text": "狂怒的",
+        "notes": "比angry更强烈，形容极度愤怒",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "face_1753458369956_back",
+        "main_text": "furious",
+        "notes": "/ˈfjʊəriəs/ She was furious at the delay.",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "face_1753458369957_front",
+        "main_text": "神经质的",
+        "notes": "形容紧张、易激动的人",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "face_1753458369957_back",
+        "main_text": "nervous",
+        "notes": "/ˈnɜːvəs/ He gets nervous before speaking.",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "face_1753458369958_front",
+        "main_text": "满足的",
+        "notes": "用于表达对结果或现状的满意",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "face_1753458369958_back",
+        "main_text": "satisfied",
+        "notes": "/ˈsætɪsfaɪd/ She felt satisfied with her work.",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "face_1753458369959_front",
+        "main_text": "自信的",
+        "notes": "形容对自己能力有把握",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "face_1753458369959_back",
+        "main_text": "confident",
+        "notes": "/ˈkɑːnfɪdənt/ She is confident about the presentation.",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "face_1753458369960_front",
+        "main_text": "尴尬的",
+        "notes": "形容感到难为情或羞愧",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "face_1753458369960_back",
+        "main_text": "embarrassed",
+        "notes": "/ɪmˈbærəst/ He felt embarrassed by his mistake.",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "face_1753458369961_front",
+        "main_text": "好奇的",
+        "notes": "形容对新事物感兴趣",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "face_1753458369961_back",
+        "main_text": "curious",
+        "notes": "/ˈkjʊriəs/ Children are naturally curious.",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "face_1753458369962_front",
+        "main_text": "嫉妒的",
+        "notes": "形容因他人拥有而产生的不满",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "face_1753458369962_back",
+        "main_text": "jealous",
+        "notes": "/ˈdʒeləs/ She was jealous of her sister's success.",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "face_1753458369963_front",
+        "main_text": "感激的",
+        "notes": "表达对他人帮助的感谢",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "face_1753458369963_back",
+        "main_text": "grateful",
+        "notes": "/ˈɡreɪtfl/ I am grateful for your help.",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "face_1753458369964_front",
+        "main_text": "失望的",
+        "notes": "形容期望落空时的心情",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      },
+      {
+        "id": "face_1753458369964_back",
+        "main_text": "disappointed",
+        "notes": "/ˌdɪsəˈpɔɪntɪd/ He was disappointed with the result.",
+        "created_at": "2025-07-25T15:46:09.945Z",
+        "updated_at": "2025-07-25T15:46:09.945Z"
+      }
+    ]
+  }
+}

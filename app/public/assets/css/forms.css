@@ -29,9 +29,8 @@
   margin: 0;
 }
 
-.theme-editor-form,
-.card-editor-form {
-  /* padding: 2rem; */
+.theme-editor-form {
+  padding: 2rem;
 }
 
 /* 确保卡片编辑器内容区域布局稳定 */

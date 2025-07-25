@@ -15,11 +15,105 @@ export class SettingsPage {
       <div class="settings-page">
         <div class="settings-container">
           <div class="settings-content">
+
+          
+            <!-- 数据导入导出区域 -->
+            <div class="settings-section">
+              <div class="section-header">
+                <h3>💾 数据导入导出</h3>
+                <p class="section-description">备份和恢复应用数据，支持跨应用数据迁移</p>
+              </div>
+
+              <div class="settings-grid">
+                <div class="setting-card" style="grid-row: span 3">
+                  <div class="card-content"> 
+                    <h4>📦 官方卡片包</h4> 
+                    <p>从我们提供的卡包中寻找你感兴趣的内容，一键导入卡片库</p> 
+                    <div class="official-cardpack-section"> 
+                      <select id="cardpack-select" size="12" class="cardpack-selector"> 
+                        <option value="cardpacks/milka-import-zh-poem.json">古诗词经典对句</option> 
+                        <option value="cardpacks/milka-import-zh-en-1.json">中英词汇：外貌性格与情感表达</option> 
+                        <option value="cardpacks/milka-import-zh-en-2.json">中英词汇：能力品质与职业技能</option> 
+                        <option value="cardpacks/milka-import-zh-en-3.json">中英词汇：学习教育与知识技能</option> 
+                        <option value="cardpacks/milka-import-zh-en-4.json">中英词汇：社交沟通与人际关系</option> 
+                        <option value="cardpacks/milka-import-zh-jp-1.json">日语五十音图</option> 
+                        <option value="cardpacks/milka-import-zh-fr-1.json">中法日常用语：问候与礼貌用语</option> 
+                        <option value="cardpacks/milka-import-zh-fr-2.json">中法日常用语：日常购物</option> 
+                        <option value="cardpacks/milka-import-zh-fr-3.json">中法日常用语：餐厅用餐</option> 
+                      
+                      </select> 
+                      <div class="cardpack-actions"> 
+                      <button id="import-cardpack-btn" onclick="settingsPage.importSelectedCardpack()" class="btn btn-primary" > 导入选中的卡片包 </button> 
+                    </div> 
+                    </div> 
+                  </div>
+                </div>
+                
+                <!-- 批量输入卡片 -->
+                <div class="setting-card">
+                  <div class="card-content">
+                    <h4>🚀 批量输入卡片</h4>
+                    <p>通过CSV文件或文本快速创建大量卡片，提高效率</p>
+                    <div class="actions">
+                      <a href="/import" class="btn btn-primary">
+                        前往批量输入
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                
+                <!-- 导出数据 -->
+                <div class="setting-card">
+                  <div class="card-content">
+                    <h4>📤 导出数据</h4>
+                    <p>将所有主题、卡片和关联数据导出为标准JSON格式</p>
+                    <button 
+                      class="btn btn-primary" 
+                      onclick="settingsPage.exportData()"
+                      ${this.isProcessing ? "disabled" : ""}
+                    >
+                      导出全部数据
+                    </button>
+                  </div>
+                </div>
+
+                <!-- 导入数据 -->
+                <div class="setting-card">
+                  <div class="card-content">
+                    <h4>📥 导入数据</h4>
+                    <p>从JSON文件导入数据，支持增量导入和完全覆盖</p>
+                    <div class="import-controls">
+                      <input 
+                        type="file" 
+                        id="import-file" 
+                        accept=".json"
+                        style="display: none;"
+                        onchange="settingsPage.handleFileSelect(event)"
+                      >
+                      <button 
+                        class="btn btn-secondary" 
+                        onclick="document.getElementById('import-file').click()"
+                      >
+                        选择文件
+                      </button>
+                      <div class="file-info" id="file-info" style="display: none;">
+                        <span class="file-name" id="file-name"></span>
+                        <span class="file-size" id="file-size"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>   
+              
+
+            </div>
             <!-- 数据管理区域 -->
             <div class="settings-section">
               <div class="section-header">
-                <h3>📊 数据管理</h3>
-                <p class="section-description">管理应用数据，包括重置、清空和备份操作</p>
+                <h3>📊 应用初始化功能<b style="color:red">(危险区域)</b></h3>
+                <p class="section-description">管理完整的应用数据，包括重置、清空和添加示例数据</p>
                 <button class="btn btn-close-settings" onclick="location.reload()">✕</button>
               </div>
 
@@ -98,59 +192,6 @@ export class SettingsPage {
               </div>
             </div>
 
-            <!-- 数据导入导出区域 -->
-            <div class="settings-section">
-              <div class="section-header">
-                <h3>💾 数据导入导出</h3>
-                <p class="section-description">备份和恢复应用数据，支持跨应用数据迁移</p>
-              </div>
-
-              <div class="settings-grid">
-                <!-- 导出数据 -->
-                <div class="setting-card">
-                  <div class="card-content">
-                    <h4>📤 导出数据</h4>
-                    <p>将所有主题、卡片和关联数据导出为标准JSON格式</p>
-                    <button 
-                      class="btn btn-primary" 
-                      onclick="settingsPage.exportData()"
-                      ${this.isProcessing ? "disabled" : ""}
-                    >
-                      导出全部数据
-                    </button>
-                  </div>
-                </div>
-
-                <!-- 导入数据 -->
-                <div class="setting-card">
-                  <div class="card-content">
-                    <h4>📥 导入数据</h4>
-                    <p>从JSON文件导入数据，支持增量导入和完全覆盖</p>
-                    <div class="import-controls">
-                      <input 
-                        type="file" 
-                        id="import-file" 
-                        accept=".json"
-                        style="display: none;"
-                        onchange="settingsPage.handleFileSelect(event)"
-                      >
-                      <button 
-                        class="btn btn-secondary" 
-                        onclick="document.getElementById('import-file').click()"
-                      >
-                        选择文件
-                      </button>
-                      <div class="file-info" id="file-info" style="display: none;">
-                        <span class="file-name" id="file-name"></span>
-                        <span class="file-size" id="file-size"></span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-
-              </div>
-            </div>
 
             <!-- 系统信息区域 -->
             <div class="settings-section">
@@ -160,10 +201,10 @@ export class SettingsPage {
               </div>
 
               <div class="system-info">
-                <div class="info-item">
+                <!--div class="info-item">
                   <span class="info-label">应用版本：</span>
                   <span class="info-value">v0.2.1</span>
-                </div>
+                </div-->
                 <div class="info-item">
                   <span class="info-label">数据库：</span>
                   <span class="info-value">MiniDB</span>
@@ -177,8 +218,8 @@ export class SettingsPage {
                   <span class="info-value">1.0</span>
                 </div>
                 <div class="info-item">
-                  <span class="info-label">最后更新：</span>
-                  <span class="info-value" id="last-update">-</span>
+                  <span class="info-label">开发者：</span>
+                  <span class="info-value">@CATxPAPA 喵爸联萌</span>
                 </div>
               </div>
             </div>
@@ -229,7 +270,7 @@ export class SettingsPage {
                 </label>
                 <label class="radio-label">
                   <input type="radio" name="preview-import-mode" value="replace">
-                  <span>完全覆盖 - 清空现有数据，导入新数据</span>
+                  <span>完全覆盖<b style="color:red">(危险)</b> - 清空现有数据，导入新数据</span>
                 </label>
               </div>
             </div>
@@ -348,7 +389,15 @@ export class SettingsPage {
           opacity: 0.6;
           cursor: not-allowed;
         }
-
+        .setting-card select{
+          width:100%;
+          height:100%;
+          font-size:1.2rem;
+          border:1px solid #ccc;
+        }
+        .setting-card select option{
+          font-weight:200;
+        }
         .card-content h4 {
           font-size: 1.125rem;
           font-weight: 400;
@@ -838,7 +887,7 @@ export class SettingsPage {
         data: {
           themes: themes.map((theme) => ({
             // 使用 _id 作为主键，但在导出时转换为 id 以保持兼容性
-            id: theme.id ,
+            id: theme.id,
             title: theme.title,
             description: theme.description,
             cover_image_url: theme.cover_image_url || "",
@@ -957,7 +1006,7 @@ export class SettingsPage {
 
         for (const theme of themes) {
           const themeAssociations = associations.filter(
-            (a) => a.theme_id === (theme.id)
+            (a) => a.theme_id === theme.id
           );
 
           for (const assoc of themeAssociations) {
@@ -966,7 +1015,7 @@ export class SettingsPage {
 
             if (frontFace && backFace) {
               exportData.data.cards.push({
-                id: assoc.id ,
+                id: assoc.id,
                 theme_id: assoc.theme_id,
                 sort_order: assoc.sort_order,
                 front: {
@@ -1330,8 +1379,6 @@ export class SettingsPage {
 
       // 第二层验证：检查数据结构
       if (!importData.data) {
-
-
         console.error("数据结构验证失败:", {
           importData: importData,
           hasData: !!importData.data,
@@ -1505,6 +1552,8 @@ export class SettingsPage {
       message += `卡片：${importStats.cards.imported} 成功，${importStats.cards.skipped} 跳过，${importStats.cards.errors} 失败`;
 
       this.showNotification(message, totalErrors > 0 ? "warning" : "success");
+
+      return importStats;
     } catch (error) {
       console.error("导入执行失败:", error);
       this.hideProcessing();
@@ -1622,7 +1671,7 @@ export class SettingsPage {
   updateLastUpdate() {
     const now = new Date();
     const timeString = now.toLocaleString("zh-CN");
-    document.getElementById("last-update").textContent = timeString;
+    // document.getElementById("last-update").textContent = timeString;
   }
 
   // 显示通知
@@ -1715,6 +1764,92 @@ export class SettingsPage {
       console.log("导入UI已重置");
     } catch (error) {
       console.error("重置导入UI失败:", error);
+    }
+  }
+
+  /**
+   * [新增] 处理官方卡片包选择事件
+   * @param {HTMLSelectElement} selectElement - select元素本身
+   */
+  handleCardpackSelect(selectElement) {
+    const importBtn = document.getElementById("import-cardpack-btn");
+    if (importBtn) {
+      importBtn.disabled = !selectElement.value;
+    }
+  }
+
+  /**
+   * [新增] 导入选中的官方卡片包
+   */
+  async importSelectedCardpack() {
+    const selectElement = document.getElementById("cardpack-select");
+    if (selectElement && selectElement.value) {
+      await this.importOfficialCardpack(selectElement.value);
+    }
+  }
+
+  /**
+   * [新增] 导入官方卡片包的核心逻辑
+   * @param {string} cardpackPath - 卡片包的相对路径
+   */
+  async importOfficialCardpack(cardpackPath) {
+    if (!cardpackPath || this.isProcessing) return;
+
+    const importBtn = document.getElementById("import-cardpack-btn");
+    this.isProcessing = true;
+    if (importBtn) {
+      importBtn.disabled = true;
+      importBtn.textContent = "正在导入...";
+    }
+
+    try {
+      this.showNotification("正在下载卡片包...", "info");
+      const response = await fetch(cardpackPath);
+      if (!response.ok) {
+        throw new Error(`下载失败: ${response.statusText}`);
+      }
+      const cardpackData = await response.json();
+
+      if (
+        !cardpackData.data ||
+        !cardpackData.data.themes ||
+        !cardpackData.data.faces ||
+        !cardpackData.data.cards
+      ) {
+        throw new Error("卡片包文件格式不正确。");
+      }
+
+      this.showNotification("正在导入数据...", "info");
+      // 复用已有的 executeImport 方法，并使用 'merge' 模式
+      // const importStats = await this.executeImport(cardpackData, "merge");
+
+      const importStats =  await this.executeImport.call(this, cardpackData,  "merge");
+      
+      const totalImported =
+        importStats.themes.imported +
+        importStats.faces.imported +
+        importStats.cards.imported;
+      if (totalImported > 0) {
+        this.showNotification(
+          `✅ 成功导入 ${totalImported} 个新项目！`,
+          "success"
+        );
+        if (this.app && typeof this.app.loadThemes === "function") {
+          await this.app.loadThemes();
+        }
+      } else {
+        this.showNotification("卡片包内容已存在，未导入新数据。", "info");
+      }
+    } catch (error) {
+      console.error("导入官方卡片包失败:", error);
+      this.showNotification(`导入失败: ${error.message}`, "error");
+    } finally {
+      this.isProcessing = false;
+      if (importBtn) {
+        const selectElement = document.getElementById("cardpack-select");
+        importBtn.disabled = !selectElement.value;
+        importBtn.textContent = "导入选中的卡片包";
+      }
     }
   }
 }

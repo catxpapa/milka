@@ -1,0 +1,360 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "export_date": "2025-07-25T18:39:35.575Z",
+    "source": "喵卡批量创建工具"
+  },
+  "data": {
+    "themes": [
+      {
+        "id": "theme_1753468775574_xszy2d6y0",
+        "title": "中法日常用语：餐厅用餐",
+        "description": "在餐厅点餐、用餐过程中的常用对话表达。",
+        "cover_image_url": "",
+        "style_config": {
+          "theme": "minimalist-white",
+          "custom_styles": {}
+        },
+        "is_official": false,
+        "sort_order": 0,
+        "is_pinned": false,
+        "created_at": "2025-07-25T18:39:35.575Z",
+        "updated_at": "2025-07-25T18:39:35.575Z"
+      }
+    ],
+    "cards": [
+      {
+        "id": "assoc_1753468775574",
+        "theme_id": "theme_1753468775574_xszy2d6y0",
+        "front_face_id": "face_1753468775574_front",
+        "back_face_id": "face_1753468775574_back",
+        "sort_order": 0,
+        "created_at": "2025-07-25T18:39:35.574Z"
+      },
+      {
+        "id": "assoc_1753468775575",
+        "theme_id": "theme_1753468775574_xszy2d6y0",
+        "front_face_id": "face_1753468775575_front",
+        "back_face_id": "face_1753468775575_back",
+        "sort_order": 1,
+        "created_at": "2025-07-25T18:39:35.574Z"
+      },
+      {
+        "id": "assoc_1753468775576",
+        "theme_id": "theme_1753468775574_xszy2d6y0",
+        "front_face_id": "face_1753468775576_front",
+        "back_face_id": "face_1753468775576_back",
+        "sort_order": 2,
+        "created_at": "2025-07-25T18:39:35.574Z"
+      },
+      {
+        "id": "assoc_1753468775577",
+        "theme_id": "theme_1753468775574_xszy2d6y0",
+        "front_face_id": "face_1753468775577_front",
+        "back_face_id": "face_1753468775577_back",
+        "sort_order": 3,
+        "created_at": "2025-07-25T18:39:35.574Z"
+      },
+      {
+        "id": "assoc_1753468775578",
+        "theme_id": "theme_1753468775574_xszy2d6y0",
+        "front_face_id": "face_1753468775578_front",
+        "back_face_id": "face_1753468775578_back",
+        "sort_order": 4,
+        "created_at": "2025-07-25T18:39:35.574Z"
+      },
+      {
+        "id": "assoc_1753468775579",
+        "theme_id": "theme_1753468775574_xszy2d6y0",
+        "front_face_id": "face_1753468775579_front",
+        "back_face_id": "face_1753468775579_back",
+        "sort_order": 5,
+        "created_at": "2025-07-25T18:39:35.574Z"
+      },
+      {
+        "id": "assoc_1753468775580",
+        "theme_id": "theme_1753468775574_xszy2d6y0",
+        "front_face_id": "face_1753468775580_front",
+        "back_face_id": "face_1753468775580_back",
+        "sort_order": 6,
+        "created_at": "2025-07-25T18:39:35.574Z"
+      },
+      {
+        "id": "assoc_1753468775581",
+        "theme_id": "theme_1753468775574_xszy2d6y0",
+        "front_face_id": "face_1753468775581_front",
+        "back_face_id": "face_1753468775581_back",
+        "sort_order": 7,
+        "created_at": "2025-07-25T18:39:35.574Z"
+      },
+      {
+        "id": "assoc_1753468775582",
+        "theme_id": "theme_1753468775574_xszy2d6y0",
+        "front_face_id": "face_1753468775582_front",
+        "back_face_id": "face_1753468775582_back",
+        "sort_order": 8,
+        "created_at": "2025-07-25T18:39:35.574Z"
+      },
+      {
+        "id": "assoc_1753468775583",
+        "theme_id": "theme_1753468775574_xszy2d6y0",
+        "front_face_id": "face_1753468775583_front",
+        "back_face_id": "face_1753468775583_back",
+        "sort_order": 9,
+        "created_at": "2025-07-25T18:39:35.574Z"
+      },
+      {
+        "id": "assoc_1753468775584",
+        "theme_id": "theme_1753468775574_xszy2d6y0",
+        "front_face_id": "face_1753468775584_front",
+        "back_face_id": "face_1753468775584_back",
+        "sort_order": 10,
+        "created_at": "2025-07-25T18:39:35.574Z"
+      },
+      {
+        "id": "assoc_1753468775585",
+        "theme_id": "theme_1753468775574_xszy2d6y0",
+        "front_face_id": "face_1753468775585_front",
+        "back_face_id": "face_1753468775585_back",
+        "sort_order": 11,
+        "created_at": "2025-07-25T18:39:35.574Z"
+      },
+      {
+        "id": "assoc_1753468775586",
+        "theme_id": "theme_1753468775574_xszy2d6y0",
+        "front_face_id": "face_1753468775586_front",
+        "back_face_id": "face_1753468775586_back",
+        "sort_order": 12,
+        "created_at": "2025-07-25T18:39:35.575Z"
+      },
+      {
+        "id": "assoc_1753468775588",
+        "theme_id": "theme_1753468775574_xszy2d6y0",
+        "front_face_id": "face_1753468775588_front",
+        "back_face_id": "face_1753468775588_back",
+        "sort_order": 13,
+        "created_at": "2025-07-25T18:39:35.575Z"
+      },
+      {
+        "id": "assoc_1753468775589",
+        "theme_id": "theme_1753468775574_xszy2d6y0",
+        "front_face_id": "face_1753468775589_front",
+        "back_face_id": "face_1753468775589_back",
+        "sort_order": 14,
+        "created_at": "2025-07-25T18:39:35.575Z"
+      }
+    ],
+    "faces": [
+      {
+        "id": "face_1753468775574_front",
+        "main_text": "菜单",
+        "notes": "要求查看菜单",
+        "created_at": "2025-07-25T18:39:35.574Z",
+        "updated_at": "2025-07-25T18:39:35.574Z"
+      },
+      {
+        "id": "face_1753468775574_back",
+        "main_text": "La carte",
+        "notes": "/la ˈkaʁt/<br>A: La carte s'il vous plaît.<br>B: Voici la carte monsieur.",
+        "created_at": "2025-07-25T18:39:35.574Z",
+        "updated_at": "2025-07-25T18:39:35.574Z"
+      },
+      {
+        "id": "face_1753468775575_front",
+        "main_text": "我要点餐",
+        "notes": "准备点餐时的表达",
+        "created_at": "2025-07-25T18:39:35.574Z",
+        "updated_at": "2025-07-25T18:39:35.574Z"
+      },
+      {
+        "id": "face_1753468775575_back",
+        "main_text": "Je voudrais commander",
+        "notes": "/ʒə vu.dʁɛ ko.mɑ̃.ˈde/<br>A: Je voudrais commander.<br>B: Qu'est-ce que vous prenez?",
+        "created_at": "2025-07-25T18:39:35.574Z",
+        "updated_at": "2025-07-25T18:39:35.574Z"
+      },
+      {
+        "id": "face_1753468775576_front",
+        "main_text": "今日特色",
+        "notes": "询问当日推荐菜品",
+        "created_at": "2025-07-25T18:39:35.574Z",
+        "updated_at": "2025-07-25T18:39:35.574Z"
+      },
+      {
+        "id": "face_1753468775576_back",
+        "main_text": "Le plat du jour",
+        "notes": "/lə pla dy ˈʒuʁ/<br>A: Quel est le plat du jour?<br>B: Aujourd'hui c'est du poisson.",
+        "created_at": "2025-07-25T18:39:35.574Z",
+        "updated_at": "2025-07-25T18:39:35.574Z"
+      },
+      {
+        "id": "face_1753468775577_front",
+        "main_text": "我是素食者",
+        "notes": "说明饮食偏好",
+        "created_at": "2025-07-25T18:39:35.574Z",
+        "updated_at": "2025-07-25T18:39:35.574Z"
+      },
+      {
+        "id": "face_1753468775577_back",
+        "main_text": "Je suis végétarien",
+        "notes": "/ʒə sɥi ve.ʒe.ta.ˈʁjɛ̃/<br>A: Je suis végétarien.<br>B: Nous avons des plats végétariens.",
+        "created_at": "2025-07-25T18:39:35.574Z",
+        "updated_at": "2025-07-25T18:39:35.574Z"
+      },
+      {
+        "id": "face_1753468775578_front",
+        "main_text": "不要辣",
+        "notes": "要求不要辛辣",
+        "created_at": "2025-07-25T18:39:35.574Z",
+        "updated_at": "2025-07-25T18:39:35.574Z"
+      },
+      {
+        "id": "face_1753468775578_back",
+        "main_text": "Pas épicé",
+        "notes": "/pa e.pi.ˈse/<br>A: Pas trop épicé s'il vous plaît.<br>B: D'accord pas de problème.",
+        "created_at": "2025-07-25T18:39:35.574Z",
+        "updated_at": "2025-07-25T18:39:35.574Z"
+      },
+      {
+        "id": "face_1753468775579_front",
+        "main_text": "水",
+        "notes": "点水时的表达",
+        "created_at": "2025-07-25T18:39:35.574Z",
+        "updated_at": "2025-07-25T18:39:35.574Z"
+      },
+      {
+        "id": "face_1753468775579_back",
+        "main_text": "De l'eau",
+        "notes": "/də ˈlo/<br>A: De l'eau s'il vous plaît.<br>B: Plate ou gazeuse?",
+        "created_at": "2025-07-25T18:39:35.574Z",
+        "updated_at": "2025-07-25T18:39:35.574Z"
+      },
+      {
+        "id": "face_1753468775580_front",
+        "main_text": "红酒",
+        "notes": "点红酒",
+        "created_at": "2025-07-25T18:39:35.574Z",
+        "updated_at": "2025-07-25T18:39:35.574Z"
+      },
+      {
+        "id": "face_1753468775580_back",
+        "main_text": "Du vin rouge",
+        "notes": "/dy vɛ̃ ˈʁuʒ/<br>A: Du vin rouge s'il vous plaît.<br>B: Quel vin préférez-vous?",
+        "created_at": "2025-07-25T18:39:35.574Z",
+        "updated_at": "2025-07-25T18:39:35.574Z"
+      },
+      {
+        "id": "face_1753468775581_front",
+        "main_text": "很好吃",
+        "notes": "称赞食物美味",
+        "created_at": "2025-07-25T18:39:35.574Z",
+        "updated_at": "2025-07-25T18:39:35.574Z"
+      },
+      {
+        "id": "face_1753468775581_back",
+        "main_text": "C'est délicieux",
+        "notes": "/sɛ de.li.ˈsjø/<br>A: Comment trouvez-vous?<br>B: C'est délicieux!",
+        "created_at": "2025-07-25T18:39:35.574Z",
+        "updated_at": "2025-07-25T18:39:35.574Z"
+      },
+      {
+        "id": "face_1753468775582_front",
+        "main_text": "我吃饱了",
+        "notes": "表示已经吃饱",
+        "created_at": "2025-07-25T18:39:35.574Z",
+        "updated_at": "2025-07-25T18:39:35.574Z"
+      },
+      {
+        "id": "face_1753468775582_back",
+        "main_text": "Je suis rassasié",
+        "notes": "/ʒə sɥi ʁa.sa.ˈzje/<br>A: Encore un peu?<br>B: Non merci je suis rassasié.",
+        "created_at": "2025-07-25T18:39:35.574Z",
+        "updated_at": "2025-07-25T18:39:35.574Z"
+      },
+      {
+        "id": "face_1753468775583_front",
+        "main_text": "可以打包吗",
+        "notes": "要求打包剩余食物",
+        "created_at": "2025-07-25T18:39:35.574Z",
+        "updated_at": "2025-07-25T18:39:35.574Z"
+      },
+      {
+        "id": "face_1753468775583_back",
+        "main_text": "Je peux emporter",
+        "notes": "/ʒə pø ɑ̃.pɔʁ.ˈte/<br>A: Je peux emporter le reste?<br>B: Bien sûr je vous prépare ça.",
+        "created_at": "2025-07-25T18:39:35.574Z",
+        "updated_at": "2025-07-25T18:39:35.574Z"
+      },
+      {
+        "id": "face_1753468775584_front",
+        "main_text": "厕所在哪",
+        "notes": "询问洗手间位置",
+        "created_at": "2025-07-25T18:39:35.574Z",
+        "updated_at": "2025-07-25T18:39:35.574Z"
+      },
+      {
+        "id": "face_1753468775584_back",
+        "main_text": "Où sont les toilettes",
+        "notes": "/u sɔ̃ le twa.ˈlɛt/<br>A: Où sont les toilettes?<br>B: Au fond à droite.",
+        "created_at": "2025-07-25T18:39:35.574Z",
+        "updated_at": "2025-07-25T18:39:35.574Z"
+      },
+      {
+        "id": "face_1753468775585_front",
+        "main_text": "服务员",
+        "notes": "呼叫服务员",
+        "created_at": "2025-07-25T18:39:35.574Z",
+        "updated_at": "2025-07-25T18:39:35.574Z"
+      },
+      {
+        "id": "face_1753468775585_back",
+        "main_text": "Monsieur/Madame",
+        "notes": "/mə.ˈsjø/ma.ˈdam/<br>A: Monsieur s'il vous plaît!<br>B: Oui qu'est-ce que je peux faire?",
+        "created_at": "2025-07-25T18:39:35.574Z",
+        "updated_at": "2025-07-25T18:39:35.574Z"
+      },
+      {
+        "id": "face_1753468775586_front",
+        "main_text": "预订",
+        "notes": "预订餐桌",
+        "created_at": "2025-07-25T18:39:35.574Z",
+        "updated_at": "2025-07-25T18:39:35.575Z"
+      },
+      {
+        "id": "face_1753468775586_back",
+        "main_text": "Une réservation",
+        "notes": "/yn ʁe.zɛʁ.va.ˈsjɔ̃/<br>A: J'ai une réservation au nom de Martin.<br>B: Oui suivez-moi s'il vous plaît.",
+        "created_at": "2025-07-25T18:39:35.575Z",
+        "updated_at": "2025-07-25T18:39:35.575Z"
+      },
+      {
+        "id": "face_1753468775588_front",
+        "main_text": "等位",
+        "notes": "需要等待时的说明",
+        "created_at": "2025-07-25T18:39:35.575Z",
+        "updated_at": "2025-07-25T18:39:35.575Z"
+      },
+      {
+        "id": "face_1753468775588_back",
+        "main_text": "Il faut attendre",
+        "notes": "/il fo a.ˈtɑ̃dʁ/<br>A: Il y a de la place?<br>B: Il faut attendre dix minutes.",
+        "created_at": "2025-07-25T18:39:35.575Z",
+        "updated_at": "2025-07-25T18:39:35.575Z"
+      },
+      {
+        "id": "face_1753468775589_front",
+        "main_text": "小费",
+        "notes": "关于小费的表达",
+        "created_at": "2025-07-25T18:39:35.575Z",
+        "updated_at": "2025-07-25T18:39:35.575Z"
+      },
+      {
+        "id": "face_1753468775589_back",
+        "main_text": "Le pourboire",
+        "notes": "/lə puʁ.ˈbwaʁ/<br>A: Le service est compris?<br>B: Le pourboire n'est pas obligatoire.",
+        "created_at": "2025-07-25T18:39:35.575Z",
+        "updated_at": "2025-07-25T18:39:35.575Z"
+      }
+    ]
+  }
+}
